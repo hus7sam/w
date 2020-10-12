@@ -43,6 +43,9 @@ body
 .head
 {     /* start header */
     background-color: gold;
+    background-image: url("w.jpg");
+    background-repeat: no-repeat;
+    background-size: 2000px 500px;
     width: 100%;
     height: 30pc;
     margin: 0 auto;
@@ -109,7 +112,7 @@ body
     height: 70px;
     width: 75%;
     border-radius: 20px;
-    background-color: rgba(247, 252, 247, 0.5);
+    background-color: rgba(2, 2, 2, 0.2);
 }
 
 .head a
