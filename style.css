@@ -2,8 +2,9 @@
 {
     box-sizing: border-box;
     direction: rtl;
-    font-family: Samim;
+    font-family: calibri,Samim;
     font-weight: normal;
+    /*font-family: "Source Sans Pro", "Arial", sans-serif;*/
 }
 
 body
@@ -16,19 +17,31 @@ body
 
 .bar
 { /* start mune */
+    animation-delay: 2400ms;
     background-color: #eeeded;
     width: 100%;
     margin: auto auto ;
     padding: 0 20px;
-    height: 60px;
+    height: fit-content;
 }
 
 .bar h2
 {   /* start title  of bar */
+
     display: inline-block;
     margin: 15px auto;
     padding: 0 0 ;
     font-size: 20px;
+    height: fit-content;
+    width: fit-content;
+}
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+
 }
 
 .bar p
@@ -38,32 +51,43 @@ body
     margin: 15px  auto;
     padding: 0 0 ;
     font-size: 20px;
+    height: fit-content;
+    width: fit-content;
+    animation-name: example;
+    animation-fill-mode: backwards;
+    animation-duration: 9s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
 }
 
 .head
 {     /* start header */
+    display: block;
     background-color: rgba(255, 215, 0.9);
     color: #f5f1f3;
     width: 100%;
-    height: 30pc;
-    margin: 0 auto;
+    height: fit-content;
+    margin: auto auto;
     text-align: center;
-    padding: 0 0px;
+    padding: 25px 0px;
     border-top: 1px solid black;
     max-height: 100pc;
 }
 
 .head form
 {
-    width: 60%;
+    display: block;
+    /*grid-template-columns: auto auto ;*/
+    width: fit-content;
+    height: fit-content;
     background-color: rgba(38, 38, 38, 0.5);
-    margin: 60px auto;
-    padding: 20px 30px;
+    margin: 20px auto;
+    padding: 20px 20px;
     border-radius: 15px;
 }
 
 
-.head form input[type=text]
+.head form input[type=text],[type=submit],select
 {
     display: grid;
     margin: 5px auto;
@@ -87,47 +111,47 @@ body
 .head h1
 {
     display: inline-block;
-    height: 130px;
-    width: 60%;
+    height: fit-content;
+    width: fit-content;
     display: block;
     color: black;
-    background-color: #e9e8e8;
+    background-color: rgba(250, 250, 248, 0.9);
     text-align: center;
-    margin: 20px auto ;
-    padding: 0px 0px ;
+    margin: auto auto ;
+    padding: 0px 40px ;
     font-size: 85px;
-    border-radius: 20px;
+    border-radius: 6pc 3pc;
 }
 
 .head h2
 {
     display: block;
-    color: #000000;
+    color: #fcf8f8;
     text-align: center;
-    margin: 40px auto 20px;
-    padding: 15px 0px;
+    margin: 40px auto 10px;
+    padding: 15px 20px ;
     font-size: 30px;
-    height: 70px;
-    width: 75%;
-    border-radius: 20px;
-    background-color: rgba(2, 2, 2, 0.2);
+    height: fit-content;
+    width: fit-content;
+    border-radius: 6pc 3pc;
+    background-color: rgba(2, 2, 2, 0.4);
 }
 
 .head a
 {  /* start links  of header */
-    width: 15%;
-    height: 90px;
+    width: fit-content;
+    height: fit-content;
     display: inline-block;
     text-decoration: none;
     color: black;
     background-color: rgba(247, 252, 247, 0.9);
     text-align: center;
-    margin: 15px 10px ;
-    padding: 25px 5px;
+    margin: 50px 10px 0 ;
+    padding: 15px 30px;
     /*border: 1px dashed #0a0a0a;*/
-    border-radius:20px;
+    border-radius: 3pc 1pc;
     font-size: 30px;
-
+    white-space: normal;
 }
 
 .head a:hover
@@ -136,16 +160,25 @@ body
     background-color: rgba(14, 13, 13, 0.9);
 }
 
-.head > ol
+.head  ol
 {
-    display: block;
-    margin: 30px 60px;
-    padding: 0px 060px;
-    list-style-type: square;
-    font-size: 25px;
-    text-indent: 200px;
     text-align: right;
+    margin-right: 0100px;
+    margin: 050px;
 }
+
+.head  ol li
+{
+    list-style: decimal-leading-zero;
+    list-style: -moz-decimal-leading-zero;
+    list-style: -ms-decimal-leading-zero;
+    text-indent: 5px;
+    color: black;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
 
 /*.head  ul li*/
 /*{*/
@@ -194,3 +227,75 @@ footer a
     text-decoration: none;
     color: white;
 }
+
+
+/*  start  Display Page  */
+.Display_Body
+{
+    background-color: rgba(124, 124, 123, 0.5);
+    margin: auto auto;
+}
+
+
+.Display_Grid-container {
+    display: grid;
+    height: fit-content;
+    width: fit-content;
+    max-width: 95%;
+    margin: 30px auto;
+    grid-template-columns:  auto auto auto auto ;
+    background-color: rgb(245, 220, 0);
+    padding: 20px;
+    border-radius: 5px;
+    grid-gap: 20px;
+}
+
+.grid-item {
+    height: 300px;
+    max-height: fit-content;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.8);
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    padding: 5px;
+    text-align: center;
+    border-radius: 1pc ;
+
+}
+
+.grid-item table ,td
+{
+    table-layout: auto;
+    width: 100%;
+    border-collapse: separate;
+    padding: 00px;
+    font-size: 13px;
+    border-spacing: 0.3rem;
+}
+
+.grid-item td
+{
+    width: 33%;
+    border: 1px solid #999;
+    padding: 0.3rem ;
+    border-radius:2pc 1pc;
+
+}
+
+.grid-item tr:hover
+{
+    background-color: rgba(191, 187, 187, 0.8);
+}
+
+.grid-item  h3
+{
+    padding: -50px 0;
+
+}
+
+.grid-item p{
+    font-size: 15px ;
+    height: fit-content;
+    width: fit-content;
+}
+
+/*  end  Display Page  */

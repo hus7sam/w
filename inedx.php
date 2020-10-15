@@ -20,14 +20,15 @@
 </div>
 
 <div class="head">
-<h1>  أختر أي فئة تساعد !</h1>
-    <h2>(يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا وَاعْبُدُوا رَبَّكُمْ وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ) </h2>
+<h1>  .. خير الناس أنفعهم للناس ..
+    </h1>
 
-    <a href="inedx.php"> الصحة</a>
+    <a href="dispaly.php"> الصحة</a>
     <a href="inedx.php"> التعليم</a>
     <a href="inedx.php"> الغذاء</a>
     <a href="inedx.php"> الكسوة</a>
 <!--    <a href="inedx.php"> تبرعات</a>-->
+    <h2>(يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا وَاعْبُدُوا رَبَّكُمْ وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ) </h2>
 </div>
 
 <div class="head" style="background-color: #c1bebe;">
@@ -51,9 +52,16 @@
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="fname">
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname">
+            <input type="text" id="lname" name="lname"><label for="lname">Last Name</label>
 
-            <textarea name="t_text" id="t_text"></textarea>
+<select>
+    <option>الصحة</option>
+    <option>الصحة</option>
+    <option>الصحة</option>
+</select>
+<!--            <textarea name="t_text" id="t_text"></textarea>-->
+
+            <input type="submit" value="أرسل">
         </form>
 
 
