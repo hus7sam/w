@@ -49,18 +49,11 @@
     <h1>   التسجيل</h1>
 
         <form>
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname"><label for="lname">Last Name</label>
 
-<select>
-    <option>الصحة</option>
-    <option>الصحة</option>
-    <option>الصحة</option>
-</select>
-<!--            <textarea name="t_text" id="t_text"></textarea>-->
-
+            <input type="text" id="fname" name="fname" placeholder="وصف للغرض">
+            <input type="text" id="lname" name="lname" placeholder="المدينة">
+            <input type="text" id="lname" name="lname" placeholder="الحي">
+            <input type="number" id="lname" name="lname" placeholder="رقم الجوال">
             <input type="submit" value="أرسل">
         </form>
 
