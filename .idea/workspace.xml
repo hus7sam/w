@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="EDIT FORM">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispaly.php" beforeDir="false" afterPath="$PROJECT_DIR$/dispaly.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602846861928</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="EDIT FORM">
+      <created>1602847947544</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602847947544</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,12 +181,12 @@
     <state x="36" y="-1057" key="SettingsEditor/-234.-1057.1920.1057/0.23.1366.745@-234.-1057.1920.1057" timestamp="1602338170714" />
     <state x="192" y="23" key="SettingsEditor/-234.-1057.1920.1057/0.23.1366.745@0.23.1366.745" timestamp="1602335348058" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.677@0.23.1366.677" timestamp="1602334119554" />
-    <state x="245" y="-823" key="Vcs.Push.Dialog.v2" timestamp="1602846868840">
+    <state x="245" y="-823" key="Vcs.Push.Dialog.v2" timestamp="1602847952559">
       <screen x="-314" y="-1057" width="1920" height="1057" />
     </state>
     <state x="326" y="-823" key="Vcs.Push.Dialog.v2/-234.-1057.1920.1057/0.23.1366.677@-234.-1057.1920.1057" timestamp="1602417589738" />
     <state x="398" y="188" key="Vcs.Push.Dialog.v2/-234.-1057.1920.989/0.23.1366.745@0.23.1366.745" timestamp="1602496863176" />
-    <state x="245" y="-823" key="Vcs.Push.Dialog.v2/-314.-1057.1920.1057/0.23.1366.677@-314.-1057.1920.1057" timestamp="1602846868840" />
+    <state x="245" y="-823" key="Vcs.Push.Dialog.v2/-314.-1057.1920.1057/0.23.1366.677@-314.-1057.1920.1057" timestamp="1602847952559" />
     <state x="311" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1602575974437">
       <screen x="-314" y="-1057" width="1920" height="1057" />
     </state>
