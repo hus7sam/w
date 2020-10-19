@@ -259,7 +259,7 @@ footer a
     grid-template-columns:  auto auto auto auto ;
     /*background-color: rgba(7, 7, 7, 0.5);*/
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 2px;
     grid-gap: 20px;
 }
 
@@ -271,7 +271,7 @@ footer a
     /*border: 1px solid rgba(0, 0, 0, 0.8);*/
     padding: 5px;
     text-align: center;
-    border-radius: 1pc ;
+    border-radius: 07px ;
 
 }
 
@@ -290,12 +290,12 @@ footer a
     width: 33%;
     border: 1px solid #999;
     padding: 0.2rem ;
-    border-radius:1pc;
+    border-radius:2px;
 }
 
-.grid-item tr:hover
+.grid-item:hover
 {
-    background-color: rgba(191, 187, 187, 0.8);
+    background-color: rgb(255, 238, 88);
 }
 
 .grid-item  h3
