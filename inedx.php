@@ -49,7 +49,6 @@
     <h1>   التسجيل</h1>
 
         <form>
-
             <input type="text" id="fname" name="fname" placeholder="وصف للغرض">
             <input type="text" id="lname" name="lname" placeholder="المدينة">
             <input type="text" id="lname" name="lname" placeholder="الحي">
