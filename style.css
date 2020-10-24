@@ -22,7 +22,7 @@ body
     width: 100%;
     margin: auto auto ;
     padding: 0 20px;
-    height: 70px;
+    height: 60px;
 }
 
 .bar h2
@@ -56,7 +56,7 @@ body
 .head
 {     /* start header */
     display: block;
-    background-color: rgba(255, 215,0, 0.9);
+    background-color: rgba(255, 215, 0, 0.9);
     color: #f5f1f3;
     width: 100%;
     height: fit-content;
@@ -240,7 +240,7 @@ footer a
 /*  start  Display Page  */
 .Display_Body
 {
-    background-color: rgba(253, 252, 252, 0.4);
+    background-color: rgba(255, 215, 0, 0.9);
 
     margin: auto auto;
 }
@@ -250,24 +250,25 @@ footer a
     display: grid;
     height: fit-content;
     width: fit-content;
-    margin: 0 auto;
-    grid-template-columns:  auto auto auto auto auto ;
+    margin: auto auto;
+    grid-template-columns:  23% 23% 23% 23%  ;
+    justify-content: center;
     /*background-color: rgba(7, 7, 7, 0.5);*/
     padding: 30px;
     border-radius: 2px;
-    grid-gap: 12px;
+    grid-gap: 15px;
 }
 
 .grid-item {
     height: fit-content;
     max-height: fit-content;
     width: fit-content;
-    background-color: rgba(246, 243, 243, 0.7);
+    background-color: rgba(250, 250, 248, 0.9);
     /*border: 1px solid rgba(0, 0, 0, 0.8);*/
-    padding: 5px;
     text-align: center;
-    border-radius: 3px ;
-    box-shadow: 1px 1px 1px  1px #434343;
+    border-radius: 15px;
+    /*border: 1px solid #c4c3c3;*/
+    padding: 5px 5px;
 }
 
 .grid-item table ,td
@@ -275,7 +276,7 @@ footer a
     table-layout: auto;
     width: 100%;
     border-collapse: separate;
-    padding: 00px;
+    padding: 5px 10px;
     font-size: 15px;
     border-spacing: 0.2rem;
 }
@@ -283,26 +284,21 @@ footer a
 .grid-item td
 {
     width: fit-content;
-    border: 1px solid #0a0a0a;
-    padding: 1px 0;
-    border-radius:2px;
+    max-height: fit-content;
+    border: 1px solid #c4c3c3;
+    border-radius:25px;
+    padding: 5px 5px;
 
 }
 
-.grid-item:hover , td:hover
+.grid-item:hover
 {
-    background-color: rgb(245, 203, 6);
-    color: black;
+    background-color: rgb(186, 186, 180);
+    color: white;
 
 }
 
-.grid-item  h3
-{
-    margin: auto  auto;
-    padding: 2px 2px;
-    font-size: 11px;
 
-}
 
 .grid-item p{
     font-size: 11px ;

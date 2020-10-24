@@ -39,7 +39,7 @@
                 <tr ALIGN="CENTER">
                     <td>الرياض </td>
                     <td>حي النسيم</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
 
@@ -58,7 +58,7 @@
                 <tr ALIGN="CENTER">
                     <td>المدينة المنورة </td>
                     <td>حي القصواء</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
 
@@ -77,7 +77,7 @@
                 <tr ALIGN="CENTER">
                     <td>الرياض </td>
                     <td>حي النسيم</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
 
@@ -96,7 +96,7 @@
                 <tr ALIGN="CENTER">
                     <td>الرياض </td>
                     <td>حي النسيم</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
 
@@ -115,7 +115,7 @@
                 <tr ALIGN="CENTER">
                     <td>الرياض </td>
                     <td>حي النسيم</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
 
@@ -134,7 +134,7 @@
                 <tr ALIGN="CENTER">
                     <td>الرياض </td>
                     <td>حي النسيم</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
 
@@ -153,7 +153,7 @@
                 <tr ALIGN="CENTER">
                     <td>الرياض </td>
                     <td>حي النسيم</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
 
@@ -172,7 +172,7 @@
                 <tr ALIGN="CENTER">
                     <td>الرياض </td>
                     <td>حي النسيم</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
 
@@ -191,7 +191,7 @@
                 <tr ALIGN="CENTER">
                     <td>الرياض </td>
                     <td>حي النسيم</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
 
@@ -210,7 +210,7 @@
                 <tr ALIGN="CENTER">
                     <td>الرياض </td>
                     <td>حي النسيم</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
 
@@ -230,7 +230,7 @@
                 <tr ALIGN="CENTER">
                     <td>الرياض </td>
                     <td>حي النسيم</td>
-                    <td>٠٥٤٦٦٦٨٨٢٠ </td>
+                    <td>0123456789 </td>
                 </tr>
             </table>
         </div>
