@@ -307,3 +307,97 @@ footer a
 }
 
 /*  end  Display Page  */
+
+
+/*// Extra small devices (portrait phones, less than 576px)*/
+/*// No media query for `xs` since this is the default in Bootstrap*/
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575.98px)
+{
+    .Display_Grid-container {
+        display: block;
+    }
+
+/*    dfff */
+
+    .grid-item {
+        margin: 15px;
+    }
+
+    .head h1
+    {
+        font-size: 45px;
+    }
+
+    .head h2
+    {
+        font-size: 17px;
+    }
+
+    .head a
+    {  /* start links  of header */
+
+        font-size: 20px;
+    }
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px)
+{
+    .Display_Grid-container {
+        display: grid;
+        grid-template-columns:  48% 48% ;
+    }
+
+    .head h1
+    {
+        font-size: 50px;
+    }
+
+    .head h2
+    {
+        font-size: 20px;
+    }
+
+    .head a
+    {  /* start links  of header */
+
+        font-size: 20px;
+    }
+
+
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px)
+{
+    .Display_Grid-container {
+        display: grid;
+        grid-template-columns:  29% 29% 29%;
+    }
+
+
+
+    .head h1
+    {
+        font-size: 60px;
+    }
+
+    .head h2
+    {
+        font-size: 25px;
+    }
+
+    .head a
+    {  /* start links  of header */
+
+        font-size: 30px;
+    }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px)
+{
+
+}
