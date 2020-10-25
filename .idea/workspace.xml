@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="EDIT FORM">
+    <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="ddd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispaly.php" beforeDir="false" afterPath="$PROJECT_DIR$/dispaly.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +73,7 @@
       <workItem from="1602415577273" duration="1458000" />
       <workItem from="1602418900702" duration="172000" />
       <workItem from="1602493690669" duration="13883000" />
-      <workItem from="1603571822250" duration="4749000" />
+      <workItem from="1603571822250" duration="5332000" />
     </task>
     <task id="LOCAL-00001" summary="u">
       <created>1602417578729</created>
@@ -139,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603571850683</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ddd">
+      <created>1603582084033</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603582084033</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +170,8 @@
     <MESSAGE value="adding grip" />
     <MESSAGE value="EDIT FORM" />
     <MESSAGE value="gf" />
-    <option name="LAST_COMMIT_MESSAGE" value="gf" />
+    <MESSAGE value="ddd" />
+    <option name="LAST_COMMIT_MESSAGE" value="ddd" />
   </component>
   <component name="WindowStateProjectService">
     <state x="271" y="23" key="#CLI_Interpreters" timestamp="1602334193447">
@@ -213,15 +220,15 @@
     <state x="192" y="23" key="SettingsEditor/-234.-1057.1920.1057/0.23.1366.745@0.23.1366.745" timestamp="1602335348058" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.677@0.23.1366.677" timestamp="1602334119554" />
     <state x="192" y="23" key="SettingsEditor/1366.-69.1920.1057/0.23.1366.677@0.23.1366.677" timestamp="1603215186997" />
-    <state x="398" y="173" key="Vcs.Push.Dialog.v2" timestamp="1603571853090">
-      <screen x="0" y="23" width="1366" height="677" />
+    <state x="1925" y="165" key="Vcs.Push.Dialog.v2" timestamp="1603582086207">
+      <screen x="1366" y="-69" width="1920" height="1057" />
     </state>
     <state x="326" y="-823" key="Vcs.Push.Dialog.v2/-234.-1057.1920.1057/0.23.1366.677@-234.-1057.1920.1057" timestamp="1602417589738" />
     <state x="398" y="188" key="Vcs.Push.Dialog.v2/-234.-1057.1920.989/0.23.1366.745@0.23.1366.745" timestamp="1602496863176" />
     <state x="245" y="-823" key="Vcs.Push.Dialog.v2/-314.-1057.1920.1057/0.23.1366.677@-314.-1057.1920.1057" timestamp="1603093088237" />
     <state x="245" y="-838" key="Vcs.Push.Dialog.v2/-314.-1057.1920.989/0.23.1366.745@-314.-1057.1920.989" timestamp="1603092398714" />
     <state x="398" y="173" key="Vcs.Push.Dialog.v2/1366.-69.1920.1057/0.23.1366.677@0.23.1366.677" timestamp="1603571853090" />
-    <state x="1925" y="165" key="Vcs.Push.Dialog.v2/1366.-69.1920.1057/0.23.1366.677@1366.-69.1920.1057" timestamp="1603493498545" />
+    <state x="1925" y="165" key="Vcs.Push.Dialog.v2/1366.-69.1920.1057/0.23.1366.677@1366.-69.1920.1057" timestamp="1603582086207" />
     <state x="311" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1602575974437">
       <screen x="-314" y="-1057" width="1920" height="1057" />
     </state>
