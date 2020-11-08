@@ -72,9 +72,9 @@ body
     display: grid;
     height: fit-content;
     width: fit-content;
-    grid-template-columns: auto auto ;
+    grid-template-columns: subgrid ;
     height: fit-content;
-    background-color: rgba(38, 38, 38, 0.8);
+    background-color: rgba(14, 13, 13, 0.9);
     margin: 50px auto;
     padding: 20px 20px;
     border-radius: 15px;
@@ -82,7 +82,7 @@ body
 }
 
 
-.head form input[type=text],[type=submit],[type=number]
+.head form input[type=text],[type=submit],[type=number],select
 {
     background-color: rgba(252, 252, 252, 0.8);
     display: grid;
@@ -94,7 +94,21 @@ body
     width: 250PX;
     font: bold 18px Samim;
     color: #090808;
+    width: 90%;
 }
+
+#text
+{
+    background-color: rgba(252, 252, 252, 0.8);
+    display: grid;
+    margin: 5px auto;
+    padding:12px 20px ;
+    border-radius: 1pc ;
+    border: none;
+    font: bold 18px Samim;
+
+}
+
 
 .head input[type=submit]
 {
@@ -102,6 +116,7 @@ body
     border: none;
     color: white;
 }
+
 
 /*textarea {*/
 
@@ -153,8 +168,8 @@ body
     color: black;
     background-color: rgba(247, 252, 247, 0.9);
     text-align: center;
-    margin: 50px 10px 0 ;
-    padding: 15px 30px;
+    margin: 50px 3px 0 ;
+    padding: 5px 10px;
     /*border: 1px dashed #0a0a0a;*/
     border-radius: 3pc 1pc;
     font-size: 30px;
@@ -251,19 +266,19 @@ footer a
     height: fit-content;
     width: fit-content;
     margin: auto auto;
-    grid-template-columns:  23% 23% 23% 23%  ;
+    grid-template-columns:  30%  30% 30%  ;
     justify-content: center;
     /*background-color: rgba(7, 7, 7, 0.5);*/
-    padding: 30px;
+    padding: 20px 0px;
     border-radius: 2px;
-    grid-gap: 15px;
+    grid-gap: 10px ;
 }
 
 .grid-item {
     height: fit-content;
     max-height: fit-content;
     width: fit-content;
-    background-color: rgba(250, 250, 248, 0.9);
+    background-color: white;
     /*border: 1px solid rgba(0, 0, 0, 0.8);*/
     text-align: center;
     border-radius: 15px;
@@ -293,7 +308,7 @@ footer a
 
 .grid-item:hover
 {
-    background-color: rgb(59, 58, 58);
+    background-color: rgba(14, 13, 13, 0.9);
     color: white;
 
 }
@@ -304,6 +319,46 @@ footer a
     font-size: 11px ;
     height: fit-content;
     width: fit-content;
+}
+
+
+
+.DisplayHead
+{
+    display: grid;
+
+    width: 100%;
+    margin: 20px  auto;
+    grid-template-columns:  auto auto auto  auto ;
+    justify-content: center;
+    /*background-color: rgb(255, 252, 252);*/
+    border-radius: 13px;
+    grid-gap: 15px ;
+}
+
+.diHead
+{
+
+    width: fit-content;
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    text-align: center;
+    border-radius: 15px;
+    /*border: 1px solid #c4c3c3;*/
+
+}
+
+
+.DisplayHead select
+{
+
+    margin: 5px auto;
+    padding:12px 20px ;
+    border-radius: 1pc ;
+    border: none;
+    height: 50px;
+    width: 250PX;
+    font: bold 18px Samim;
+    color: black;
 }
 
 /*  end  Display Page  */
@@ -319,26 +374,33 @@ footer a
         display: block;
     }
 
-/*    dfff */
+    /*    dfff */
 
     .grid-item {
-        margin: 15px;
+        margin: 10px;
     }
 
     .head h1
     {
-        font-size: 45px;
+        font-size: 25px;
+        height: fit-content;
+        width: fit-content;
+        padding: 15px;
     }
 
     .head h2
     {
-        font-size: 17px;
+        font-size: 13px;
+        height: fit-content;
+        width: fit-content;
+        padding: 15px;
     }
 
     .head a
     {  /* start links  of header */
 
         font-size: 20px;
+        /*margin: 20px 10px;*/
     }
 }
 
@@ -375,9 +437,16 @@ footer a
     .Display_Grid-container {
         display: grid;
         grid-template-columns:  29% 29% 29%;
+        justify-content: center;
+        margin-right: -25px;
+        grid-gap: 20px ;
+
     }
 
-
+    .grid-item
+    {
+        margin: auto 10px;
+    }
 
     .head h1
     {
@@ -401,3 +470,4 @@ footer a
 {
 
 }
+

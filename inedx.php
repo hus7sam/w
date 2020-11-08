@@ -1,4 +1,40 @@
 <?php
+include 'Connection.php';
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$itemDesc = $itemDate = $itemState = $itemCity = $itemNumber= $itemStatus= $itemCategory = "";
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+    if (!filter_var($_POST["text"],FILTER_SANITIZE_STRING))  { $textErr="الرجاء كتابة وصف العنصر"; }
+    if (empty($_POST["text"])) { $textErr="الرجاء كتابة وصف العنصر ";
+    }else { $itemDesc = mysqli_real_escape_string(test_input($_POST["text"])) ;}
+
+
+    $itemDate = date('Y-m-d H:i:s') ;
+    $itemState = 'fghf';
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql = "INSERT INTO items VALUES ('$itemDesc',14 ,'$itemDate', '$itemState','$itemCity','$itemNumber','$itemStatus','$itemCategory')";
+    // use exec() because no results are returned
+    $conn->exec($sql);
+    echo "New record created successfully";
+} catch(PDOException $e) {
+    echo $sql . "<br>" . $e->getMessage();
+}
+
+$conn = null;
+
+}
 
 ?>
 <!doctype html>
@@ -16,17 +52,20 @@
 <div class="bar">
     <h2>| فينا خير  </h2>
     <p>خير الناس أنفعهم للناس ..</p>
-
 </div>
 
 <div class="head">
 <h1>  .. خير الناس أنفعهم للناس ..
     </h1>
 
-    <a href="dispaly.php"> الصحة</a>
-    <a href="inedx.php"> التعليم</a>
-    <a href="inedx.php"> الغذاء</a>
-    <a href="inedx.php"> الكسوة</a>
+    <a href="dispaly.php">أجهزة طبية </a>
+    <a href="inedx.php"> أجهزة الكترونية</a>
+    <a href="inedx.php"> أجهزة كهربائية</a>
+    <a href="inedx.php"> كتب</a>
+    <a href="inedx.php"> مواد غذائية</a>
+    <a href="inedx.php"> أثاث</a>
+    <a href="inedx.php"> ملابس </a>
+
 <!--    <a href="inedx.php"> تبرعات</a>-->
     <h2>(يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا وَاعْبُدُوا رَبَّكُمْ وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ) </h2>
 </div>
@@ -48,11 +87,46 @@
 <div class="head">
     <h1>   التسجيل</h1>
 
-        <form>
-            <input type="text" id="fname" name="fname" placeholder="وصف للغرض">
-            <input type="text" id="lname" name="lname" placeholder="المدينة">
+        <form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <textarea cols="50" rows="3" placeholder="أكتب وصف العنصر هنا..." id="text" name="text"></textarea>
+
+            <select>
+                <option value="">-- أختر المنطقة -- </option>
+                <option value="مكة المكرمة">مكة المكرمة</option>
+                <option value="المدينة المنورة">المدينة المنورة</option>
+                <option value="الرياض ">الرياض </option>
+                <option value="عسير"> عسير</option>
+                <option value="الحدود الشمالية">الحدود الشمالية</option>
+                <option value="نجران"> نجران</option>
+                <option value="حائل">حائل </option>
+                <option value="القصيم">القصيم</option>
+                <option value="تبوك">تبوك</option>
+                <option value="جازان">جازان</option>
+                <option value="الجوف">الجوف</option>
+                <option value="الشرقية">الشرقية</option>
+            </select>
+
             <input type="text" id="lname" name="lname" placeholder="الحي">
             <input type="number" id="lname" name="lname" placeholder="رقم الجوال">
+
+                <select>
+                <option value=""> -- ختر فئة العنصر--</option>
+                <option value="أجهزة طبية">أجهزة طبية</option>
+                <option value="كتب">كتب</option>
+                <option value="ملابس">ملابس</option>
+                <option value="أثاث">أثاث</option>
+                <option value="مواد غذائية">مواد غذائية</option>
+                <option value="الكهربائيات">الكهربائيات</option>
+                <option value="الالكترونيات">الالكترونيات</option>
+                <option value="أخر">أخر</option>
+            </select>
+
+            <select name="formGender">
+                <option value="">-- أختر حالة العنصر  -- </option>
+                <option value="جديد">جديد</option>
+                <option value="مستعمل">مستعمل</option>
+            </select>
+
             <input type="submit" value="أرسل">
         </form>
 

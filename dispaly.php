@@ -21,6 +21,58 @@
 </div>
 <div class="DisplayHead">
 
+
+    <div class="diHead">
+        <select name="formGender">
+            <option value="">-- أختر المنطقة -- </option>
+            <option value="مكة المكرمة">مكة المكرمة</option>
+            <option value="المدينة المنورة">المدينة المنورة</option>
+            <option value="الرياض ">الرياض </option>
+            <option value="عسير"> عسير</option>
+            <option value="الحدود الشمالية">الحدود الشمالية</option>
+            <option value="نجران"> نجران</option>
+            <option value="حائل">حائل </option>
+            <option value="القصيم">القصيم</option>
+            <option value="تبوك">تبوك</option>
+            <option value="جازان">جازان</option>
+            <option value="الجوف">الجوف</option>
+            <option value="الشرقية">الشرقية</option>
+        </select>
+    </div>
+
+    <div class="diHead">
+        <select name="formGender">
+            <option value="">-- أختر فئة العنصر  -- </option>
+            <option value="أجهزة طبية">أجهزة طبية</option>
+            <option value="أجهزة كهربائية"> أجهزة كهربائية</option>
+            <option value="أجهزة الكترونية">أجهزة الكترونية</option>
+            <option value="كتب">كتب</option>
+            <option value="ملابس">ملابس</option>
+            <option value="أثاث">أثاث</option>
+            <option value="مواد غذائية">مواد غذائية</option>
+            <option value="أخر">أخر</option>
+        </select>
+    </div>
+    <div class="diHead">
+        <select name="formGender">
+            <option value="">-- أختر حالة العنصر  -- </option>
+            <option value="جديد">جديد</option>
+            <option value="مستعمل">مستعمل</option>
+        </select>
+    </div>
+    <div class="diHead">
+        <input type="submit" value="أبحث">
+    </div>
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <div class="Display_Grid-container">
