@@ -1,40 +1,35 @@
 <?php
 include 'Connection.php';
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
-$itemDesc = $itemDate = $itemState = $itemCity = $itemNumber= $itemStatus= $itemCategory = "";
+$itemDesc = $itemState = $itemCity = $itemNumber= $itemStatus= $itemCategory = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    if (!filter_var($_POST["text"],FILTER_SANITIZE_STRING))  { $textErr="الرجاء كتابة وصف العنصر"; }
-    if (empty($_POST["text"])) { $textErr="الرجاء كتابة وصف العنصر ";
-    }else { $itemDesc = mysqli_real_escape_string(test_input($_POST["text"])) ;}
+//    if (!filter_var($_POST["itemDesc"],FILTER_SANITIZE_STRING))  { $textErr="الرجاء كتابة وصف العنصر"; }
+//    if (empty($_POST["itemDesc"])) { $textErr="الرجاء كتابة وصف العنصر ";
+//    }else { $itemDesc = mysqli_real_escape_string(test_input($_POST["itemDesc"])) ;}
+
+    $itemID     = null;
+    $itemDesc     = $_POST["itemDesc"];
+    $itemState    = $_POST["itemState"];
+    $itemCity     = $_POST["itemCity"];
+    $itemNumber   = $_POST["itemNumber"];
+    $itemStatus   = $_POST["itemStatus"];
+    $itemCategory = $_POST["itemCategory"];
+
+    $stmt = $conn->prepare("
+            INSERT INTO items (itemID, itemDesc, itemStatus, itemCategory, itemState, itemCity, itemNumber) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("isssssi", $itemID, $itemDesc,$itemStatus, $itemCategor, $itemState, $itemCity, $itemNumber);
+    $stmt->execute();
+    echo "New records created successfully";
+    $stmt->close();
+    $conn->close();
 
 
-    $itemDate = date('Y-m-d H:i:s') ;
-    $itemState = 'fghf';
+    }
 
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO items VALUES ('$itemDesc',14 ,'$itemDate', '$itemState','$itemCity','$itemNumber','$itemStatus','$itemCategory')";
-    // use exec() because no results are returned
-    $conn->exec($sql);
-    echo "New record created successfully";
-} catch(PDOException $e) {
-    echo $sql . "<br>" . $e->getMessage();
-}
-
-$conn = null;
-
-}
 
 ?>
 <!doctype html>
@@ -88,9 +83,9 @@ $conn = null;
     <h1>   التسجيل</h1>
 
         <form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-            <textarea cols="50" rows="3" placeholder="أكتب وصف العنصر هنا..." id="text" name="text"></textarea>
+            <textarea cols="50" rows="3" placeholder="أكتب وصف العنصر هنا..." id="text" name="itemDesc"></textarea>
 
-            <select>
+            <select name="itemState">
                 <option value="">-- أختر المنطقة -- </option>
                 <option value="مكة المكرمة">مكة المكرمة</option>
                 <option value="المدينة المنورة">المدينة المنورة</option>
@@ -106,10 +101,11 @@ $conn = null;
                 <option value="الشرقية">الشرقية</option>
             </select>
 
-            <input type="text" id="lname" name="lname" placeholder="الحي">
-            <input type="number" id="lname" name="lname" placeholder="رقم الجوال">
+            <input type="text" id="itemCity" name="itemCity" placeholder="المدينة">
 
-                <select>
+            <input type="number" id="itemNumber" name="itemNumber" placeholder="رقم الجوال">
+
+                <select name="itemCategory">
                 <option value=""> -- ختر فئة العنصر--</option>
                 <option value="أجهزة طبية">أجهزة طبية</option>
                 <option value="كتب">كتب</option>
@@ -121,7 +117,7 @@ $conn = null;
                 <option value="أخر">أخر</option>
             </select>
 
-            <select name="formGender">
+            <select name="itemStatus">
                 <option value="">-- أختر حالة العنصر  -- </option>
                 <option value="جديد">جديد</option>
                 <option value="مستعمل">مستعمل</option>

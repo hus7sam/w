@@ -19,11 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="adding grip">
-      <change afterPath="$PROJECT_DIR$/Connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+    <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="hh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispaly.php" beforeDir="false" afterPath="$PROJECT_DIR$/dispaly.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/Connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inedx.php" beforeDir="false" afterPath="$PROJECT_DIR$/inedx.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
@@ -61,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -144,10 +142,15 @@
       <screen x="0" y="23" width="1366" height="677" />
     </state>
     <state x="375" y="23" key="#PHP/0.23.1366.677@0.23.1366.677" timestamp="1602334194602" />
-    <state x="478" y="147" key="#Web_Browsers" timestamp="1602334142801">
-      <screen x="0" y="23" width="1366" height="677" />
+    <state x="2038" y="106" key="#Web_Browsers" timestamp="1604870622887">
+      <screen x="1366" y="-92" width="1920" height="1080" />
     </state>
     <state x="478" y="147" key="#Web_Browsers/0.23.1366.677@0.23.1366.677" timestamp="1602334142801" />
+    <state x="2038" y="106" key="#Web_Browsers/1366.-92.1920.1080/0.0.1366.768@1366.-92.1920.1080" timestamp="1604870622887" />
+    <state x="1926" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604869396883">
+      <screen x="1366" y="-92" width="1920" height="1080" />
+    </state>
+    <state x="1926" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog/1366.-92.1920.1080/0.0.1366.768@1366.-92.1920.1080" timestamp="1604869396883" />
     <state x="606" y="-659" key="Github.ShareDialog" timestamp="1602417373874">
       <screen x="-234" y="-1057" width="1920" height="1057" />
     </state>
@@ -166,15 +169,21 @@
     <state x="397" y="-637" key="NewPhpFileDialog/-314.-1057.1920.1057/0.23.1366.677@-314.-1057.1920.1057" timestamp="1602575931973" />
     <state x="506" y="292" key="NewPhpFileDialog/0.23.1366.677@0.23.1366.677" timestamp="1602333949809" />
     <state x="569" y="343" key="NewPhpFileDialog/1920.0.1280.720/0.0.1536.864@0.0.1536.864" timestamp="1604790304834" />
-    <state x="216" y="0" key="SettingsEditor" timestamp="1604790442722">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="1636" y="-92" key="SettingsEditor" timestamp="1604865305601">
+      <screen x="1366" y="-92" width="1920" height="1080" />
     </state>
     <state x="36" y="-1057" key="SettingsEditor/-234.-1057.1920.1057/0.23.1366.677@-234.-1057.1920.1057" timestamp="1602500823048" />
     <state x="192" y="23" key="SettingsEditor/-234.-1057.1920.1057/0.23.1366.677@0.23.1366.677" timestamp="1602493761382" />
     <state x="36" y="-1057" key="SettingsEditor/-234.-1057.1920.1057/0.23.1366.745@-234.-1057.1920.1057" timestamp="1602338170714" />
     <state x="192" y="23" key="SettingsEditor/-234.-1057.1920.1057/0.23.1366.745@0.23.1366.745" timestamp="1602335348058" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.677@0.23.1366.677" timestamp="1602334119554" />
+    <state x="1636" y="-92" key="SettingsEditor/1366.-92.1920.1080/0.0.1366.768@1366.-92.1920.1080" timestamp="1604865287878" />
+    <state x="1636" y="-92" key="SettingsEditor/1366.-92.1920.1080/0.23.1366.745@1366.-92.1920.1080" timestamp="1604865305601" />
     <state x="216" y="0" key="SettingsEditor/1920.0.1280.720/0.0.1536.864@0.0.1536.864" timestamp="1604790442722" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1604869914063">
+      <screen x="1366" y="-92" width="1920" height="1080" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/1366.-92.1920.1080/0.0.1366.768@1366.-92.1920.1080" timestamp="1604869914063" />
     <state x="447" y="182" key="Vcs.Push.Dialog.v2" timestamp="1604090503536">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -183,14 +192,20 @@
     <state x="245" y="-823" key="Vcs.Push.Dialog.v2/-314.-1057.1920.1057/0.23.1366.677@-314.-1057.1920.1057" timestamp="1602663943566" />
     <state x="447" y="182" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1858.0.1474.864@0.0.1536.824" timestamp="1603660137390" />
     <state x="447" y="182" key="Vcs.Push.Dialog.v2/1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1604090503536" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603653192444">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="2099" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604869847377">
+      <screen x="1366" y="-92" width="1920" height="1080" />
     </state>
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-1858.0.1474.864@0.0.1536.824" timestamp="1603653192444" />
-    <state x="311" y="-839" width="670" height="676" key="search.everywhere.popup" timestamp="1602575974437">
-      <screen x="-314" y="-1057" width="1920" height="1057" />
+    <state x="2099" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1366.-92.1920.1080/0.0.1366.768@1366.-92.1920.1080" timestamp="1604869847377" />
+    <state x="1991" y="209" key="run.anything.popup" timestamp="1604869867425">
+      <screen x="1366" y="-92" width="1920" height="1080" />
+    </state>
+    <state x="1991" y="209" key="run.anything.popup/1366.-92.1920.1080/0.0.1366.768@1366.-92.1920.1080" timestamp="1604869867425" />
+    <state x="1991" y="131" width="670" height="691" key="search.everywhere.popup" timestamp="1604869845990">
+      <screen x="1366" y="-92" width="1920" height="1080" />
     </state>
     <state x="391" y="-839" width="670" height="676" key="search.everywhere.popup/-234.-1057.1920.1057/0.23.1366.677@-234.-1057.1920.1057" timestamp="1602404561889" />
     <state x="311" y="-839" width="670" height="676" key="search.everywhere.popup/-314.-1057.1920.1057/0.23.1366.677@-314.-1057.1920.1057" timestamp="1602575974437" />
+    <state x="1991" y="131" width="670" height="691" key="search.everywhere.popup/1366.-92.1920.1080/0.0.1366.768@1366.-92.1920.1080" timestamp="1604869845990" />
   </component>
 </project>
