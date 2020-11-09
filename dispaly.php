@@ -101,7 +101,7 @@
     <?php
     require 'Connection.php';
 
-    $stmt = $conn->prepare("select itemDesc,itemState,itemCity,itemNumber from items order by itemDate ASC");
+    $stmt = $conn->prepare("select itemDesc,itemState,itemCity,itemNumber from items order by itemDate DESC ");
     if(!$stmt){
         printf("Query Prep Failed: %s\n", $conn->error);
         exit;
