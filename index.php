@@ -8,7 +8,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 //    if (!filter_var($_POST["itemDesc"],FILTER_SANITIZE_STRING))  { $textErr="الرجاء كتابة وصف العنصر"; }
 //    if (empty($_POST["itemDesc"])) { $textErr="الرجاء كتابة وصف العنصر ";
 //    }else { $itemDesc = mysqli_real_escape_string(test_input($_POST["itemDesc"])) ;}
-
     $itemID     = null;
     $itemDesc     = $_POST["itemDesc"];
     $itemState    = $_POST["itemState"];
@@ -17,14 +16,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $itemStatus   = $_POST["itemStatus"];
     $itemCategory = $_POST["itemCategory"];
 
-    $stmt = $conn->prepare("
-            INSERT INTO items (itemID, itemDesc, itemStatus, itemCategory, itemState, itemCity, itemNumber) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("isssssi", $itemID, $itemDesc,$itemStatus, $itemCategor, $itemState, $itemCity, $itemNumber);
+
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    $stmt = $conn->prepare('INSERT INTO items (itemID,itemDesc,itemStatus,itemCategory,itemState,itemCity,itemNumber) 
+            VALUES (?,?,?,?,?,?,?) ');
+//    if(!$stmt){
+//        printf("Query Prep Failed: %s\n", $conn->error);
+//        exit;
+//    }
+    $stmt->bind_param('isssssi', $itemID,$itemDesc,$itemStatus,$itemCategory,$itemState,$itemCity,$itemNumber);
     $stmt->execute();
     echo "New records created successfully";
-    $stmt->close();
-    $conn->close();
+
 
 
     }
@@ -54,12 +63,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </h1>
 
     <a href="dispaly.php">أجهزة طبية </a>
-    <a href="inedx.php"> أجهزة الكترونية</a>
-    <a href="inedx.php"> أجهزة كهربائية</a>
-    <a href="inedx.php"> كتب</a>
-    <a href="inedx.php"> مواد غذائية</a>
-    <a href="inedx.php"> أثاث</a>
-    <a href="inedx.php"> ملابس </a>
+    <a href="index.php"> أجهزة الكترونية</a>
+    <a href="index.php"> أجهزة كهربائية</a>
+    <a href="index.php"> كتب</a>
+    <a href="index.php"> مواد غذائية</a>
+    <a href="index.php"> أثاث</a>
+    <a href="index.php"> ملابس </a>
 
 <!--    <a href="inedx.php"> تبرعات</a>-->
     <h2>(يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا وَاعْبُدُوا رَبَّكُمْ وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ) </h2>
@@ -122,6 +131,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <option value="جديد">جديد</option>
                 <option value="مستعمل">مستعمل</option>
             </select>
+            <span class="error">* <?php echo $nameErr;?></span>
 
             <input type="submit" value="أرسل">
         </form>
