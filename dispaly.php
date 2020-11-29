@@ -77,33 +77,14 @@
 
 <div class="Display_Grid-container">
 
-        <div class="grid-item">
-            <table>
-                <tr>
-                    <td COLSPAN="3">هناك الكثير من الحكم المنتشرة والشائعة بين الناس؛ حيث إنّها تُقال بعد المرور بعدّة مواقف قد يتعرّض لها الإنسان فيأخذ العظة والعبرة منها، وسنذكر في هذا المقال أجمل الحكم الشائعة بين الناس
-                    </td>
-                </tr>
-<!--                <tr>-->
-<!--                    <td> المدينة</td>-->
-<!--                    <td> الحي</td>-->
-<!--                    <td> رقم الجوال</td>-->
-<!--                </tr>-->
-                <tr ALIGN="CENTER">
-                    <td>الرياض </td>
-                    <td>حي النسيم</td>
-                    <td>0123456789 </td>
-                </tr>
-            </table>
-
-        </div>
 
 
     <?php
     require 'Connection.php';
-
-    $stmt = $conn->prepare("select itemDesc,itemState,itemCity,itemNumber from items order by itemDate DESC ");
-    if(!$stmt){
-        printf("Query Prep Failed: %s\n", $conn->error);
+$stmt = $conn->prepare("select itemDesc,itemState,itemCity,itemNumber from items order by itemDate DESC ");
+if(!$stmt){
+    printf("Query Prep Failed: %s
+\n", $conn->error);
         exit;
     }
 
@@ -125,7 +106,9 @@
                     <td>$itemCity</td>
                     <td>$itemNumber </td>
                 </tr>
+                
             </table>
+            <img src='' class='imh_grid'>
        </div>";
 
     }

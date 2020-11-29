@@ -268,18 +268,17 @@ footer a
     height: fit-content;
     width: fit-content;
     margin: auto auto;
-    grid-template-columns:  30%  30% 30%  ;
+    grid-template-columns:  auto auto auto ;
     justify-content: center;
     /*background-color: rgba(7, 7, 7, 0.5);*/
-    padding: 20px 0px;
+    padding: 15px 30px;
     border-radius: 2px;
-    grid-gap: 10px ;
+    grid-gap: 20px ;
+
 }
 
 .grid-item {
-    height: fit-content;
-    max-height: fit-content;
-    width: fit-content;
+
     background-color: white;
     /*border: 1px solid rgba(0, 0, 0, 0.8);*/
     text-align: center;
@@ -323,7 +322,11 @@ footer a
     width: fit-content;
 }
 
-
+.imh_grid
+{
+    height: 200px;
+    width: 200px;
+}
 
 .DisplayHead
 {
@@ -438,15 +441,14 @@ footer a
     .Display_Grid-container {
         display: grid;
         grid-template-columns:  29% 29% 29%;
-        justify-content: center;
-        margin-right: -25px;
+
         grid-gap: 20px ;
 
     }
 
     .grid-item
     {
-        margin: auto 10px;
+        /*margin: auto 10px;*/
     }
 
     .head h1

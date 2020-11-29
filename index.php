@@ -139,14 +139,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 </div>
 
-
 <footer>
     <ul>
 
         <li> لتواصل عبر البريد الالكتوني
             <ul>
                 <li><a href="mailto:hege@example.com">hege@example.com</a></li>
-
             </ul>
         </li>
 
