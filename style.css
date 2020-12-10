@@ -112,11 +112,18 @@ body
 }
 
 
-.head input[type=submit]
+.btn_submit
 {
-    background-color: gold;
+    background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%);
     border: none;
     color: white;
+}
+
+.btn_submit:hover
+{
+    background-image: linear-gradient(to right, #f8f7f4 0%, #ffcc33  51%, #fffefc 100%);
+    border: none;
+    color: black;
 }
 
 
@@ -474,3 +481,34 @@ footer a
 
 }
 
+.alert_success{
+    width: 100%;
+    margin: 0px;
+    padding: 5px;
+    background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+    text-align: center;
+    font-size: 25px;
+    color: green;
+    }
+
+
+.alert_danger{
+    width: 100%;
+    margin: 0px;
+    padding: 5px;
+    background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.alert_info{
+    width: 100%;
+    margin: 0px;
+    padding: 5px;
+    /*background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);*/
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}

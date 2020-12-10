@@ -8,7 +8,7 @@ if(isset($_POST["itemDesc"])){
 //    if (!filter_var($_POST["itemDesc"],FILTER_SANITIZE_STRING))  { $textErr="الرجاء كتابة وصف العنصر"; }
 //    if (empty($_POST["itemDesc"])) { $textErr="الرجاء كتابة وصف العنصر ";
 //    }else { $itemDesc = mysqli_real_escape_string(test_input($_POST["itemDesc"])) ;}
-    $itemID       = 66;
+
     $itemDesc     = $_POST["itemDesc"];
     $itemState    = $_POST["itemState"];
     $itemCity     = $_POST["itemCity"];
@@ -24,22 +24,24 @@ if(isset($_POST["itemDesc"])){
         return $data;
     }
 
-    try {
-        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
-        $sql ='INSERT INTO items (itemID, itemDesc, itemStatus) 
-                      VALUES (:itemID,:itemDesc,:itemStatus) ';
-        $stmt = $conn->prepare($sql);
-        $stmt->execute($r=array(
-            'itemID'      => $itemID,
-            'itemDesc'    => $itemDesc,
-            'itemStatus'  => $itemStatus
-        ));
-        echo "New records created successfully";
 
-        print_r($r);
+    try {
+
+        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+        $sql ="INSERT INTO items (itemID,itemState,itemStatus) 
+                      VALUES(:itID, :itDesc, :itStatus) ";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(array(
+            'itID'     => null,
+            'itDesc'   => $itemDesc,
+            'itStatus' => $itemStatus,
+    ));
+        echo "<p class='alert_success'>.. لقد تم إضافة الاعلان بنجاح ..</p>";
+
+//        print_r($r);
     }catch (PDOException $error){
 
-        echo $error->getMessage();
+        echo "<p class='alert_danger'>".$error->getMessage() ."</p>";
     }
 
 
@@ -146,7 +148,7 @@ if(isset($_POST["itemDesc"])){
             </select>
             <span class="error">* <?php echo $nameErr;?></span>
 
-            <input type="submit" value="أرسل">
+            <input type="submit" class="btn_submit" value="أرسل">
         </form>
 
 

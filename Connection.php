@@ -3,9 +3,14 @@ $dbhost = "localhost";
 $dbusername = "root";
 $dbpassword = "";
 $dbname = "w";
+
 try {
-    $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $options = array(
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_EMULATE_PREPARES => false
+    );
+    $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+
 
 }catch (PDOException $error){
 
