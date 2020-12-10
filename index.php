@@ -3,12 +3,12 @@ include 'Connection.php';
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
 $itemDesc = $itemState = $itemCity = $itemNumber= $itemStatus= $itemCategory = "";
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if(isset($_POST["itemDesc"])){
 
 //    if (!filter_var($_POST["itemDesc"],FILTER_SANITIZE_STRING))  { $textErr="الرجاء كتابة وصف العنصر"; }
 //    if (empty($_POST["itemDesc"])) { $textErr="الرجاء كتابة وصف العنصر ";
 //    }else { $itemDesc = mysqli_real_escape_string(test_input($_POST["itemDesc"])) ;}
-    $itemID     = null;
+    $itemID       = 66;
     $itemDesc     = $_POST["itemDesc"];
     $itemState    = $_POST["itemState"];
     $itemCity     = $_POST["itemCity"];
@@ -24,15 +24,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         return $data;
     }
 
-    $stmt = $conn->prepare('INSERT INTO items (itemID,itemDesc,itemStatus,itemCategory,itemState,itemCity,itemNumber) 
-            VALUES (?,?,?,?,?,?,?) ');
-//    if(!$stmt){
-//        printf("Query Prep Failed: %s\n", $conn->error);
-//        exit;
-//    }
-    $stmt->bind_param('isssssi', $itemID,$itemDesc,$itemStatus,$itemCategory,$itemState,$itemCity,$itemNumber);
-    $stmt->execute();
-    echo "New records created successfully";
+    try {
+        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
+        $sql ='INSERT INTO items (itemID, itemDesc, itemStatus) 
+                      VALUES (:itemID,:itemDesc,:itemStatus) ';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($r=array(
+            'itemID'      => $itemID,
+            'itemDesc'    => $itemDesc,
+            'itemStatus'  => $itemStatus
+        ));
+        echo "New records created successfully";
+
+        print_r($r);
+    }catch (PDOException $error){
+
+        echo $error->getMessage();
+    }
+
+
+
+
+
 
 
 
@@ -91,7 +104,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <div class="head">
     <h1>   التسجيل</h1>
 
-        <form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <form  method="post" action="index.php">
             <textarea cols="50" rows="3" placeholder="أكتب وصف العنصر هنا..." id="text" name="itemDesc"></textarea>
 
             <select name="itemState">
