@@ -81,41 +81,33 @@
 
     <?php
     require 'Connection.php';
-$stmt = $conn->prepare("select itemDesc,itemState,itemCity,itemNumber from items order by itemDate DESC ");
-if(!$stmt){
-    printf("Query Prep Failed: %s
-\n", $conn->error);
-        exit;
-    }
-
+    $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+    $sql = "select *
+            from items
+            order by itemDate DESC ";
+    $stmt = $conn->prepare($sql);
     $stmt->execute();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    $stmt->bind_result($itemDesc, $itemState,	$itemCity,$itemNumber);
-
-
-    while($stmt->fetch()){
- echo "<div class='grid-item'>
+    foreach($rows as $row){
+        ?>
+ <div class='grid-item'>
 
         <table>
                 <tr>
-                    <td COLSPAN='3'>  $itemDesc  </td>
+                    <td COLSPAN='3'><?php echo $row['itemCity']; ?> </td>
                 </tr>
 
                 <tr ALIGN='CENTER'>
-                    <td>$itemState</td>
-                    <td>$itemCity</td>
-                    <td>$itemNumber </td>
+                    <td><?php echo $row['itemState']; ?></td>
+                    <td><?php echo $row['itemCity']; ?></td>
+                    <td><?php  echo $row['itemNumber']; ?> </td>
                 </tr>
                 
             </table>
-            <img src='' class='imh_grid'>
-       </div>";
-
-    }
-
-
-    $stmt->close();
-    ?>
+<!--            <img src='' class='imh_grid'>-->
+       </div>
+<?php }  ?>
 
 
 
