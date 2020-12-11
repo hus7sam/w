@@ -83,7 +83,7 @@
     require 'Connection.php';
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
     $sql = "select *
-            from items
+            from item
             order by itemDate DESC ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
@@ -93,20 +93,39 @@
         ?>
  <div class='grid-item'>
 
+
+         <p class="link_item"><?php echo '#'. $row['ID']; ?> </p>
+
         <table>
-                <tr>
-                    <td COLSPAN='3'><?php echo $row['itemCity']; ?> </td>
+
+            <tr>
+
+
+                    <td COLSPAN='2' class="td_desc">
+                        <?php
+
+                        $string = strip_tags($row['Description']);
+                        if (strlen($string) > 100) {
+
+                            // truncate string
+                            $stringCut = substr($string, 0, 100);
+                            $endPoint = strrpos($stringCut, ' ');
+
+                            //if the string doesn't contain any space then it will cut without word basis.
+                            $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                            echo $string . " ..." ;
+                        } ?></td>
                 </tr>
 
                 <tr ALIGN='CENTER'>
-                    <td><?php echo $row['itemState']; ?></td>
-                    <td><?php echo $row['itemCity']; ?></td>
-                    <td><?php  echo $row['itemNumber']; ?> </td>
+                    <td><?php echo $row['City']; ?></td>
+                    <td><?php  echo $row['Number']; ?> </td>
                 </tr>
                 
             </table>
-<!--            <img src='' class='imh_grid'>-->
+     <a class="link_item" href="dispaly.php">تفاصيل اكثر</a>
        </div>
+
 <?php }  ?>
 
 

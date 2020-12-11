@@ -264,9 +264,9 @@ footer a
 /*  start  Display Page  */
 .Display_Body
 {
-    background-color: rgba(255, 215, 0, 0.9);
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;    margin: auto auto;
 
-    margin: auto auto;
 }
 
 
@@ -275,24 +275,48 @@ footer a
     height: fit-content;
     width: fit-content;
     margin: auto auto;
-    grid-template-columns:  auto auto auto ;
+    grid-template-columns: auto auto auto auto ;
     justify-content: center;
     /*background-color: rgba(7, 7, 7, 0.5);*/
     padding: 15px 30px;
-    border-radius: 2px;
+    /*border-radius: 2px;*/
     grid-gap: 20px ;
 
 }
 
 .grid-item {
-
+    display: block;
     background-color: white;
     /*border: 1px solid rgba(0, 0, 0, 0.8);*/
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
     /*border: 1px solid #c4c3c3;*/
-    padding: 2px 3px;
+    padding: 0px;
 }
+
+.link_item
+{
+    display: block;
+    width:100%;
+    margin: 0px auto;
+    padding:5px 5px;
+    background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius:0px 0px 10px 10px ;
+
+}
+
+.link_item:hover
+{
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);}
+
+.td_desc
+{
+    height: 70px;
+}
+
 
 .grid-item table ,td
 {
@@ -304,11 +328,12 @@ footer a
     border-spacing: 0.4rem;
 }
 
+
 .grid-item td
 {
     width: fit-content;
     max-height: fit-content;
-    border: 1px solid #c4c3c3;
+    border: 1px solid #1d1c1c;
     border-radius:10px;
     padding: 5px 5px;
 
@@ -316,12 +341,9 @@ footer a
 
 .grid-item:hover
 {
-    background-color: rgba(14, 13, 13, 0.9);
-    color: white;
-
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    color: black;
 }
-
-
 
 .grid-item p{
     font-size: 11px ;
@@ -338,7 +360,6 @@ footer a
 .DisplayHead
 {
     display: grid;
-
     width: 100%;
     margin: 20px  auto;
     grid-template-columns:  auto auto auto  auto ;
@@ -350,7 +371,6 @@ footer a
 
 .diHead
 {
-
     width: fit-content;
     /*border: 1px solid rgba(0, 0, 0, 0.8);*/
     text-align: center;
