@@ -43,17 +43,7 @@ if(isset($_POST["itemDesc"])){
 
         echo "<p class='alert_danger'>".$error->getMessage() ."</p>";
     }
-
-
-
-
-
-
-
-
     }
-
-
 
 ?>
 <!doctype html>
@@ -105,12 +95,11 @@ if(isset($_POST["itemDesc"])){
 
 <div class="head">
     <h1>   التسجيل</h1>
-
-        <form  method="post" action="index.php">
-            <textarea cols="50" rows="3" placeholder="أكتب وصف العنصر هنا..." id="text" name="itemDesc"></textarea>
-
-            <select name="itemState">
-                <option value="">-- أختر المنطقة -- </option>
+    <div class="box_form">
+        <form  class="form_insert" action="index.php" method="post">
+            <textarea class="textarea_form_insert"          name="it_Descrption" placeholder="أكتب وصف للعنصر"></textarea>
+            <select class="list_insert">
+                <option value="">-- أختر المنطقة --</option>
                 <option value="مكة المكرمة">مكة المكرمة</option>
                 <option value="المدينة المنورة">المدينة المنورة</option>
                 <option value="الرياض ">الرياض </option>
@@ -124,12 +113,10 @@ if(isset($_POST["itemDesc"])){
                 <option value="الجوف">الجوف</option>
                 <option value="الشرقية">الشرقية</option>
             </select>
+            <input    class="input_form_insert" type="text" name="city"          placeholder="أكتب اسم المدينة">
+            <input    class="input_form_insert" type="text" name="city"          placeholder="رقم الرقم التواصل">
 
-            <input type="text" id="itemCity" name="itemCity" placeholder="المدينة">
-
-            <input type="number" id="itemNumber" name="itemNumber" placeholder="رقم الجوال">
-
-                <select name="itemCategory">
+            <select class="list_insert">
                 <option value=""> -- ختر فئة العنصر--</option>
                 <option value="أجهزة طبية">أجهزة طبية</option>
                 <option value="كتب">كتب</option>
@@ -141,16 +128,16 @@ if(isset($_POST["itemDesc"])){
                 <option value="أخر">أخر</option>
             </select>
 
-            <select name="itemStatus">
+            <select class="list_insert">
                 <option value="">-- أختر حالة العنصر  -- </option>
                 <option value="جديد">جديد</option>
                 <option value="مستعمل">مستعمل</option>
             </select>
-            <span class="error">* <?php echo $nameErr;?></span>
 
-            <input type="submit" class="btn_submit" value="أرسل">
+            <input class="btn_submit_sreach" type="submit" value="بحث">
+
         </form>
-
+    </div>
 
 </div>
 

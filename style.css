@@ -69,36 +69,6 @@ body
     max-height: 100pc;
 }
 
-.head form
-{
-    display: grid;
-    height: fit-content;
-    width: fit-content;
-    grid-template-columns: subgrid ;
-    height: fit-content;
-    background-color: rgba(14, 13, 13, 0.9);
-    margin: 50px auto;
-    padding: 20px 20px;
-    border-radius: 15px;
-    grid-gap: 15px;
-}
-
-
-.head form input[type=text],[type=submit],[type=number]
-{
-    background-color: rgba(252, 252, 252, 0.8);
-    display: grid;
-    margin: 5px auto;
-    padding:12px 20px ;
-    border-radius: 1pc ;
-    border: none;
-    height: 50px;
-    width: 250PX;
-    font: bold 18px Samim;
-    color: #090808;
-    width: 90%;
-}
-
 #text
 {
     background-color: rgba(252, 252, 252, 0.8);
@@ -144,6 +114,7 @@ body
     display: inline-block;
     height: fit-content;
     width: fit-content;
+    width: -moz-fit-content;
     display: block;
     color: black;
     background-color: rgba(250, 250, 248, 0.9);
@@ -164,6 +135,7 @@ body
     font-size: 30px;
     height: fit-content;
     width: fit-content;
+    width: -moz-fit-content;
     border-radius: 6pc 3pc;
     background-color: rgba(2, 2, 2, 0.4);
 }
@@ -264,9 +236,11 @@ footer a
     background: linear-gradient(-90deg, #BCC5CE 20%, #f8bb00 98%), radial-gradient(at bottom left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
     margin: auto auto;
+    display: block;
 }
 
 .Display_Grid-container {
+
     display: grid;
     height: fit-content;
     width: 95%;
@@ -274,6 +248,7 @@ footer a
     grid-template-columns: auto auto auto auto ;
     justify-content: center;
     background-color: rgba(7, 7, 7, 0.5);
+    /*background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);*/
     padding: 30px 30px;
     border-radius: 10px;
     grid-gap: 25px ;
@@ -362,14 +337,80 @@ footer a
     grid-gap: 15px ;
 }
 
-.box_sreach
+.box_form
 {
     display: block;
-    margin: 10px auto ;
+    margin: 60px auto ;
+    padding: 10px 15px;
+    width: fit-content;
+    width: -moz-fit-content;
+    height: fit-content;
+    /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
+    background-color: rgba(7, 7, 7, 0.5);
+    color: snow;
+    text-align: center;
+    border-radius: 15px;
+    vertical-align: top;
+}
+
+.form_insert
+{
+    vertical-align: top;
+    width: fit-content;
+    height: fit-content;
+    margin: 10px auto;
+    padding: 10px 5px;
+    display: block;
+    vertical-align: top;
+}
+
+
+
+.list_insert
+{
+    display: block;
+    margin: 15px auto;
+    padding: 5px 10px;
+    height: 45px;
+    width: 300px;
+    border-radius: 10px;
+    border-width: 0px;
+
+}
+
+input[type=text].input_form_insert
+{
+    display: block;
+    margin: 15px auto;
+    padding: 5px 10px;
+    height: 45px;
+    width: 300px;
+    border-radius: 10px;
+    border-width: 0px;
+}
+
+
+.textarea_form_insert
+{
+    display: block;
+    margin: 15px auto;
+    padding: 5px 10px;
+    height: 90px;
+    max-height: 90px;
+    width: 300px;
+    max-width: 300px;
+    border-radius: 10px;
+    border-width: 0px;
+}
+
+.box_sreach
+{
+    margin: 15px auto ;
     padding: 10px 5px;
     width: fit-content;
     height: fit-content;
-    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
+    background-color: rgba(7, 7, 7, 0.5);
     color: snow;
     text-align: center;
     border-radius: 15px;
@@ -377,29 +418,32 @@ footer a
 
 .list_sreach
 {
-    width: 80%;
-    height: 40px ;
+    width: 90%;
+    height: 45px ;
     width: -moz-fit-content;
-    margin: 5px auto;
+    margin: 10px auto;
     padding: 5px 10px;
     border-radius: 10px;
     background-color: rgba(252, 249, 249, 0.8);
     text-align: center;
     /*font-family: Arial;*/
+    grid-template-columns: auto auto auto auto;
+
 }
 
 
+
 .btn_submit_sreach {
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #e3e0a2 100%);
 }
 .btn_submit_sreach {
     margin: 5px auto;
     padding: 5px 10px;
-    height: 40px ;
-    width: 80%;
+    height: 45px ;
+    width: 90%;
     text-align: center;
-    transition: 0.6s;
-    background-size: 200% auto;
+    transition: 0.1s;
+    background-size: 300% auto;
     color: black;
     /*box-shadow: 0 0 20px #eee;*/
     border-radius: 10px;
@@ -568,6 +612,7 @@ footer a
 #id_item
 {
     width: fit-content;
+    width: -moz-fit-content;
     margin:0 auto;
     padding: 5px 5px;
     background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
