@@ -84,7 +84,7 @@ body
 }
 
 
-.head form input[type=text],[type=submit],[type=number],select
+.head form input[type=text],[type=submit],[type=number]
 {
     background-color: rgba(252, 252, 252, 0.8);
     display: grid;
@@ -250,8 +250,6 @@ footer h3
     margin: auto 200px ;
     text-align: center;
     padding: 5px 5px;
-
-
 }
 
 footer a
@@ -260,27 +258,25 @@ footer a
     color: white;
 }
 
-
 /*  start  Display Page  */
 .Display_Body
 {
-    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-    background-blend-mode: screen;    margin: auto auto;
-
+    background: linear-gradient(-90deg, #BCC5CE 20%, #f8bb00 98%), radial-gradient(at bottom left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;
+    margin: auto auto;
 }
-
 
 .Display_Grid-container {
     display: grid;
     height: fit-content;
-    width: fit-content;
+    width: 95%;
     margin: auto auto;
     grid-template-columns: auto auto auto auto ;
     justify-content: center;
-    /*background-color: rgba(7, 7, 7, 0.5);*/
-    padding: 15px 30px;
-    /*border-radius: 2px;*/
-    grid-gap: 20px ;
+    background-color: rgba(7, 7, 7, 0.5);
+    padding: 30px 30px;
+    border-radius: 10px;
+    grid-gap: 25px ;
 
 }
 
@@ -317,7 +313,6 @@ footer a
     height: 70px;
 }
 
-
 .grid-item table ,td
 {
     table-layout: auto;
@@ -328,7 +323,6 @@ footer a
     border-spacing: 0.4rem;
 }
 
-
 .grid-item td
 {
     width: fit-content;
@@ -336,7 +330,6 @@ footer a
     border: 1px solid #1d1c1c;
     border-radius:10px;
     padding: 5px 5px;
-
 }
 
 .grid-item:hover
@@ -369,28 +362,67 @@ footer a
     grid-gap: 15px ;
 }
 
+.box_sreach
+{
+    display: block;
+    margin: 10px auto ;
+    padding: 10px 5px;
+    width: fit-content;
+    height: fit-content;
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    color: snow;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.list_sreach
+{
+    width: 80%;
+    height: 40px ;
+    width: -moz-fit-content;
+    margin: 5px auto;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgba(252, 249, 249, 0.8);
+    text-align: center;
+    /*font-family: Arial;*/
+}
+
+
+.btn_submit_sreach {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.btn_submit_sreach {
+    margin: 5px auto;
+    padding: 5px 10px;
+    height: 40px ;
+    width: 80%;
+    text-align: center;
+    transition: 0.6s;
+    background-size: 200% auto;
+    color: black;
+    /*box-shadow: 0 0 20px #eee;*/
+    border-radius: 10px;
+    display: block;
+    font-family: calibri;
+}
+
+.btn_submit_sreach:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: black;
+    text-decoration: none;
+}
+
 .diHead
 {
     width: fit-content;
-    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    border: 1px solid rgba(0, 0, 0, 0.8);
     text-align: center;
     border-radius: 15px;
     /*border: 1px solid #c4c3c3;*/
-
 }
 
 
-.DisplayHead select
-{
-    margin: 5px auto;
-    padding:12px 20px ;
-    border-radius: 1pc ;
-    border: none;
-    height: 50px;
-    width: 250PX;
-    font: bold 18px Samim;
-    color: black;
-}
 
 /*  end  Display Page  */
 
@@ -471,7 +503,7 @@ footer a
 
         grid-gap: 20px ;
 
-    }
+    }id_item
 
     .grid-item
     {
@@ -532,3 +564,16 @@ footer a
     font-size: 25px;
     color: white;
 }
+
+#id_item
+{
+    width: fit-content;
+    margin:0 auto;
+    padding: 5px 5px;
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
+

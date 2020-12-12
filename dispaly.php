@@ -20,71 +20,61 @@
 
 </div>
 <div class="DisplayHead">
+    <div class="box_sreach">
+        <form action="dispaly.php" method="post">
+            <select class="list_sreach">
+                <option value="">-- أختر المنطقة --</option>
+                <option value="مكة المكرمة">مكة المكرمة</option>
+                <option value="المدينة المنورة">المدينة المنورة</option>
+                <option value="الرياض ">الرياض </option>
+                <option value="عسير"> عسير</option>
+                <option value="الحدود الشمالية">الحدود الشمالية</option>
+                <option value="نجران"> نجران</option>
+                <option value="حائل">حائل </option>
+                <option value="القصيم">القصيم</option>
+                <option value="تبوك">تبوك</option>
+                <option value="جازان">جازان</option>
+                <option value="الجوف">الجوف</option>
+                <option value="الشرقية">الشرقية</option>
+            </select>
 
+            <select class="list_sreach">
+                <option value="">-- أختر فئة العنصر --</option>
+                <option value="أجهزة طبية">أجهزة طبية</option>
+                <option value="أجهزة كهربائية"> أجهزة كهربائية</option>
+                <option value="أجهزة الكترونية">أجهزة الكترونية</option>
+                <option value="كتب">كتب</option>
+                <option value="ملابس">ملابس</option>
+                <option value="أثاث">أثاث</option>
+                <option value="مواد غذائية">مواد غذائية</option>
+                <option value="أخر">أخر</option>
+            </select>
 
-    <div class="diHead">
-        <select name="formGender">
-            <option value="">-- أختر المنطقة -- </option>
-            <option value="مكة المكرمة">مكة المكرمة</option>
-            <option value="المدينة المنورة">المدينة المنورة</option>
-            <option value="الرياض ">الرياض </option>
-            <option value="عسير"> عسير</option>
-            <option value="الحدود الشمالية">الحدود الشمالية</option>
-            <option value="نجران"> نجران</option>
-            <option value="حائل">حائل </option>
-            <option value="القصيم">القصيم</option>
-            <option value="تبوك">تبوك</option>
-            <option value="جازان">جازان</option>
-            <option value="الجوف">الجوف</option>
-            <option value="الشرقية">الشرقية</option>
-        </select>
+            <select class="list_sreach">
+                <option value="">-- أختر خالة العنصر --</option>
+                <option value="جديد">جديد</option>
+                <option value="مستعمل">مستعمل</option>
+            </select>
+
+            <input class="btn_submit_sreach" type="submit" value="بحث">
+        </form>
     </div>
 
-    <div class="diHead">
-        <select name="formGender">
-            <option value="">-- أختر فئة العنصر  -- </option>
-            <option value="أجهزة طبية">أجهزة طبية</option>
-            <option value="أجهزة كهربائية"> أجهزة كهربائية</option>
-            <option value="أجهزة الكترونية">أجهزة الكترونية</option>
-            <option value="كتب">كتب</option>
-            <option value="ملابس">ملابس</option>
-            <option value="أثاث">أثاث</option>
-            <option value="مواد غذائية">مواد غذائية</option>
-            <option value="أخر">أخر</option>
-        </select>
+<!--    <div class="box_sreach">Using this method to fetch large result sets will result in a heavy demand on system and possibly ...-->
+<!--    </div>-->
+
+
+
     </div>
-    <div class="diHead">
-        <select name="formGender">
-            <option value="">-- أختر حالة العنصر  -- </option>
-            <option value="جديد">جديد</option>
-            <option value="مستعمل">مستعمل</option>
-        </select>
-    </div>
-    <div class="diHead">
-        <input type="submit" value="أبحث">
-    </div>
-
-
-
-
-
-
-
-
-
-
-</div>
 
 <div class="Display_Grid-container">
-
-
 
     <?php
     require 'Connection.php';
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
     $sql = "select *
             from item
-            order by itemDate DESC ";
+            order by id DESC ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -94,27 +84,27 @@
  <div class='grid-item'>
 
 
-         <p class="link_item"><?php echo '#'. $row['ID']; ?> </p>
-
-        <table>
+         <p id="id_item"><?php echo  $row['ID']. ' #'; ?> </p>
+      <table>
+          <tr>
+              <td><?php echo  $row['Number']; ?></td>
+              <td><?php echo  date("Y-m-d : g:i A",strtotime($row['Date'])); ?></td>
+          </tr>
 
             <tr>
-
-
-                    <td COLSPAN='2' class="td_desc">
+                <td COLSPAN='2' class="td_desc">
                         <?php
-
                         $string = strip_tags($row['Description']);
                         if (strlen($string) > 100) {
-
                             // truncate string
                             $stringCut = substr($string, 0, 100);
                             $endPoint = strrpos($stringCut, ' ');
-
                             //if the string doesn't contain any space then it will cut without word basis.
                             $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                             echo $string . " ..." ;
-                        } ?></td>
+                        } ?>
+
+                    </td>
                 </tr>
 
                 <tr ALIGN='CENTER'>

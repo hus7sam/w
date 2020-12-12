@@ -1,7 +1,7 @@
 <?php
 include 'Connection.php';
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
-$itemDesc = $itemState = $itemCity = $itemNumber= $itemStatus= $itemCategory = "";
+$itDesc = $itemState = $itemCity = $itemNumber= $itStatus= $itemCategory = "";
 
 if(isset($_POST["itemDesc"])){
 
@@ -9,11 +9,11 @@ if(isset($_POST["itemDesc"])){
 //    if (empty($_POST["itemDesc"])) { $textErr="الرجاء كتابة وصف العنصر ";
 //    }else { $itemDesc = mysqli_real_escape_string(test_input($_POST["itemDesc"])) ;}
 
-    $itemDesc     = $_POST["itemDesc"];
+    $itDesc     = $_POST["itemDesc"];
     $itemState    = $_POST["itemState"];
     $itemCity     = $_POST["itemCity"];
     $itemNumber   = $_POST["itemNumber"];
-    $itemStatus   = $_POST["itemStatus"];
+    $itStatus   = $_POST["itemStatus"];
     $itemCategory = $_POST["itemCategory"];
 
 
@@ -28,13 +28,13 @@ if(isset($_POST["itemDesc"])){
     try {
 
         $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
-        $sql ="INSERT INTO items (itemID,itemState,itemStatus) 
+        $sql ="INSERT INTO item (iD,Description,Status) 
                       VALUES(:itID, :itDesc, :itStatus) ";
         $stmt = $conn->prepare($sql);
         $stmt->execute(array(
             'itID'     => null,
-            'itDesc'   => $itemDesc,
-            'itStatus' => $itemStatus,
+            'itDesc'   => $itDesc,
+            'itStatus' => $itStatus,
     ));
         echo "<p class='alert_success'>.. لقد تم إضافة الاعلان بنجاح ..</p>";
 
