@@ -9,12 +9,12 @@ if(isset($_POST["itemDesc"])){
 //    if (empty($_POST["itemDesc"])) { $textErr="الرجاء كتابة وصف العنصر ";
 //    }else { $itemDesc = mysqli_real_escape_string(test_input($_POST["itemDesc"])) ;}
 
-    $itDesc     = $_POST["itemDesc"];
-    $itemState    = $_POST["itemState"];
-    $itemCity     = $_POST["itemCity"];
-    $itemNumber   = $_POST["itemNumber"];
-    $itStatus   = $_POST["itemStatus"];
-    $itemCategory = $_POST["itemCategory"];
+    $itDesc     = $_POST["ITDescription_F"];
+    $itemState    = $_POST["ITState_F"];
+    $itemCity     = $_POST["ITCity_F"];
+    $itemNumber   = $_POST["ITNumber_F"];
+    $itStatus   = $_POST["ITStatus_F"];
+    $itemCategory = $_POST["ITCategory_F"];
 
 
     function test_input($data) {

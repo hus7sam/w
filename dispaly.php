@@ -109,7 +109,7 @@
 
                 <tr ALIGN='CENTER'>
                     <td><?php echo $row['City']; ?></td>
-                    <td><?php  echo $row['Number']; ?> </td>
+                    <td><?php  echo $row['State']; ?> </td>
                 </tr>
                 
             </table>

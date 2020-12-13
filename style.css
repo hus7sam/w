@@ -5,6 +5,7 @@
     font-family: calibri;
     font-weight: normal;
     /*font-family: "Source Sans Pro", "Arial", sans-serif;*/
+    font-size: 13px;
 }
 
 .error {color: #FF0000;}
@@ -58,7 +59,7 @@ body
 .head
 {     /* start header */
     display: block;
-    background-image: linear-gradient(120deg, #ffd700 85%,#fffefc 10%, gold 100%);
+    /*background-image: linear-gradient(120deg, #ffd700 85%,#fffefc 10%, gold 100%);*/
     background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
     color: #f5f1f3;
     width: 100%;
@@ -224,8 +225,10 @@ footer a
 /*  start  Display Page  */
 .Display_Body
 {
-    background: linear-gradient(-90deg, #BCC5CE 20%, #f8bb00 98%), radial-gradient(at bottom left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-    background-blend-mode: screen;
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #e7e3d1 0%, #f8cf04 100%);
+
+
     margin: auto auto;
     display: block;
 }
@@ -285,13 +288,16 @@ footer a
     width: 100%;
     border-collapse: separate;
     padding: 5px 10px;
-    font-size: 15px;
+    font-size: 13px;
     border-spacing: 0.4rem;
+    height: 2.5em;
+
 }
 
 .grid-item td
 {
     width: fit-content;
+    width: -moz-fit-content;
     max-height: fit-content;
     border: 1px solid #1d1c1c;
     border-radius:10px;
@@ -318,14 +324,11 @@ footer a
 
 .DisplayHead
 {
-    display: grid;
+    display: block;
     width: 100%;
     margin: 20px  auto;
-    grid-template-columns:  auto auto auto  auto ;
     justify-content: center;
     /*background-color: rgb(255, 252, 252);*/
-    border-radius: 13px;
-    grid-gap: 15px ;
 }
 
 .box_form
