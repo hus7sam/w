@@ -1,21 +1,16 @@
 <?php
 include 'Connection.php';
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$Description = $State = $City = $itemNumber= $itStatus= $itemCategory = "";
+$DescriptionErr = $emailErr = $genderErr = $websiteErr = "";
+//$Description = $State = $City = $itemNumber= $itStatus= $itemCategory = "";
 
 if(isset($_POST["Description_F"])){
 
-//    if (!filter_var($_POST["itemDesc"],FILTER_SANITIZE_STRING))  { $textErr="الرجاء كتابة وصف العنصر"; }
-//    if (empty($_POST["itemDesc"])) { $textErr="الرجاء كتابة وصف العنصر ";
-//    }else { $itemDesc = mysqli_real_escape_string(test_input($_POST["itemDesc"])) ;}
-
     $Description  =$_POST["Description_F"];
     $State        =$_POST["State_F"];
-    $City         =$_POST["City_F"];
+//    $City         =$_POST["City_F"];
     $Number       =$_POST["Number_F"];
     $Status       =$_POST["Status_F"];
     $Category     =$_POST["Category_F"];
-
 
     function test_input($data) {
         $data=trim($data);
@@ -25,22 +20,33 @@ if(isset($_POST["Description_F"])){
     }
 
 
+    if (empty($_POST["City_F"]))
+    { $DescriptionErr="الرجاء كتابة المدينة";  $_POST["City_F"]=''; }
+
+    if(filter_has_var(INPUT_POST,'City_F')){
+        $City=test_input(filter_var($_POST["City_F"],FILTER_SANITIZE_STRING));
+    }
+
+
+
     try {
 
         $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
-        $sql ="INSERT INTO item (iD,Description,Status,Category,State,City,Number) 
-                      VALUES(:itID,:itDesc,:itStatus,:itCategory,:itState,:itCity,:itNumber";
+        $sql ="INSERT INTO item (ID,Description,Status,Category,State,City,Number) 
+                      VALUES(:itID,:itDesc,:itStatus,:itCategory,:itState,:itCity,:itNumber)";
         $stmt = $conn->prepare($sql);
-        $stmt->execute(array(
+        $stmt->execute($R=array(
             'itID'       => null,
             'itDesc'     => $Description,
-            'itStatus'   => $itStatus,
+            'itStatus'   => $Status,
             'itCategory' => $Category,
             'itState'    => $State,
             'itCity'     => $City,
             'itNumber'   => $Number,
     ));
         echo "<p class='alert_success'>.. لقد تم إضافة الاعلان بنجاح ..</p>";
+
+        PRINT_R($R);
 
 //        print_r($r);
     }catch (PDOException $error){
@@ -109,7 +115,7 @@ background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(a
                 <option value="مكة المكرمة">مكة المكرمة</option>
                 <option value="المدينة المنورة">المدينة المنورة</option>
                 <option value="الرياض ">الرياض </option>
-                <option value="عسير"> عسير</option>
+                <option value="منطقكة عسير"> عسير</option>
                 <option value="الحدود الشمالية">الحدود الشمالية</option>
                 <option value="نجران"> نجران</option>
                 <option value="حائل">حائل </option>

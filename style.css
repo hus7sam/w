@@ -237,13 +237,13 @@ footer a
 
     display: grid;
     height: fit-content;
-    width: 95%;
+    width: 96%;
     margin: auto auto;
-    grid-template-columns: auto auto auto auto ;
+    grid-template-columns: 330px 330px 330px 330px ;
     justify-content: center;
     background-color: rgba(7, 7, 7, 0.5);
     /*background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);*/
-    padding: 30px 30px;
+    padding: 30px 10px;
     border-radius: 10px;
     grid-gap: 25px ;
 
@@ -281,24 +281,27 @@ footer a
 {
     height: 70px;
 }
+.grid-item table
+{
+    margin: 0px auto;
+    width: 100%;
+    text-align: center;
+
+}
 
 .grid-item table ,td
 {
     table-layout: auto;
-    width: 100%;
     border-collapse: separate;
     padding: 5px 10px;
     font-size: 13px;
     border-spacing: 0.4rem;
     height: 2.5em;
-
 }
 
-.grid-item td
+.grid-item  td
 {
-    width: fit-content;
-    width: -moz-fit-content;
-    max-height: fit-content;
+    width: 50%;
     border: 1px solid #1d1c1c;
     border-radius:10px;
     padding: 5px 5px;
@@ -556,18 +559,21 @@ input[type=text].input_form_insert:hover {
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px)
 {
+
     .Display_Grid-container {
         display: grid;
-        grid-template-columns:  29% 29% 29%;
+        width: 98%;
+        grid-template-columns:  32% 32% 32%;
+        grid-gap: 15px ;
 
-        grid-gap: 20px ;
-
-    }id_item
-
-    .grid-item
-    {
-        /*margin: auto 10px;*/
     }
+
+    .grid-item    td{
+        font-size: 10px;
+    }
+
+
+
 
     .head h1
     {

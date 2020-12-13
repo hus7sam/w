@@ -95,21 +95,21 @@
                 <td COLSPAN='2' class="td_desc">
                         <?php
                         $string = strip_tags($row['Description']);
-                        if (strlen($string) > 100) {
+                            if (strlen($string) > 100) {
                             // truncate string
-                            $stringCut = substr($string, 0, 100);
+                            $stringCut = substr($string, 0, 300);
                             $endPoint = strrpos($stringCut, ' ');
                             //if the string doesn't contain any space then it will cut without word basis.
                             $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                             echo $string . " ..." ;
-                        } ?>
+                        }else{ echo $string  ;} ?>
 
                     </td>
                 </tr>
 
                 <tr ALIGN='CENTER'>
-                    <td><?php echo $row['City']; ?></td>
                     <td><?php  echo $row['State']; ?> </td>
+                    <td><?php echo $row['City']; ?></td>
                 </tr>
                 
             </table>
