@@ -21,7 +21,7 @@ body
 { /* start mune */
     animation-delay: 2400ms;
     background-color: #eeeded;
-    width: 100%;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);    width: 100%;
     margin: auto auto ;
     padding: 0 20px;
     height: 60px;
@@ -58,7 +58,8 @@ body
 .head
 {     /* start header */
     display: block;
-    background-color: rgba(255, 215, 0, 0.9);
+    background-image: linear-gradient(120deg, #ffd700 85%,#fffefc 10%, gold 100%);
+    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
     color: #f5f1f3;
     width: 100%;
     height: fit-content;
@@ -97,17 +98,7 @@ body
 }
 
 
-/*textarea {*/
 
-/*    width: 100%;*/
-/*    height: 100px;*/
-/*    padding: 12px 20px;*/
-/*    box-sizing: border-box;*/
-/*    border: 2px solid #ccc;*/
-/*    border-radius: 4px;*/
-/*    background-color: #f8f8f8;*/
-/*    resize: none;*/
-/*}*/
 
 .head h1
 {
@@ -117,7 +108,7 @@ body
     width: -moz-fit-content;
     display: block;
     color: black;
-    background-color: rgba(250, 250, 248, 0.9);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     text-align: center;
     margin: auto auto ;
     padding: 0 40px ;
@@ -147,10 +138,10 @@ body
     display: inline-block;
     text-decoration: none;
     color: black;
-    background-color: rgba(247, 252, 247, 0.9);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     text-align: center;
     margin: 50px 3px 0 ;
-    padding: 5px 10px;
+    padding: 10px 15px;
     /*border: 1px dashed #0a0a0a;*/
     border-radius: 3pc 1pc;
     font-size: 30px;
@@ -160,8 +151,8 @@ body
 .head a:hover
 {
     color: white;
-    background-color: rgba(14, 13, 13, 0.9);
-}
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;}
 
 .head  ol
 {
@@ -309,8 +300,8 @@ footer a
 
 .grid-item:hover
 {
-    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-    color: black;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;    color: black;
 }
 
 .grid-item p{
@@ -364,8 +355,6 @@ footer a
     vertical-align: top;
 }
 
-
-
 .list_insert
 {
     display: block;
@@ -375,8 +364,19 @@ footer a
     width: 300px;
     border-radius: 10px;
     border-width: 0px;
+    font-family: calibri;
+    text-align: center;
+    font-size: 18px;
 
 }
+
+.list_insert:hover {
+    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: normal, lighten, soft-light;
+    color: black;
+}
+
+
 
 input[type=text].input_form_insert
 {
@@ -387,6 +387,14 @@ input[type=text].input_form_insert
     width: 300px;
     border-radius: 10px;
     border-width: 0px;
+    font-family: calibri;
+    text-align: center;
+    font-size: 18px;
+}
+
+input[type=text].input_form_insert:hover {
+    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: normal, lighten, soft-light;    color: snow;
 }
 
 
@@ -401,60 +409,64 @@ input[type=text].input_form_insert
     max-width: 300px;
     border-radius: 10px;
     border-width: 0px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.textarea_form_insert:hover {
+    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: normal, lighten, soft-light;    color: snow;
 }
 
 .box_sreach
 {
     margin: 15px auto ;
-    padding: 10px 5px;
+    padding: 10px 15px;
     width: fit-content;
+    width: -moz-fit-content;
     height: fit-content;
     /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
     background-color: rgba(7, 7, 7, 0.5);
     color: snow;
+    font-family: calibri;
     text-align: center;
+    font-size: 15px;
     border-radius: 15px;
 }
 
 .list_sreach
 {
-    width: 90%;
+    display: block;
+    width:300px;
     height: 45px ;
-    width: -moz-fit-content;
-    margin: 10px auto;
+    margin: 15px auto;
     padding: 5px 10px;
     border-radius: 10px;
-    background-color: rgba(252, 249, 249, 0.8);
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    font-family: calibri;
     text-align: center;
-    /*font-family: Arial;*/
-    grid-template-columns: auto auto auto auto;
-
+    font-size: 15px;
 }
 
-
-
-.btn_submit_sreach {
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #e3e0a2 100%);
-}
 .btn_submit_sreach {
     margin: 5px auto;
     padding: 5px 10px;
     height: 45px ;
-    width: 90%;
-    text-align: center;
-    transition: 0.1s;
-    background-size: 300% auto;
+    width: 300px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     color: black;
-    /*box-shadow: 0 0 20px #eee;*/
     border-radius: 10px;
     display: block;
     font-family: calibri;
+    text-align: center;
+    font-size: 18px;
+    border-width: 0px;
 }
 
 .btn_submit_sreach:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: black;
-    text-decoration: none;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;    color: snow;
 }
 
 .diHead

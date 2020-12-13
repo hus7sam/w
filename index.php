@@ -64,8 +64,7 @@ if(isset($_POST["itemDesc"])){
 </div>
 
 <div class="head">
-<h1>  .. خير الناس أنفعهم للناس ..
-    </h1>
+<h1>  .. خير الناس أنفعهم للناس ..  </h1>
 
     <a href="dispaly.php">أجهزة طبية </a>
     <a href="index.php"> أجهزة الكترونية</a>
@@ -79,7 +78,9 @@ if(isset($_POST["itemDesc"])){
     <h2>(يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا وَاعْبُدُوا رَبَّكُمْ وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ) </h2>
 </div>
 
-<div class="head" style="background-color: #c1bebe;">
+<div class="head" style="background-color: #c1bebe;
+background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+ background-blend-mode: screen;">
 <h1>  أهداف عمل الخير</h1>
     <ol>
         <li>تحقيق رضا الله تعالى، والحصول على الأجر والثواب.</li>
@@ -113,6 +114,7 @@ if(isset($_POST["itemDesc"])){
                 <option value="الجوف">الجوف</option>
                 <option value="الشرقية">الشرقية</option>
             </select>
+
             <input    class="input_form_insert" type="text" name="city"          placeholder="أكتب اسم المدينة">
             <input    class="input_form_insert" type="text" name="city"          placeholder="رقم الرقم التواصل">
 
@@ -142,23 +144,22 @@ if(isset($_POST["itemDesc"])){
 </div>
 
 <footer>
-    <ul>
-
-        <li> لتواصل عبر البريد الالكتوني
-            <ul>
-                <li><a href="mailto:hege@example.com">hege@example.com</a></li>
-            </ul>
-        </li>
-
-        <li>  لتواصل عبر الواتس
-            <ul>
-                <li><a href="https://wa.me/+996546668820">    0546668820  </a></li>
-            </ul>
-        </li>
-
-    </ul>
-
-<h3> جميع الحقوق محفوظة </h3>
+<!--    <ul>-->
+<!--        <li> لتواصل عبر البريد الالكتوني-->
+<!--            <ul>-->
+<!--                <li><a href="mailto:hege@example.com">hege@example.com</a></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!---->
+<!--        <li>  لتواصل عبر الواتس-->
+<!--            <ul>-->
+<!--                <li><a href="https://wa.me/+996546668820">    0546668820  </a></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+<!---->
+<!--    </ul>-->
+<!---->
+<!--<h3> جميع الحقوق محفوظة </h3>-->
 
 
 </footer>
