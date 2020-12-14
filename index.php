@@ -1,16 +1,18 @@
 <?php
+
+
 include 'Connection.php';
 $DescriptionErr = $emailErr = $genderErr = $websiteErr = "";
 //$Description = $State = $City = $itemNumber= $itStatus= $itemCategory = "";
 
 if(isset($_POST["Description_F"])){
 
-    $Description  =$_POST["Description_F"];
-    $State        =$_POST["State_F"];
+//    $Description  =$_POST["Description_F"];
+//    $State        =$_POST["State_F"];
 //    $City         =$_POST["City_F"];
-    $Number       =$_POST["Number_F"];
-    $Status       =$_POST["Status_F"];
-    $Category     =$_POST["Category_F"];
+//    $Number       =$_POST["Number_F"];
+//    $Status       =$_POST["Status_F"];
+//    $Category     =$_POST["Category_F"];
 
     function test_input($data) {
         $data=trim($data);
@@ -20,12 +22,41 @@ if(isset($_POST["Description_F"])){
     }
 
 
+    if (empty($_POST["Description_F"]))
+    { $DescriptionErr="الرجاء كتابة المدينة";  $_POST["Description_F"]=''; }
+
+    if(filter_has_var(INPUT_POST,'Description_F')){
+        $Description=test_input(filter_var($_POST["Description_F"],FILTER_SANITIZE_STRING));}
+
+    if (empty($_POST["State_F"]))
+    { $DescriptionErr="الرجاء كتابة المدينة";  $_POST["State_F"]=''; }
+
+    if(filter_has_var(INPUT_POST,'State_F')){
+        $State=test_input(filter_var($_POST["State_F"],FILTER_SANITIZE_STRING));}
+
     if (empty($_POST["City_F"]))
     { $DescriptionErr="الرجاء كتابة المدينة";  $_POST["City_F"]=''; }
 
     if(filter_has_var(INPUT_POST,'City_F')){
-        $City=test_input(filter_var($_POST["City_F"],FILTER_SANITIZE_STRING));
-    }
+        $City=test_input(filter_var($_POST["City_F"],FILTER_SANITIZE_STRING));}
+
+    if (empty($_POST["Number_F"]))
+    { $DescriptionErr="الرجاء كتابة المدينة";  $_POST["Number_F"]=''; }
+
+    if(filter_has_var(INPUT_POST,'Number_F')){
+        $Number=test_input(filter_var($_POST["Number_F"],FILTER_SANITIZE_STRING));}
+
+    if (empty($_POST["Status_F"]))
+    { $DescriptionErr="الرجاء كتابة المدينة";  $_POST["Status_F"]=''; }
+
+    if(filter_has_var(INPUT_POST,'Status_F')){
+        $Status=test_input(filter_var($_POST["Status_F"],FILTER_SANITIZE_STRING));}
+
+    if (empty($_POST["Category_F"]))
+    { $DescriptionErr="الرجاء كتابة المدينة";  $_POST["Category_F"]=''; }
+
+    if(filter_has_var(INPUT_POST,'Category_F')){
+        $Category=test_input(filter_var($_POST["Category_F"],FILTER_SANITIZE_STRING));}
 
 
 
@@ -70,8 +101,7 @@ if(isset($_POST["Description_F"])){
 
 <div class="bar">
     <h2>| فينا خير  </h2>
-    <p>خير الناس أنفعهم للناس ..</p>
-</div>
+    <img class="img_logo" src="logo.png"></div>
 
 <div class="head">
 <h1>  .. خير الناس أنفعهم للناس ..  </h1>

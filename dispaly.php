@@ -1,5 +1,7 @@
 <?php
 
+
+
 ?>
 
 <!doctype html>
@@ -16,7 +18,7 @@
 <body class="Display_Body">
 <div class="bar">
     <h2>| فينا خير  </h2>
-    <p>خير الناس أنفعهم للناس ..</p>
+    <img class="img_logo" src="logo.png">
 
 </div>
 <div class="DisplayHead">
@@ -60,6 +62,10 @@
         </form>
     </div>
 
+<!--    <div class="box_sreach"> خير الناس أنفعهم للناس ..</div>-->
+<!--    <div class="box_sreach"> خير الناس أنفعهم للناس ..</div>-->
+<!--    <div class="box_sreach"> خير الناس أنفعهم للناس ..</div>-->
+
 <!--    <div class="box_sreach">Using this method to fetch large result sets will result in a heavy demand on system and possibly ...-->
 <!--    </div>-->
 
@@ -88,7 +94,7 @@
       <table>
           <tr>
               <td><?php echo  $row['Number']; ?></td>
-              <td><?php echo  date("Y-m-d : g:i A",strtotime($row['Date'])); ?></td>
+              <td><?php echo  date("y-m-d : g:I",strtotime($row['Date'])); ?></td>
           </tr>
 
             <tr>

@@ -1,6 +1,7 @@
 *
 {
     box-sizing: border-box;
+
     direction: rtl;
     font-family: calibri;
     font-weight: normal;
@@ -8,6 +9,17 @@
     font-size: 13px;
 }
 
+.img_logo
+{
+    float:left;
+    width: 60px;
+    margin: 3px auto ;
+    display: inline-block;
+    text-indent: -9999px;
+    border-radius: 50%;
+    border:1px solid #f1bf0a;
+display: inline-block;
+}
 .error {color: #FF0000;}
 
 body
@@ -16,6 +28,7 @@ body
     /*width: 95%;*/
     margin: auto auto ;
     padding: 0 0;
+
 }
 
 .bar
@@ -24,8 +37,10 @@ body
     background-color: #eeeded;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);    width: 100%;
     margin: auto auto ;
-    padding: 0 20px;
-    height: 60px;
+    padding: 0px 20px ;
+    height: 70px;
+    border-bottom: 2px solid #000;
+    display: block;
 }
 
 .bar h2
@@ -34,7 +49,7 @@ body
     display: inline-block;
     margin: 15px auto;
     padding: 0 0 ;
-    font-size: 20px;
+    font-size: 30px;
     height: fit-content;
     width: fit-content;
 }
@@ -175,16 +190,6 @@ body
 }
 
 
-
-/*.head  ul li*/
-/*{*/
-/*    display: block;*/
-/*    margin: auto auto ;*/
-/*    text-align: right;*/
-/*    padding: 5px 30px;*/
-/*}*/
-
-
 footer
 {
     display: inline-block;
@@ -219,18 +224,14 @@ footer h3
 footer a
 {
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
 /*  start  Display Page  */
-.Display_Body
-{
-    background-color: #FBDA61;
-    background-image: linear-gradient(45deg, #e7e3d1 0%, #f8cf04 100%);
+.Display_Body {
+    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
 
 
-    margin: auto auto;
-    display: block;
 }
 
 .Display_Grid-container {
@@ -239,13 +240,13 @@ footer a
     height: fit-content;
     width: 96%;
     margin: auto auto;
-    grid-template-columns: 330px 330px 330px 330px ;
+    grid-template-columns: 23% 23% 23% 23% ;
     justify-content: center;
-    background-color: rgba(7, 7, 7, 0.5);
+    /*background-color: rgba(255, 255, 255, 0.7);*/
     /*background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);*/
-    padding: 30px 10px;
-    border-radius: 10px;
-    grid-gap: 25px ;
+    padding: 30px 5px;
+    border-radius: 7px;
+    grid-gap: 10px ;
 
 }
 
@@ -254,10 +255,26 @@ footer a
     background-color: white;
     /*border: 1px solid rgba(0, 0, 0, 0.8);*/
     text-align: center;
-    border-radius: 10px;
+    border-radius: 1px;
     /*border: 1px solid #c4c3c3;*/
+    -moz-box-shadow:    inset 0 0 2px #000000;
+    -webkit-box-shadow: inset 0 0 2px #000000;
+    box-shadow:         inset 0 0 2px #000000;
+    outline: black;
     padding: 0px;
 }
+
+.grid-item:hover {
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+}
+
+
+/*.grid-item:nth-child(2n+1) {*/
+/*    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);*/
+/*    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);*/
+/*}*/
+
+
 
 .link_item
 {
@@ -265,12 +282,12 @@ footer a
     width:100%;
     margin: 0px auto;
     padding:5px 5px;
-    background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
-    color: white;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;    color: snow;
     text-align: center;
     text-decoration: none;
-    border-radius:0px 0px 10px 10px ;
-
+    border-radius:1px;
+    font-size: 16px;
 }
 
 .link_item:hover
@@ -307,11 +324,6 @@ footer a
     padding: 5px 5px;
 }
 
-.grid-item:hover
-{
-    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-    background-blend-mode: screen;    color: black;
-}
 
 .grid-item p{
     font-size: 11px ;
@@ -343,10 +355,10 @@ footer a
     width: -moz-fit-content;
     height: fit-content;
     /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
-    background-color: rgba(7, 7, 7, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     color: snow;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 7px;
     vertical-align: top;
 }
 
@@ -359,6 +371,7 @@ footer a
     padding: 10px 5px;
     display: block;
     vertical-align: top;
+    /*border: 1px solid #000;*/
 }
 
 .list_insert
@@ -369,7 +382,7 @@ footer a
     height: 45px;
     width: 300px;
     border-radius: 10px;
-    border-width: 0px;
+    border: 1px solid #000;
     font-family: calibri;
     text-align: center;
     font-size: 18px;
@@ -392,10 +405,10 @@ input[type=text].input_form_insert
     height: 45px;
     width: 300px;
     border-radius: 10px;
-    border-width: 0px;
     font-family: calibri;
     text-align: center;
     font-size: 18px;
+    border: 1px solid #000;
 }
 
 input[type=text].input_form_insert:hover {
@@ -406,6 +419,7 @@ input[type=text].input_form_insert:hover {
 
 .textarea_form_insert
 {
+    border: 1px solid #000;
     display: block;
     margin: 15px auto;
     padding: 5px 10px;
@@ -414,10 +428,8 @@ input[type=text].input_form_insert:hover {
     width: 300px;
     max-width: 300px;
     border-radius: 10px;
-    border-width: 0px;
     text-align: center;
     font-size: 18px;
-    border-radius: 15px;
 }
 
 .textarea_form_insert:hover {
@@ -427,26 +439,27 @@ input[type=text].input_form_insert:hover {
 
 .box_sreach
 {
-    margin: 15px auto ;
-    padding: 10px 15px;
+    display: block;
+    margin: 15px auto 15px auto ;
+    padding: 3px 15px;
     width: fit-content;
     width: -moz-fit-content;
     height: fit-content;
     /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
-    background-color: rgba(7, 7, 7, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     color: snow;
     font-family: calibri;
     text-align: center;
     font-size: 15px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .list_sreach
 {
-    display: block;
-    width:300px;
+    display: inline-block;
+    width: 158px;
     height: 45px ;
-    margin: 15px auto;
+    margin: 15px 5px;
     padding: 5px 10px;
     border-radius: 10px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
@@ -459,11 +472,12 @@ input[type=text].input_form_insert:hover {
     margin: 5px auto;
     padding: 5px 10px;
     height: 45px ;
-    width: 300px;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    width: 158px;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;
     color: black;
     border-radius: 10px;
-    display: block;
+
     font-family: calibri;
     text-align: center;
     font-size: 18px;
@@ -471,8 +485,8 @@ input[type=text].input_form_insert:hover {
 }
 
 .btn_submit_sreach:hover {
-    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-    background-blend-mode: screen;    color: snow;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+
 }
 
 .diHead
@@ -502,7 +516,7 @@ input[type=text].input_form_insert:hover {
     /*    dfff */
 
     .grid-item {
-        margin: 10px;
+        margin: 10px auto;
     }
 
     .head h1
@@ -568,12 +582,9 @@ input[type=text].input_form_insert:hover {
 
     }
 
-    .grid-item    td{
+    .grid-item  td{
         font-size: 10px;
     }
-
-
-
 
     .head h1
     {
@@ -592,10 +603,49 @@ input[type=text].input_form_insert:hover {
     }
 }
 
+@media (min-width: 992.98px) and (max-width: 1199px)
+{
+
+    .Display_Grid-container {
+        display: grid;
+        width: 98%;
+        grid-template-columns:  32% 32% 32%;
+        grid-gap: 15px ;
+
+    }}
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px)
 {
+    .Display_Grid-container {
+        display: grid;
+        width: 98%;
+        grid-template-columns:  23% 23% 23% 23%;
+        grid-gap: 20px ;
+        padding: 30px 0px;
 
+    }
+
+
+
+    .grid-item    td{
+        font-size: 15px;
+    }
+
+    .head h1
+    {
+        font-size: 60px;
+    }
+
+    .head h2
+    {
+        font-size: 25px;
+    }
+
+    .head a
+    {  /* start links  of header */
+
+        font-size: 31px;
+    }
 }
 
 .alert_success{
