@@ -89,16 +89,15 @@
         ?>
  <div class='grid-item'>
 
+         <p id="id_item"><?php echo  $row['ID']. " ID"; ?> </p>
+         <?php  if ($row['Status']==="جديد"):?>
+         <p class="p_newItem"><?php echo  'جديد'; ?> </p>
+         <?php elseif($row['Status']==="مستعمل"):   ?>
+         <p class="p_UsedItem"><?php echo  'مستعمل';  endif;?> </p>
 
-         <p id="id_item"><?php echo  $row['ID']. ' #'; ?> </p>
-      <table>
-          <tr>
-              <td><?php echo  $row['Number']; ?></td>
-              <td><?php echo  date("y-m-d : g:I",strtotime($row['Date'])); ?></td>
-          </tr>
 
-            <tr>
-                <td COLSPAN='2' class="td_desc">
+              <p class="p_item_1" COLSPAN='2'><?php echo  "رقم الجوال: " . $row['Number']. "  __ " ."التاريخ: " .date("y-m-d : g:I",strtotime($row['Date'])); ?></p>
+              <p class="p_item_2">
                         <?php
                         $string = strip_tags($row['Description']);
                             if (strlen($string) > 100) {
@@ -110,15 +109,14 @@
                             echo $string . " ..." ;
                         }else{ echo $string  ;} ?>
 
-                    </td>
-                </tr>
+                    </p>
 
-                <tr ALIGN='CENTER'>
+                <p class="p_item_1">
                     <td><?php  echo $row['State']; ?> </td>
                     <td><?php echo $row['City']; ?></td>
-                </tr>
-                
-            </table>
+                </p>
+
+
      <a class="link_item" href="dispaly.php">تفاصيل اكثر</a>
        </div>
 
