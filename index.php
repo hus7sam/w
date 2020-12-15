@@ -107,12 +107,12 @@ if(isset($_POST["Description_F"])){
 <h1>  .. خير الناس أنفعهم للناس ..  </h1>
 
     <a href="dispaly.php">أجهزة طبية </a>
-    <a href="index.php"> أجهزة الكترونية</a>
-    <a href="index.php"> أجهزة كهربائية</a>
-    <a href="index.php"> كتب</a>
-    <a href="index.php"> مواد غذائية</a>
-    <a href="index.php"> أثاث</a>
-    <a href="index.php"> ملابس </a>
+    <a href="dispaly.php"> أجهزة الكترونية</a>
+    <a href="dispaly.php"> أجهزة كهربائية</a>
+    <a href="dispaly.php"> كتب</a>
+    <a href="dispaly.php"> مواد غذائي /??Lة</a>
+    <a href="dispaly.php"> أثاث</a>
+    <a href="dispaly.php"> ملابس </a>
 
 <!--    <a href="inedx.php"> تبرعات</a>-->
     <h2>(يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا وَاعْبُدُوا رَبَّكُمْ وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ) </h2>

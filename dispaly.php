@@ -89,14 +89,13 @@
         ?>
  <div class='grid-item'>
 
-         <p id="id_item"><?php echo  $row['ID']. " ID"; ?> </p>
+         <p id="id_item"><?php echo $row['ID']. " ID"; ?> </p>
          <?php  if ($row['Status']==="جديد"):?>
          <p class="p_newItem"><?php echo  'جديد'; ?> </p>
          <?php elseif($row['Status']==="مستعمل"):   ?>
          <p class="p_UsedItem"><?php echo  'مستعمل';  endif;?> </p>
 
-
-              <p class="p_item_1" COLSPAN='2'><?php echo  "رقم الجوال: " . $row['Number']. "  __ " ."التاريخ: " .date("y-m-d : g:I",strtotime($row['Date'])); ?></p>
+              <p class="p_item_1"><?php echo   $row['Number']. "  " .date("y-m-d : g:I",strtotime($row['Date'])); ?></p>
               <p class="p_item_2">
                         <?php
                         $string = strip_tags($row['Description']);
@@ -109,11 +108,10 @@
                             echo $string . " ..." ;
                         }else{ echo $string  ;} ?>
 
-                    </p>
-
+              </p>
                 <p class="p_item_1">
                     <td><?php  echo $row['State']; ?> </td>
-                    <td><?php echo $row['City']; ?></td>
+                    <td><?php  echo $row['City']; ?></td>
                 </p>
 
 
