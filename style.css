@@ -1,6 +1,6 @@
 *
 {
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
     direction: rtl;
     font-family: calibri;
     font-weight: normal;
@@ -61,9 +61,8 @@ body
 
     display: inline-block;
     float: right;
-    margin: 15px auto;
-    padding: 0 0 ;
-    font-size: 30px;
+    margin: 15px -5px 0px ;  padding: 5px 15px ;
+    font-size: 18px;
     height: fit-content;
     width: fit-content;
 }
@@ -95,19 +94,9 @@ body
     /*background-image: linear-gradient(120deg, #ffd700 85%,#fffefc 10%, gold 100%);*/
     background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
     text-align: center;  color: #f5f1f3;
-    width: 100%;         height: fit-content; max-height: 100pc;
+    width: 100%;   height: fit-content;
     margin: auto auto;   padding: 25px 0;
     border-top: 1px solid black;
-
-}
-
-#text
-{
-    background-color: rgba(252, 252, 252, 0.8);
-    display: grid;
-    margin: 5px auto;       padding:12px 20px ;
-    border-radius: 1pc ;    border: none;
-    font: bold 18px Samim;
 
 }
 
@@ -352,11 +341,11 @@ footer a
 .list_insert
 {
     display: block;
-    margin: 15px auto;  padding: 5px 5px;
+    margin: 15px 0;  padding: 5px 5px;
     height: 45px;   width: 300px;
-    border-radius: 90%;    border: 1px solid #000;
+    border-radius: 2px;    border: 1px solid #000;
     font-family: calibri;   text-align: center;    /*font-size: 12px;*/
-
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
 .list_insert:hover {
@@ -373,7 +362,8 @@ input[type=text].input_form_insert
     margin: 15px auto;  padding: 5px 10px;
     height: 45px;   width: 300px;
     font-family: calibri;   text-align: center;     font-size: 18px;
-    border: 1px solid #000;    border-radius: 10px;
+    border: 1px solid #000;    border-radius: 2px;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
 input[type=text].input_form_insert:hover {
@@ -386,8 +376,9 @@ input[type=text].input_form_insert:hover {
     display: block;
     margin: 15px auto;  padding: 5px 10px;
     height: 90px;   max-height: 90px;   width: 300px;   max-width: 300px;
-    border-radius: 10px; border: 1px solid #000;
+    border-radius: 2px; border: 1px solid #000;
     text-align: center; font-size: 18px;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
 .textarea_form_insert:hover {
@@ -411,7 +402,7 @@ input[type=text].input_form_insert:hover {
     display: inline-block;
     width: 158px;   height: 45px ;
     margin: 15px 5px;    padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 2px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     font-family: calibri;   text-align: center; font-size: 15px;
 }
@@ -421,13 +412,29 @@ input[type=text].input_form_insert:hover {
     height: 45px ; width: 158px;
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
-    border-radius: 10px; border-width: 0px;
+    border-radius: 2px; border-width: 0px;
     font-family: calibri;   text-align: center; font-size: 18px; color: black;
 }
+
 
 .btn_submit_sreach:hover {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
+
+.btn_submit_insert
+{
+    margin: 5px auto; padding: 5px 10px;
+    height: 45px ; width: 300px;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;
+    border-radius: 2px; border-width: 0px;
+    font-family: calibri;   text-align: center; font-size: 18px; color: black;
+}
+
+.btn_submit_insert:hover {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
 
 .diHead
 {

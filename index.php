@@ -91,11 +91,10 @@ if(isset($_POST["Description_F"])){
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 
     <title>فينا خير</title>
 </head>
@@ -109,7 +108,7 @@ if(isset($_POST["Description_F"])){
 </div>
 
 <div class="head">
-    <h1>  .. خير الناس أنفعهم للناس ..  </h1>
+    <h1>   خير الناس أنفعهم للناس   </h1>
 
     <a href="dispaly.php">أجهزة طبية </a>
     <a href="dispaly.php"> أجهزة الكترونية</a>
@@ -182,7 +181,7 @@ background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(a
                 <option value="مستعمل">مستعمل</option>
             </select>
 
-            <input class="btn_submit_sreach" type="submit" value="بحث">
+            <input class="btn_submit_insert" type="submit" value="بحث">
 
         </form>
     </div>
