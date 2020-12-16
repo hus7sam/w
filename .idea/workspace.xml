@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="css sort">
+    <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="css sort1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispaly.php" beforeDir="false" afterPath="$PROJECT_DIR$/dispaly.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
@@ -93,7 +93,8 @@
       <workItem from="1607860354889" duration="21786000" />
       <workItem from="1607970540837" duration="14833000" />
       <workItem from="1608032766669" duration="30483000" />
-      <workItem from="1608117947875" duration="8354000" />
+      <workItem from="1608117947875" duration="9720000" />
+      <workItem from="1608145799672" duration="9502000" />
     </task>
     <task id="LOCAL-00001" summary="u">
       <created>1602417578729</created>
@@ -249,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608128872387</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="css sort1">
+      <created>1608133796437</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1608133796437</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +292,7 @@
     <MESSAGE value="done get form" />
     <MESSAGE value="done array" />
     <MESSAGE value="css sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="css sort" />
+    <MESSAGE value="css sort1" />
+    <option name="LAST_COMMIT_MESSAGE" value="css sort1" />
   </component>
 </project>

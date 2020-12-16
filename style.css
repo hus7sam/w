@@ -159,7 +159,6 @@ body
 .head  ol
 {
     text-align: right;
-
     margin: 050px;
     margin-right: 0100px;
 }
@@ -240,13 +239,11 @@ footer a
     display: block;
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
     text-align: center;
-    border-radius: 50%;
-    -moz-box-shadow:    inset 0 0 2px #000000;
-    -webkit-box-shadow: inset 0 0 2px #000000;
-    box-shadow:         inset 0 0 2px #000000;
+    border-radius: 25px;
+    -moz-box-shadow:    inset 0 0 2px #000000; -webkit-box-shadow: inset 0 0 2px #000000; box-shadow: inset 0 0 2px #000000;
     /*outline: 1px solid #000000;*/
     /*outline-radius: 16px;*/
-    padding: 0px;
+    padding: 0px;  margin: 0 0 10px 0;
 }
 
 .grid-item:hover {
@@ -260,10 +257,9 @@ footer a
 /*}*/
 
 
-
 .link_item
 {
-    display: block;
+    display: none;
     width:100px;
     margin: 0px auto 10px;
     padding:5px 5px;
@@ -283,19 +279,20 @@ footer a
 
 .p_item_1
 {
-    width: fit-content;
-    width: -moz-fit-content;
-    margin: 5px auto;
-    padding: 5px 10px;
+    display: inline-block;
+    width: fit-content; width: -moz-fit-content;
+    margin:6px auto ; padding: 4px 7px;
     font-size: 14px;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.1), 0 2px 8px -1px rgba(0, 0, 0, 0.06); border-radius: 25px;
+
+
 }
 
 .p_item_2
 {
-    width: fit-content;
-    width: -moz-fit-content;
-    margin: 5px auto;
-    padding: 5px 15px;
+    width: fit-content; width: -moz-fit-content;
+    margin: 5px auto; padding: 5px 6px;
     font-size: 14px;
 }
 
@@ -318,16 +315,12 @@ footer a
 .box_form
 {
     display: block;
-    margin: 60px auto ;
-    padding: 10px 15px;
-    width: fit-content;
-    width: -moz-fit-content;
-    height: fit-content;
+    margin: 60px auto ; padding: 10px 15px;
+    width: fit-content; width: -moz-fit-content; height: fit-content;
     /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
     background-color: rgba(255, 255, 255, 0.7);
-    color: snow;
-    text-align: center;
-    border-radius: 7px;
+    color: snow; text-align: center;
+    border-radius:25px;
 
 }
 
@@ -343,7 +336,7 @@ footer a
     display: block;
     margin: 15px 0;  padding: 5px 5px;
     height: 45px;   width: 300px;
-    border-radius: 2px;    border: 1px solid #000;
+    border-radius: 25px;    border: 1px solid #000;
     font-family: calibri;   text-align: center;    /*font-size: 12px;*/
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
@@ -354,15 +347,13 @@ footer a
     color: black;
 }
 
-
-
 input[type=text].input_form_insert
 {
     display: block;
     margin: 15px auto;  padding: 5px 10px;
     height: 45px;   width: 300px;
-    font-family: calibri;   text-align: center;     font-size: 18px;
-    border: 1px solid #000;    border-radius: 2px;
+    font-family: calibri;   text-align: center;     font-size: 18px; color: black;
+    border: 1px solid #000;    border-radius: 25px;
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
@@ -376,7 +367,7 @@ input[type=text].input_form_insert:hover {
     display: block;
     margin: 15px auto;  padding: 5px 10px;
     height: 90px;   max-height: 90px;   width: 300px;   max-width: 300px;
-    border-radius: 2px; border: 1px solid #000;
+    border-radius: 25px; border: 1px solid #000;
     text-align: center; font-size: 18px;
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
@@ -386,6 +377,20 @@ input[type=text].input_form_insert:hover {
     background-blend-mode: normal, lighten, soft-light;    color: snow;
 }
 
+.btn_submit_insert
+{
+    margin: 5px auto; padding: 5px 10px;
+    height: 45px ; width: 300px;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;
+    border-radius: 25px; border-width: 0px;
+    font-family: calibri;   text-align: center; font-size: 18px; color: black;
+}
+
+.btn_submit_insert:hover {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
 .box_sreach
 {
     display: block;
@@ -393,8 +398,8 @@ input[type=text].input_form_insert:hover {
     width: fit-content; width: -moz-fit-content;     height: fit-content;
     /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
     background-color: rgba(255, 255, 255, 0.7);
-    color: snow;    font-family: calibri;   text-align: center; font-size: 15px;
-    border-radius: 5px;
+    color: snow;    font-family: calibri;   text-align: center; font-size: 17px;
+    border-radius: 25px;
 }
 
 .list_sreach
@@ -402,7 +407,7 @@ input[type=text].input_form_insert:hover {
     display: inline-block;
     width: 158px;   height: 45px ;
     margin: 15px 5px;    padding: 5px 10px;
-    border-radius: 2px;
+    border-radius: 25px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     font-family: calibri;   text-align: center; font-size: 15px;
 }
@@ -412,7 +417,7 @@ input[type=text].input_form_insert:hover {
     height: 45px ; width: 158px;
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
-    border-radius: 2px; border-width: 0px;
+    border-radius: 25px; border-width: 0px;
     font-family: calibri;   text-align: center; font-size: 18px; color: black;
 }
 
@@ -420,21 +425,6 @@ input[type=text].input_form_insert:hover {
 .btn_submit_sreach:hover {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
-
-.btn_submit_insert
-{
-    margin: 5px auto; padding: 5px 10px;
-    height: 45px ; width: 300px;
-    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-    background-blend-mode: screen;
-    border-radius: 2px; border-width: 0px;
-    font-family: calibri;   text-align: center; font-size: 18px; color: black;
-}
-
-.btn_submit_insert:hover {
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-}
-
 
 .diHead
 {
@@ -448,6 +438,62 @@ input[type=text].input_form_insert:hover {
 /*  end  Display Page  */
 
 
+.alert_success{
+    width: 100%;
+    margin: 0px;    padding: 5px;
+    background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
+    text-align: center; font-size: 25px;    color: green;
+}
+
+
+.alert_danger{
+    width: 100%;
+    margin: 0px;    padding: 5px;
+    background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
+    text-align: center; font-size: 25px;    color: white;
+}
+
+.alert_info{
+    width: 100%;
+    margin: 0px;    padding: 5px;
+    /*background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);*/
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    text-align: center; font-size: 25px;    color: white;
+}
+
+.item_ID{
+    display: block;
+    width: fit-content;     width: -moz-fit-content;
+    margin:-12px auto 0px;   padding: 5px 8px;
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    text-align: center;     color: white;
+    border-radius: 50%;
+}
+
+.p_newItem
+{
+    display: inline-block;
+    float: left;
+    width: fit-content;     width: -moz-fit-content;
+    margin:-12px 0 0px 10px;   padding: 5px 7px;
+    background-image: linear-gradient( 135deg, #c1ffab 10%, #449103 100%);
+    border-radius: 25px;
+    color: white; font-size: 13px;
+}
+
+.p_UsedItem
+{
+    display: inline-block;
+    float: left;
+    width: fit-content;     width: -moz-fit-content;
+    margin:-12px 0 0px 10px;   padding: 5px 7px;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    border-radius: 25px;
+    color: white; font-size: 13px;
+}
+
+
+
 /*// Extra small devices (portrait phones, less than 576px)*/
 /*// No media query for `xs` since this is the default in Bootstrap*/
 
@@ -455,13 +501,8 @@ input[type=text].input_form_insert:hover {
 @media (max-width: 575.98px)
 {
     .Display_Grid-container {
-        display: block;
-    }
-
-    /*    dfff */
-
-    .grid-item {
-        margin: 10px auto;
+        display: grid;
+        grid-template-columns:  90% ;
     }
 
     .head h1
@@ -482,6 +523,32 @@ input[type=text].input_form_insert:hover {
     {  /* start links  of header */
         font-size: 20px;
     }
+
+    .head  ol
+    {
+        text-align: right;
+        margin: 050px;
+    }
+
+    .head  ol li
+    {
+        list-style: decimal-leading-zero;
+        list-style: -moz-decimal-leading-zero;
+        list-style: -ms-decimal-leading-zero;
+        text-indent: 1px;
+        color: black; font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .box_sreach
+    {
+        width: 95%;
+    }
+    .list_sreach
+    {
+        width: 150px;
+        margin: 8px 5px;
+    }
 }
 
 /*// Medium devices (tablets, 768px and up)*/
@@ -490,6 +557,11 @@ input[type=text].input_form_insert:hover {
     .Display_Grid-container {
         display: grid;
         grid-template-columns:  48% 48% ;
+    }
+
+    .grid-item
+    {
+        padding: 0px;  margin: 0 0 20px 0;
     }
 
     .head h1
@@ -505,6 +577,15 @@ input[type=text].input_form_insert:hover {
     .head a
     {  /* start links  of header */
         font-size: 20px;
+    }
+    .box_sreach
+    {
+        width: 90%;
+    }
+    .list_sreach
+    {
+        width: 150px;
+        margin: 8px 5px;
     }
 
 }
@@ -548,19 +629,7 @@ input[type=text].input_form_insert:hover {
         width: 98%;
         grid-template-columns:  32% 32% 32%;
         grid-gap: 15px ;
-
-    }}
-/*// Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px)
-{
-    .Display_Grid-container {
-        display: grid;
-        width: 98%;
-        grid-template-columns:  23% 23% 23% 23%;
-        grid-gap: 20px ;
-        padding: 30px 0px;
     }
-
 
     .head h1
     {
@@ -576,57 +645,32 @@ input[type=text].input_form_insert:hover {
     {  /* start links  of header */
         font-size: 31px;
     }
+
 }
 
-.alert_success{
-    width: 100%;
-    margin: 0px;    padding: 5px;
-    background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
-    text-align: center; font-size: 25px;    color: green;
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px)
+{
+    .Display_Grid-container {
+        display: grid;
+        width: 98%;
+        grid-template-columns:  23% 23% 23% 23%;
+        grid-gap: 20px ;
+        padding: 30px 0px;
     }
 
+    .head h1
+    {
+        font-size: 60px;
+    }
 
-.alert_danger{
-    width: 100%;
-    margin: 0px;    padding: 5px;
-    background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
-    text-align: center; font-size: 25px;    color: white;
-}
+    .head h2
+    {
+        font-size: 25px;
+    }
 
-.alert_info{
-    width: 100%;
-    margin: 0px;    padding: 5px;
-    /*background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);*/
-    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
-    text-align: center; font-size: 25px;    color: white;
-}
-
-#id_item
-{
-    display: inline-block;
-    width: fit-content;     width: -moz-fit-content;
-    margin:10px auto 0px;   padding: 5px 10px;
-    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
-    text-align: center;     color: white;
-    border-radius: 50%;
-}
-
-.p_newItem
-{
-    display: inline-block;
-    width: fit-content; width: -moz-fit-content;
-    margin:10px auto 0px;   padding: 5px 10px;
-    background-image: linear-gradient( 135deg, #c1ffab 10%, #449103 100%);
-    border-radius: 50%;
-    color: snow;
-}
-
-.p_UsedItem
-{
-    display: inline-block;
-    width: fit-content;     width: -moz-fit-content;
-    margin:10px auto 0px;   padding: 5px 10px;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    border-radius: 50%;
-    color: white;
+    .head a
+    {  /* start links  of header */
+        font-size: 31px;
+    }
 }

@@ -108,8 +108,8 @@ $r=1;
     );
     $stmt->execute($select);
 
- $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-   $sum =count($rows);
+ $rows=$stmt->fetchAll(PDO::FETCH_ASSOC);
+   $sum=count($rows);
    if ($sum > 0){
  echo "<div class='Display_Grid-container'>";
     foreach($rows as $row){
@@ -117,7 +117,7 @@ $r=1;
 
         <div class='grid-item'>
 
-            <p id="id_item"><?php echo $row['ID']. " ID"; ?> </p>
+            <p class="item_ID"><?php echo $row['ID']. " ID"; ?> </p>
             <?php  if ($row['Status']==="جديد"):?>
                 <p class="p_newItem"><?php echo  'جديد'; ?> </p>
             <?php elseif($row['Status']==="مستعمل"):   ?>
@@ -138,8 +138,7 @@ $r=1;
 
             </p>
             <p class="p_item_1">
-            <td><?php  echo $row['State']; ?> </td>
-            <td><?php  echo $row['City']; ?></td>
+            <?php  echo $row['State'].str_repeat('&nbsp;', 10). $row['City']; ?>
             </p>
 
 
@@ -156,11 +155,8 @@ $r=1;
        }
    endif;
 
-
     echo"</div>";
-
-      ?>
-
+    ?>
 
 <!--  ---  sreach BOX   ---  -->
 
@@ -181,13 +177,13 @@ $r=1;
         ?>
  <div class='grid-item'>
 
-         <p id="id_item"><?php echo $row['ID']. " ID"; ?> </p>
+         <p class="item_ID"><?php echo $row['ID']. " ID"; ?> </p>
          <?php  if ($row['Status']==="جديد"):?>
          <p class="p_newItem"><?php echo  'جديد'; ?> </p>
          <?php elseif($row['Status']==="مستعمل"):   ?>
          <p class="p_UsedItem"><?php echo  'مستعمل';  endif;?> </p>
 
-              <p class="p_item_1"><?php echo   $row['Number'].str_repeat('&nbsp;', 10) .date("y-m-d : g:I",strtotime($row['Date'])); ?></p>
+              <p class="p_item_1"><?php echo $row['Number'].str_repeat('&nbsp;', 5) .date("y-m-d : g:I",strtotime($row['Date'])); ?></p>
               <p class="p_item_2">
                         <?php
                         $string = strip_tags($row['Description']);
@@ -201,10 +197,10 @@ $r=1;
                         }else{ echo $string  ;} ?>
 
               </p>
-                <p class="p_item_1">
-                    <td><?php  echo $row['State']; ?> </td>
-                    <td><?php  echo $row['City']; ?></td>
-                </p>
+     <p class="p_item_1">
+         <?php  echo $row['State'].str_repeat('&nbsp;', 2). "=>".str_repeat('&nbsp;', 2). $row['City']; ?>
+     </p>
+
 
 
      <a class="link_item" href="dispaly.php">تفاصيل اكثر</a>
@@ -212,11 +208,7 @@ $r=1;
 
 <?php }  endif;?>
 
-
-
-
-
-
-</div></body>
+</div>
+</body>
 
 </html>

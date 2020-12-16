@@ -142,9 +142,13 @@ background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(a
     <h1>   التسجيل</h1>
     <div class="box_form">
         <form  class="form_insert" action="index.php" method="post">
-            <textarea class="textarea_form_insert" name="Description_F" placeholder="أكتب وصف للعنصر"></textarea>
+            <textarea class="textarea_form_insert" name="Description_F" placeholder="أكتب وصف للعنصر" required></textarea>
 
-            <select class="list_insert" name="State_F">
+            <input    class="input_form_insert" type="text" name="City_F"   placeholder="أكتب اسم المدينة" required>
+
+            <input    class="input_form_insert" type="text" name="Number_F" placeholder="رقم الرقم التواصل" required>
+
+            <select class="list_insert" name="State_F" required>
                 <option value="">-- أختر المنطقة --</option>
                 <option value="مكة المكرمة">مكة المكرمة</option>
                 <option value="المدينة المنورة">المدينة المنورة</option>
@@ -160,10 +164,7 @@ background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(a
                 <option value="الشرقية">الشرقية</option>
             </select>
 
-            <input    class="input_form_insert" type="text" name="City_F"   placeholder="أكتب اسم المدينة">
-            <input    class="input_form_insert" type="text" name="Number_F" placeholder="رقم الرقم التواصل">
-
-            <select class="list_insert" name="Category_F">
+            <select class="list_insert" name="Category_F" required>
                 <option value="">-- أختر فئة العنصر --</option>
                 <option value="أجهزة طبية">أجهزة طبية</option>
                 <option value="أجهزة كهربائية"> أجهزة كهربائية</option>
@@ -175,7 +176,7 @@ background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(a
                 <option value="أخر">أخر</option>
             </select>
 
-            <select class="list_insert" name="Status_F">
+            <select class="list_insert" name="Status_F" required>
                 <option value="">-- أختر حالة العنصر  -- </option>
                 <option value="جديد">جديد</option>
                 <option value="مستعمل">مستعمل</option>
