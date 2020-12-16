@@ -95,17 +95,18 @@ if(isset($_POST["Description_F"])){
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <title>فينا خير</title>
 </head>
 <body>
 
 <div class="bar">
     <h2>| فينا خير  </h2>
-
     <a href="index.php">الرئيسية </a>
     <a href="dispaly.php"> العرض</a>
-
-    <img class="img_logo" src="logo.png"></div>
+    <img class="img_logo" src="logo.png">
+</div>
 
 <div class="head">
     <h1>  .. خير الناس أنفعهم للناس ..  </h1>

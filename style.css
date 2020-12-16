@@ -52,7 +52,7 @@ body
     padding: 0px 20px ;
     height: 60px;
     border-bottom: 1px solid #000;
-    display: block;
+    display: inline-block;
     text-align: center;
 }
 
@@ -88,19 +88,6 @@ body
 }
 
 
-.bar p
-{
-    float: left;
-    display: block;
-    margin: 15px  auto;  padding: 0 0 ;
-    font-size: 20px;
-    height: fit-content; width: fit-content;
-    animation-name: example;
-    animation-fill-mode: backwards;
-    animation-duration: 9s;
-    animation-delay: 2s;
-    animation-timing-function: ease-in-out;
-}
 
 .head
 {     /* start header */
@@ -352,33 +339,23 @@ footer a
     color: snow;
     text-align: center;
     border-radius: 7px;
-    vertical-align: top;
+
 }
 
 .form_insert
 {
-    vertical-align: top;
-    width: fit-content;
-    height: fit-content;
-    margin: 10px auto;
-    padding: 10px 5px;
+    width: fit-content; height: fit-content;
+    margin: 10px auto;  padding: 10px 5px;
     display: block;
-    vertical-align: top;
-    /*border: 1px solid #000;*/
 }
 
 .list_insert
 {
     display: block;
-    margin: 15px auto;
-    padding: 5px 10px;
-    height: 45px;
-    width: 300px;
-    border-radius: 10px;
-    border: 1px solid #000;
-    font-family: calibri;
-    text-align: center;
-    font-size: 18px;
+    margin: 15px auto;  padding: 5px 5px;
+    height: 45px;   width: 300px;
+    border-radius: 90%;    border: 1px solid #000;
+    font-family: calibri;   text-align: center;    /*font-size: 12px;*/
 
 }
 
@@ -393,15 +370,10 @@ footer a
 input[type=text].input_form_insert
 {
     display: block;
-    margin: 15px auto;
-    padding: 5px 10px;
-    height: 45px;
-    width: 300px;
-    border-radius: 10px;
-    font-family: calibri;
-    text-align: center;
-    font-size: 18px;
-    border: 1px solid #000;
+    margin: 15px auto;  padding: 5px 10px;
+    height: 45px;   width: 300px;
+    font-family: calibri;   text-align: center;     font-size: 18px;
+    border: 1px solid #000;    border-radius: 10px;
 }
 
 input[type=text].input_form_insert:hover {
@@ -409,20 +381,13 @@ input[type=text].input_form_insert:hover {
     background-blend-mode: normal, lighten, soft-light;    color: snow;
 }
 
-
 .textarea_form_insert
 {
-    border: 1px solid #000;
     display: block;
-    margin: 15px auto;
-    padding: 5px 10px;
-    height: 90px;
-    max-height: 90px;
-    width: 300px;
-    max-width: 300px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 18px;
+    margin: 15px auto;  padding: 5px 10px;
+    height: 90px;   max-height: 90px;   width: 300px;   max-width: 300px;
+    border-radius: 10px; border: 1px solid #000;
+    text-align: center; font-size: 18px;
 }
 
 .textarea_form_insert:hover {
@@ -433,32 +398,22 @@ input[type=text].input_form_insert:hover {
 .box_sreach
 {
     display: block;
-    margin: 15px auto 15px auto ;
-    padding: 3px 15px;
-    width: fit-content;
-    width: -moz-fit-content;
-    height: fit-content;
+    margin: 15px auto 15px auto ;   padding: 3px 15px;
+    width: fit-content; width: -moz-fit-content;     height: fit-content;
     /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
     background-color: rgba(255, 255, 255, 0.7);
-    color: snow;
-    font-family: calibri;
-    text-align: center;
-    font-size: 15px;
+    color: snow;    font-family: calibri;   text-align: center; font-size: 15px;
     border-radius: 5px;
 }
 
 .list_sreach
 {
     display: inline-block;
-    width: 158px;
-    height: 45px ;
-    margin: 15px 5px;
-    padding: 5px 10px;
+    width: 158px;   height: 45px ;
+    margin: 15px 5px;    padding: 5px 10px;
     border-radius: 10px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    font-family: calibri;
-    text-align: center;
-    font-size: 15px;
+    font-family: calibri;   text-align: center; font-size: 15px;
 }
 
 .btn_submit_sreach {
