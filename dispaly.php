@@ -12,6 +12,8 @@ $r=1;
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link  rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
     <title>عرض</title>
 </head>
@@ -19,7 +21,10 @@ $r=1;
 
 <div class="bar">
     <h2>| فينا خير  </h2>
-    <img class="img_logo" src="logo.png">
+    <a href="index.php">الرئيسية </a>
+    <a href="dispaly.php"> العرض</a>
+
+    <img class="img_logo" src="logo.png"></div>
 
 </div>
 
@@ -213,6 +218,6 @@ $r=1;
 
 
 
-</div>
+</div></body>
 
 </html>

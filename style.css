@@ -1,8 +1,9 @@
 *
 {
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     direction: rtl;
     font-family: calibri;
+    font-weight: normal;
 
     /*font-family: "Source Sans Pro", "Arial", sans-serif;*/
 
@@ -11,16 +12,25 @@ body{
     background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
 
 }
+
+.logo
+{
+    width: 32px;
+    height: 32px;
+    margin: 1px auto;
+    text-align: center;
+    align-items: center;
+}
 .img_logo
 {
     float:left;
-    width: 60px;
+    width: 52px;
+    height: 52px;
     margin: 3px auto ;
     display: inline-block;
     text-indent: -9999px;
     border-radius: 50%;
     border:1px solid #f1bf0a;
-display: inline-block;
 }
 .error {color: #FF0000;}
 
@@ -40,15 +50,17 @@ body
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);    width: 100%;
     margin: auto auto ;
     padding: 0px 20px ;
-    height: 70px;
-    border-bottom: 2px solid #000;
+    height: 60px;
+    border-bottom: 1px solid #000;
     display: block;
+    text-align: center;
 }
 
 .bar h2
 {   /* start title  of bar */
 
     display: inline-block;
+    float: right;
     margin: 15px auto;
     padding: 0 0 ;
     font-size: 30px;
@@ -56,16 +68,33 @@ body
     width: fit-content;
 }
 
+.bar a
+{   /* start title  of bar */
+
+    display: inline-block;
+    margin: 15px auto 0px 10px;  padding: 5px 15px ;
+    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
+    border-radius: 50%;
+    height: fit-content;  width: fit-content;
+    text-align:center; text-decoration: none ; COLOR:black ;
+
+}
+
+.bar a:hover
+{
+    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+    color: white;    text-decoration: none   ;
+
+}
+
 
 .bar p
 {
     float: left;
     display: block;
-    margin: 15px  auto;
-    padding: 0 0 ;
+    margin: 15px  auto;  padding: 0 0 ;
     font-size: 20px;
-    height: fit-content;
-    width: fit-content;
+    height: fit-content; width: fit-content;
     animation-name: example;
     animation-fill-mode: backwards;
     animation-duration: 9s;
@@ -78,24 +107,19 @@ body
     display: block;
     /*background-image: linear-gradient(120deg, #ffd700 85%,#fffefc 10%, gold 100%);*/
     background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
-    color: #f5f1f3;
-    width: 100%;
-    height: fit-content;
-    margin: auto auto;
-    text-align: center;
-    padding: 25px 0;
+    text-align: center;  color: #f5f1f3;
+    width: 100%;         height: fit-content; max-height: 100pc;
+    margin: auto auto;   padding: 25px 0;
     border-top: 1px solid black;
-    max-height: 100pc;
+
 }
 
 #text
 {
     background-color: rgba(252, 252, 252, 0.8);
     display: grid;
-    margin: 5px auto;
-    padding:12px 20px ;
-    border-radius: 1pc ;
-    border: none;
+    margin: 5px auto;       padding:12px 20px ;
+    border-radius: 1pc ;    border: none;
     font: bold 18px Samim;
 
 }
@@ -115,49 +139,33 @@ body
     color: black;
 }
 
-
-
-
 .head h1
 {
     display: inline-block;
-    height: fit-content;
-    width: fit-content;
-    width: -moz-fit-content;
+    height: fit-content;    width: fit-content; width: -moz-fit-content;
     display: block;
-    color: black;
+    color: black; text-align: center; font-size: 85px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    text-align: center;
-    margin: auto auto ;
-    padding: 0 40px ;
-    font-size: 85px;
     border-radius: 6pc 3pc;
+    margin: auto auto ;     padding: 0 40px ;
 }
 
 .head h2
 {
     display: block;
-    color: #fcf8f8;
-    text-align: center;
-    margin: 40px auto 10px;
-    padding: 15px 20px ;
-    font-size: 30px;
-    height: fit-content;
-    width: fit-content;
-    width: -moz-fit-content;
+    color: #fcf8f8;      text-align: center;     font-size: 30px;
+    margin: 40px auto 10px; padding: 15px 20px ;
+    height: fit-content;    width: fit-content; width: -moz-fit-content;
     border-radius: 6pc 3pc;
     background-color: rgba(2, 2, 2, 0.4);
 }
 
 .head a
 {  /* start links  of header */
-    width: fit-content;
-    height: fit-content;
+    width: fit-content;     height: fit-content;
     display: inline-block;
-    text-decoration: none;
-    color: black;
+    text-decoration: none;  color: black; text-align: center;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    text-align: center;
     margin: 50px 3px 0 ;
     padding: 10px 15px;
     /*border: 1px dashed #0a0a0a;*/
@@ -454,36 +462,26 @@ input[type=text].input_form_insert:hover {
 }
 
 .btn_submit_sreach {
-    margin: 5px auto;
-    padding: 5px 10px;
-    height: 45px ;
-    width: 158px;
+    margin: 5px auto; padding: 5px 10px;
+    height: 45px ; width: 158px;
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
-    color: black;
-    border-radius: 10px;
-
-    font-family: calibri;
-    text-align: center;
-    font-size: 18px;
-    border-width: 0px;
+    border-radius: 10px; border-width: 0px;
+    font-family: calibri;   text-align: center; font-size: 18px; color: black;
 }
 
 .btn_submit_sreach:hover {
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-
 }
 
 .diHead
 {
     width: fit-content;
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8); border-radius: 15px;
     text-align: center;
-    border-radius: 15px;
+    ;
     /*border: 1px solid #c4c3c3;*/
 }
-
-
 
 /*  end  Display Page  */
 
@@ -507,24 +505,20 @@ input[type=text].input_form_insert:hover {
     .head h1
     {
         font-size: 25px;
-        height: fit-content;
-        width: fit-content;
+        height: fit-content;    width: fit-content;
         padding: 15px;
     }
 
     .head h2
     {
         font-size: 13px;
-        height: fit-content;
-        width: fit-content;
+        height: fit-content;    width: fit-content;
         padding: 15px;
     }
 
     .head a
     {  /* start links  of header */
-
         font-size: 20px;
-        /*margin: 20px 10px;*/
     }
 }
 
@@ -548,10 +542,8 @@ input[type=text].input_form_insert:hover {
 
     .head a
     {  /* start links  of header */
-
         font-size: 20px;
     }
-
 
 }
 
@@ -564,7 +556,6 @@ input[type=text].input_form_insert:hover {
         width: 98%;
         grid-template-columns:  32% 32% 32%;
         grid-gap: 15px ;
-
     }
 
     .grid-item  td{
@@ -583,7 +574,6 @@ input[type=text].input_form_insert:hover {
 
     .head a
     {  /* start links  of header */
-
         font-size: 31px;
     }
 }
@@ -622,64 +612,48 @@ input[type=text].input_form_insert:hover {
 
     .head a
     {  /* start links  of header */
-
         font-size: 31px;
     }
 }
 
 .alert_success{
     width: 100%;
-    margin: 0px;
-    padding: 5px;
+    margin: 0px;    padding: 5px;
     background-image: linear-gradient( 135deg, #81FBB8 10%, #28C76F 100%);
-    text-align: center;
-    font-size: 25px;
-    color: green;
+    text-align: center; font-size: 25px;    color: green;
     }
 
 
 .alert_danger{
     width: 100%;
-    margin: 0px;
-    padding: 5px;
+    margin: 0px;    padding: 5px;
     background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%);
-    text-align: center;
-    font-size: 25px;
-    color: white;
+    text-align: center; font-size: 25px;    color: white;
 }
 
 .alert_info{
     width: 100%;
-    margin: 0px;
-    padding: 5px;
+    margin: 0px;    padding: 5px;
     /*background-image: linear-gradient( 135deg, #FDEB71 10%, #F8D800 100%);*/
     background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
-    text-align: center;
-    font-size: 25px;
-    color: white;
+    text-align: center; font-size: 25px;    color: white;
 }
 
 #id_item
 {
     display: inline-block;
-    width: fit-content;
-    width: -moz-fit-content;
-    margin:10px auto 0px;
-    padding: 5px 10px;
+    width: fit-content;     width: -moz-fit-content;
+    margin:10px auto 0px;   padding: 5px 10px;
     background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
-    text-align: center;
-    color: white;
+    text-align: center;     color: white;
     border-radius: 50%;
 }
 
 .p_newItem
 {
     display: inline-block;
-    /*float: left;*/
-    width: fit-content;
-    width: -moz-fit-content;
-    margin:10px auto 0px;
-    padding: 5px 10px;
+    width: fit-content; width: -moz-fit-content;
+    margin:10px auto 0px;   padding: 5px 10px;
     background-image: linear-gradient( 135deg, #c1ffab 10%, #449103 100%);
     border-radius: 50%;
     color: snow;
@@ -688,16 +662,9 @@ input[type=text].input_form_insert:hover {
 .p_UsedItem
 {
     display: inline-block;
-    /*float: left;*/
-    width: fit-content;
-    width: -moz-fit-content;
-    margin:10px auto 0px;
-    padding: 5px 10px;
+    width: fit-content;     width: -moz-fit-content;
+    margin:10px auto 0px;   padding: 5px 10px;
     background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
     border-radius: 50%;
     color: white;
 }
-
-
-
-
