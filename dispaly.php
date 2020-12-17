@@ -58,7 +58,7 @@ $r=1;
             </select>
 
             <select class="list_sreach" name="search_Status">
-                <option value="">-- أختر خالة العنصر --</option>
+                <option value="">-- أختر حالة العنصر --</option>
                 <option value="جديد">جديد</option>
                 <option value="مستعمل">مستعمل</option>
             </select>
@@ -117,11 +117,11 @@ $r=1;
 
         <div class='grid-item'>
 
-            <p class="item_ID"><?php echo $row['ID']. " ID"; ?> </p>
+            <p class="alert_itemID"><?php echo $row['ID']. " ID"; ?> </p>
             <?php  if ($row['Status']==="جديد"):?>
-                <p class="p_newItem"><?php echo  'جديد'; ?> </p>
+                <p class="alert_newitem"><?php echo  'جديد'; ?> </p>
             <?php elseif($row['Status']==="مستعمل"):   ?>
-            <p class="p_UsedItem"><?php echo  'مستعمل';  endif;?> </p>
+            <p class="alert_useditem"><?php echo  'مستعمل';  endif;?> </p>
 
             <p class="p_item_1"><?php echo   $row['Number'].str_repeat('&nbsp;', 10) .date("y-m-d : g:I",strtotime($row['Date'])); ?></p>
             <p class="p_item_2">
@@ -150,7 +150,7 @@ $r=1;
 
    }else
        {
-       echo " <div class='box_sreach'>  لم يتم العثور على العناصر </div>";
+       echo " <div class='alert_info'>  لم يتم العثور على بحثك </div>";
        $r=1;
        }
    endif;
@@ -177,11 +177,11 @@ $r=1;
         ?>
  <div class='grid-item'>
 
-         <p class="item_ID"><?php echo $row['ID']. " ID"; ?> </p>
+         <p class="alert_itemID"><?php echo $row['ID']. " ID"; ?> </p>
          <?php  if ($row['Status']==="جديد"):?>
-         <p class="p_newItem"><?php echo  'جديد'; ?> </p>
+         <p class="alert_newitem"><?php echo  'جديد'; ?> </p>
          <?php elseif($row['Status']==="مستعمل"):   ?>
-         <p class="p_UsedItem"><?php echo  'مستعمل';  endif;?> </p>
+         <p class="alert_useditem"><?php echo  'مستعمل';  endif;?> </p>
 
               <p class="p_item_1"><?php echo $row['Number'].str_repeat('&nbsp;', 5) .date("y-m-d : g:I",strtotime($row['Date'])); ?></p>
               <p class="p_item_2">
@@ -200,8 +200,6 @@ $r=1;
      <p class="p_item_1">
          <?php  echo $row['State'].str_repeat('&nbsp;', 2). "=>".str_repeat('&nbsp;', 2). $row['City']; ?>
      </p>
-
-
 
      <a class="link_item" href="dispaly.php">تفاصيل اكثر</a>
        </div>

@@ -108,7 +108,7 @@ if(isset($_POST["Description_F"])){
 </div>
 
 <div class="head">
-    <h1>   خير الناس أنفعهم للناس   </h1>
+    <h1 class="title">   خير الناس أنفعهم للناس   </h1>
 
     <a href="dispaly.php">أجهزة طبية </a>
     <a href="dispaly.php"> أجهزة الكترونية</a>
@@ -142,11 +142,11 @@ background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(a
     <h1>   التسجيل</h1>
     <div class="box_form">
         <form  class="form_insert" action="index.php" method="post">
-            <textarea class="textarea_form_insert" name="Description_F" placeholder="أكتب وصف للعنصر" required></textarea>
+            <textarea class="textarea_form_insert" name="Description_F" placeholder="أكتب وصف للعنصر لا يتعدى 200 حرف" required></textarea>
 
-            <input    class="input_form_insert" type="text" name="City_F"   placeholder="أكتب اسم المدينة" required>
+            <input    class="input_form_insert" type="text" name="City_F"   placeholder="أكتب اسم المدينة / المحافطة / القرية" required>
 
-            <input    class="input_form_insert" type="text" name="Number_F" placeholder="رقم الرقم التواصل" required>
+            <input    class="input_form_insert" type="text" name="Number_F" placeholder="أكتب رقم الجوال " required>
 
             <select class="list_insert" name="State_F" required>
                 <option value="">-- أختر المنطقة --</option>
