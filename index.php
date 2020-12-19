@@ -108,7 +108,7 @@ if(isset($_POST["Description_F"])){
 </div>
 
 <div class="head">
-    <h1 class="title">   خير الناس أنفعهم للناس   </h1>
+    <h1 class="h1">   خير الناس أنفعهم للناس   </h1>
 
     <a href="dispaly.php">أجهزة طبية </a>
     <a href="dispaly.php"> أجهزة الكترونية</a>
@@ -119,27 +119,39 @@ if(isset($_POST["Description_F"])){
     <a href="dispaly.php"> ملابس </a>
 
     <!--    <a href="inedx.php"> تبرعات</a>-->
-    <h2>(يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا وَاعْبُدُوا رَبَّكُمْ وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ) </h2>
+<!--    <h2>(يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا وَاعْبُدُوا رَبَّكُمْ وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ) </h2>-->
 </div>
 
-<div class="head" style="background-color: #c1bebe;
-background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
- background-blend-mode: screen;">
-    <h1>  أهداف عمل الخير</h1>
-    <ol>
-        <li>تحقيق رضا الله تعالى، والحصول على الأجر والثواب.</li>
-        <li>فعل الخير بما يضمن للآخرين الحياة الكريمة.</li>
-        <li>نشر المعروف بين الناس، وتشجيعهم على التعاون والتواصل والبرّ.</li>
-        <li>نشر القيم الإسلامية بين الناس، كالتضامن، والتسامح، والتعاون.</li>
-        <li>صيانة كرامة الفقراء والمحتاجين بتقديم المساعدة إليهم دون حاجتهم لذلّ السؤال.</li>
-        <li>تربية على معاني العطاء والابتكار.</li>
-        <li>تربية الأجيال على معنى المواطنة الصالحة</li>
-    </ol>
+<div class="head_2">
+    <h1 class="h1">  أهداف عمل الخير</h1>
+
+    <p class="p_list"><img class="img_list" src="icons8-number-1-100.png">
+        تحقيق رضا الله تعالى، والحصول على الأجر والثواب.
+    </p>
+    <p class="p_list"><img class="img_list" src="icons8-number-2-100.png">
+        فعل الخير بما يضمن للآخرين الحياة الكريمة.
+    </p>
+    <p class="p_list"> <img class="img_list" src="icons8-3-100.png">
+        نشر المعروف بين الناس، وتشجيعهم على التعاون والتواصل والبرّ.
+    </p>
+    <p class="p_list"> <img class="img_list" src="icons8-number-4-100.png">
+        نشر القيم الإسلامية بين الناس، كالتضامن، والتسامح، والتعاون.
+    </p>
+    <p class="p_list"> <img class="img_list" src="icons8-5-c-100.png">
+        صيانة كرامة الفقراء والمحتاجين بتقديم المساعدة إليهم دون حاجتهم لذلّ السؤال.
+    </p>
+    <p class="p_list"> <img class="img_list" src="icons8-number-6-100.png">
+        تربية على معاني العطاء والابتكار.
+    </p>
+    <p class="p_list"> <img class="img_list" src="icons8-7-c-100.png">
+        تربية الأجيال على معنى المواطنة الصالحة
+    </p>
+
 
 </div>
 
-<div class="head">
-    <h1>   التسجيل</h1>
+<div class="head_3">
+    <h1 class="h1">   نموذج تسجيل عنصر</h1>
     <div class="box_form">
         <form  class="form_insert" action="index.php" method="post">
             <textarea class="textarea_form_insert" name="Description_F" placeholder="أكتب وصف للعنصر لا يتعدى 200 حرف" required></textarea>
@@ -186,8 +198,9 @@ background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(a
 
         </form>
     </div>
-
 </div>
+
+
 
 <footer>
     <!--    <ul>-->
