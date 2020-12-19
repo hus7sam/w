@@ -71,8 +71,9 @@ body
 {   /* start title  of bar */
 
     display: inline-block;
-    margin: 15px auto 0px 10px;  padding: 5px 15px ;
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    margin: 15px auto 0px 10px;  padding: 5px 4px ;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;
     border-radius: 10px;
     height: fit-content;  width: fit-content;
     text-align:center; text-decoration: none ; COLOR:snow ;
@@ -81,8 +82,7 @@ body
 
 .bar a:hover
 {
-    background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
-    color: white;    text-decoration: none   ;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);    color: white;    text-decoration: none   ;
 
 }
 
@@ -149,7 +149,7 @@ body
     box-shadow: 0 8px 32px 0 rgba(5, 5, 5, 0.37);
     backdrop-filter: blur( 3.5px );
     -webkit-backdrop-filter: blur( 3.5px );
-    border-radius: 15px;
+    border-radius:  70% / 20%;
 }
 
 .head a:hover
@@ -449,7 +449,7 @@ footer a
 
 
 .btn_submit_sreach:hover {
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
 .diHead
@@ -635,6 +635,17 @@ footer a
 {
     .Display_Grid-container {
         grid-template-columns:  23% 23% 23% 23%;
+    }
+
+    .head h1
+    {
+        font-size: 400%;
+        margin: 30px    auto;
+    }
+
+    .head a
+    {
+        font-size: 25px;
     }
 
 
