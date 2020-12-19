@@ -5,13 +5,14 @@
     font-family: calibri;
     font-weight: normal;
     /*font-family: "Source Sans Pro", "Arial", sans-serif;*/
+    z-index: 10000;
+}
+body {
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 
 }
-body{
-    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
-
-}
-
 .logo
 {
     width: 32px;
@@ -71,10 +72,10 @@ body
 
     display: inline-block;
     margin: 15px auto 0px 10px;  padding: 5px 15px ;
-    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
-    border-radius: 50%;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    border-radius: 10px;
     height: fit-content;  width: fit-content;
-    text-align:center; text-decoration: none ; COLOR:black ;
+    text-align:center; text-decoration: none ; COLOR:snow ;
 
 }
 
@@ -91,7 +92,7 @@ body
 {     /* start header */
     display: block;
     /*background-image: linear-gradient(120deg, #ffd700 85%,#fffefc 10%, gold 100%);*/
-    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     text-align: center;  color: #f5f1f3;
     width: 100%;   height: fit-content;
     margin: auto auto;   padding: 25px 0;
@@ -105,7 +106,7 @@ body
     display: inline-block;
     height: fit-content;    width: fit-content; width: -moz-fit-content;
     display: block;
-    color: black; text-align: center; font-size: 85px;
+    color: black; text-align: center; font-size: 300%;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     border-radius: 6pc 3pc;
     margin: auto auto ;     padding: 0 40px ;
@@ -126,10 +127,10 @@ body
 .head h2
 {
     display: block;
-    color: #fcf8f8;      text-align: center;     font-size: 30px;
-    margin: 40px auto 10px; padding: 15px 20px ;
+    color: #fcf8f8;      text-align: center;     font-size: 150%;
+    margin: 40px auto 10px; padding: 7px 10px ;
     height: fit-content;    width: fit-content; width: -moz-fit-content;
-    border-radius: 6pc 3pc;
+    border-radius: 2pc ;
     background-color: rgba(2, 2, 2, 0.4);
     box-shadow:
             12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
@@ -138,26 +139,28 @@ body
 
 .head a
 {  /* start links  of header */
+    position: center;
     width: fit-content;     height: fit-content;
     display: inline-block;
     text-decoration: none;  color: black; text-align: center;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    margin: 50px 3px 0 ;
-    padding: 10px 15px;
-    /*border: 1px dashed #0a0a0a;*/
-    border-radius: 3pc 1pc;
-    font-size: 30px; white-space: normal;
-    shape-outside: circle(50%);
-    box-shadow:
-            12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
-            -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
+    margin: 20px 3px 0 ; padding: 10px 15px;
+    font-size: 15px; white-space: normal;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba(5, 5, 5, 0.37);
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 15px;
 }
 
 .head a:hover
 {
-    color: white;
-    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-    background-blend-mode: screen;}
+    background: rgba( 255, 255, 255, 0.60 );
+    box-shadow: 0 8px 32px 0 rgba(5, 5, 5, 0.37);
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 15px;
+
+}
 
 .head  ol
 {
@@ -216,42 +219,49 @@ footer a
 }
 
 /*  start  Display Page  */
-.Display_Body {
-    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
 
-
-}
 
 .Display_Grid-container {
 
-    display: grid;
+    display:grid;
     height: fit-content;
-    width: 96%;
-    margin: auto auto;
+    width: 88%;
+    margin: 30px auto;
     grid-template-columns: 23% 23% 23% 23% ;
-    justify-content: center;
-    /*background-color: rgba(255, 255, 255, 0.7);*/
+    grid-template-rows: auto;    justify-content: center;
+    /*background-color: rgb(255, 255, 255);*/
     /*background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);*/
-    padding: 30px 5px;
+    /*padding: 50px 7px;*/
     border-radius: 7px;
-    grid-gap: 10px ;
+    column-gap: 20px;
+    row-gap: 15px;
 
 }
 
 .grid-item {
     display: block;
-    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    /*background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);    !*border: 1px solid rgba(0, 0, 0, 0.8);*!*/
     text-align: center;
     border-radius: 25px;
     padding: 0px;  margin: 0 0 10px 0;
     transition: font-size 0.1s;
-    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    /*box-shadow: 6px 6px 8px 0 rgba(0, 0, 0, 0.25),*/
+    /*            -1px -1px 6px 0 rgba(255, 255, 255, 0.3);*/
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(18, 18, 19, 0.37);
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+
 }
 
 .grid-item:hover {
-    font-size:20px;
-    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    /*font-size:20px;*/
+    /*background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);*/
+    /*background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);*/
+    background: rgba( 255, 255, 255, 0.50 );
+    box-shadow:
+            12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
+            -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
 }
 
 
@@ -285,8 +295,8 @@ footer a
 {
     display: inline-block;
     width: fit-content; width: -moz-fit-content;
-    margin:6px auto ; padding: 4px 7px;
-    font-size: 14px;
+    margin:6px auto ; padding: 1px 4px;
+    font-size: 12px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.1), 0 2px 8px -1px rgba(0, 0, 0, 0.06); border-radius: 25px;
 
@@ -339,7 +349,7 @@ footer a
     display: block;
     margin: 15px 0;  padding: 5px 5px;
     height: 45px;   width: 300px;
-    border-radius: 25px;    border: 1px solid #000;
+    border-radius: 13px;    border: 1px solid #000;
     font-family: calibri;   text-align: center;    /*font-size: 12px;*/
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
@@ -350,17 +360,17 @@ footer a
     color: black;
 }
 
-input[type=text].input_form_insert
+.input_form_insert
 {
     display: block;
     margin: 15px auto;  padding: 5px 10px;
     height: 45px;   width: 300px;
     font-family: calibri;   text-align: center;     font-size: 15px; color: black;
-    border: 1px solid #000;    border-radius: 25px;
+    border: 1px solid #000;    border-radius: 13px;
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
-input[type=text].input_form_insert:hover {
+.input_form_insert:hover {
     background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
     background-blend-mode: normal, lighten, soft-light;    color: snow;
 }
@@ -383,7 +393,7 @@ input[type=text].input_form_insert:hover {
     display: block;
     margin: 15px auto;  padding: 5px 10px;
     height: 90px;   max-height: 90px;   width: 300px;   max-width: 300px;
-    border-radius: 25px; border: 1px solid #000;
+    border-radius: 20px; border: 1px solid #000;
     text-align: center; font-size: 15px;
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
@@ -399,12 +409,12 @@ input[type=text].input_form_insert:hover {
     height: 45px ; width: 300px;
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
-    border-radius: 25px; border-width: 0px;
+    border-radius: 13px; border-width: 0px;
     font-family: calibri;   text-align: center; font-size: 18px; color: black;
 }
 
 .btn_submit_insert:hover {
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
 .box_sreach
@@ -423,7 +433,7 @@ input[type=text].input_form_insert:hover {
     display: inline-block;
     width: 158px;   height: 45px ;
     margin: 15px 5px;    padding: 5px 10px;
-    border-radius: 25px;
+    border-radius: 13px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     font-family: calibri;   text-align: center; font-size: 15px;
 }
@@ -433,7 +443,7 @@ input[type=text].input_form_insert:hover {
     height: 45px ; width: 158px;
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
-    border-radius: 25px; border-width: 0px;
+    border-radius: 13px; border-width: 0px;
     font-family: calibri;   text-align: center; font-size: 18px; color: black;
 }
 
@@ -523,7 +533,7 @@ input[type=text].input_form_insert:hover {
 @media (max-width: 575.98px)
 {
     .Display_Grid-container {
-        display: grid;
+
         grid-template-columns:  90% ;
     }
 
@@ -566,40 +576,25 @@ input[type=text].input_form_insert:hover {
     {
         width: 95%;
     }
+
     .list_sreach
     {
         width: 150px;
         margin: 8px 5px;
     }
+
+
 }
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px)
 {
     .Display_Grid-container {
-        display: grid;
+
         grid-template-columns:  48% 48% ;
     }
 
-    .grid-item
-    {
-        padding: 0px;  margin: 0 0 20px 0;
-    }
 
-    .head h1
-    {
-        font-size: 50px;
-    }
-
-    .head h2
-    {
-        font-size: 20px;
-    }
-
-    .head a
-    {  /* start links  of header */
-        font-size: 20px;
-    }
     .box_sreach
     {
         width: 90%;
@@ -617,29 +612,9 @@ input[type=text].input_form_insert:hover {
 {
 
     .Display_Grid-container {
-        display: grid;
-        width: 98%;
+
         grid-template-columns:  32% 32% 32%;
-        grid-gap: 15px ;
-    }
 
-    .grid-item  td{
-        font-size: 10px;
-    }
-
-    .head h1
-    {
-        font-size: 60px;
-    }
-
-    .head h2
-    {
-        font-size: 25px;
-    }
-
-    .head a
-    {  /* start links  of header */
-        font-size: 31px;
     }
 }
 
@@ -647,26 +622,11 @@ input[type=text].input_form_insert:hover {
 {
 
     .Display_Grid-container {
-        display: grid;
-        width: 98%;
+
         grid-template-columns:  32% 32% 32%;
-        grid-gap: 15px ;
+
     }
 
-    .head h1
-    {
-        font-size: 60px;
-    }
-
-    .head h2
-    {
-        font-size: 25px;
-    }
-
-    .head a
-    {  /* start links  of header */
-        font-size: 31px;
-    }
 
 }
 
@@ -674,25 +634,8 @@ input[type=text].input_form_insert:hover {
 @media (min-width: 1200px)
 {
     .Display_Grid-container {
-        display: grid;
-        width: 98%;
         grid-template-columns:  23% 23% 23% 23%;
-        grid-gap: 20px ;
-        padding: 30px 0px;
     }
 
-    .head h1
-    {
-        font-size: 60px;
-    }
 
-    .head h2
-    {
-        font-size: 25px;
-    }
-
-    .head a
-    {  /* start links  of header */
-        font-size: 31px;
-    }
 }
