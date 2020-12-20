@@ -2,15 +2,12 @@
 {
     box-sizing: border-box;
     direction: rtl;
-    font-family: calibri;
+    font-family: "Dubai Light";
     font-weight: normal;
     /*font-family: "Source Sans Pro", "Arial", sans-serif;*/
     z-index: 10000;
 }
-body{
-    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
 
-}
 
 .logo
 {
@@ -33,15 +30,14 @@ body{
 }
 .error {color: #FF0000;}
 
-body
-{  /* start boody */
-    background-color: grey;
+body { /* start boody */
+    /*background-color: #808080;*/
     /*width: 95%;*/
-    margin: auto auto ;
+    margin: auto auto;
     padding: 0 0;
+    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
 
 }
-
 .bar
 { /* start mune */
     animation-delay: 2400ms;
@@ -53,6 +49,7 @@ body
     border-bottom: 1px solid #000;
     display: inline-block;
     text-align: center;
+
 }
 
 .bar h2
@@ -101,13 +98,16 @@ body
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
     margin: 0 auto;   padding: 60px 20px 60px 20px;
+    background-image: url("photos/brina.jpg");
 }
 
 .p_list
 {
     display: block;
     position: center;
-    margin: 20px 90px;
+    margin: 30px auto;
+    text-indent: 80px; text-align: justify;
+
 }
 
 .img_list
@@ -136,23 +136,15 @@ body
     display: inline-block;
     height: fit-content;    width: fit-content; width: -moz-fit-content;
     display: block;
-    color: black; text-align: center; font-size: 85px;
+    color: black; text-align: center; font-size: 45px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    border-radius: 6pc 3pc;
-    margin: 0 auto ;     padding: 0 40px ;
-    box-shadow:
-            12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
-            -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
+    border-radius: 60pc 10pc;
+    margin: 0px auto 40px auto ;  padding: 5px 30px ;
+    /*box-shadow:*/
+    /*        12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,*/
+    /*        -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;*/
 }
 
-
-.h1::before {
-    content: open-quote;
-}
-
-.h1::after {
-    content: close-quote;
-}
 
 
 .head h2
@@ -174,13 +166,12 @@ body
     display: inline-block;
     text-decoration: none;  color: black; text-align: center;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    margin: 50px 3px 0 ;
-    padding: 10px 15px;
-    border-radius: 3pc 1pc;
-    font-size: 30px; white-space: normal;
-    box-shadow:
-            12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-            -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    margin: 10px 3px 0 ;  padding: 5px 16px;
+    border-radius: 60pc 10pc;
+    font-size: 25px; white-space: normal;
+    /*box-shadow:*/
+    /*        10px 10px 14px 0 rgba(0, 0, 0, 0.25),*/
+    /*        -8px -8px 10px 0 rgba(255, 255, 255, 0.3);*/
 }
 
 .head a:hover
@@ -261,18 +252,15 @@ footer a
     text-align: center;
     border-radius: 25px;
     padding: 0px;  margin: 0 0 10px 0;
-    background: rgba( 255, 255, 255, 0.80 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 15px );
-    -webkit-backdrop-filter: blur( 15px );
+    background: rgba( 255, 255, 255, 0.40 );
+    box-shadow: 0 8px 14px 0 rgba(5, 5, 5, 0.37);
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
 }
 
 .grid-item:hover {
-    /*font-size:20px;*/
-    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
-    box-shadow:
-            12px 12px 16px 0 rgba(255, 255, 255, 0.3) inset,
-            -8px -8px 12px 0 rgba(0, 0, 0, .25) inset;
+    background: rgba( 255, 255, 255, 0.85 );
+    box-shadow: 0 8px 16px 0 rgba(2, 2, 2, 0.37);
 }
 
 
@@ -304,21 +292,35 @@ footer a
 
 .p_item_1
 {
-    display: inline-block;
+    position: fixed;
+    left:  0; right: 0; bottom: 5px;
     width: fit-content; width: -moz-fit-content;
-    margin:6px auto ; padding: 1px 4px;
+    margin:0 auto ; padding: 1px 5px;
     font-size: 12px;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.1), 0 2px 8px -1px rgba(0, 0, 0, 0.06); border-radius: 25px;
+    border-bottom: 1px solid  black ;
+
+}
 
 
+.p_number_date
+{
+    position: fixed;
+    left:  0; right:  0; top: 15px;
+    width: fit-content; width: -moz-fit-content;
+    margin:0 auto ; padding: 1px 4px;
+    font-size: 12px;
+    /*background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
+    /*box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.1), 0 2px 8px -1px rgba(0, 0, 0, 0.06); border-radius: 25px;*/
+    border-bottom: 1px solid  black ;
 }
 
 .p_item_2
 {
+    display: block;
     width: fit-content; width: -moz-fit-content;
-    margin: 5px auto; padding: 5px 6px;
+    margin: 45px auto 25px; padding: 5px 6px;
     font-size: 14px;
+
 }
 
 
@@ -361,7 +363,7 @@ footer a
     margin: 15px 0;  padding: 5px 5px;
     height: 45px;   width: 300px;
     border-radius: 13px;    border: 1px solid #000;
-    font-family: calibri;   text-align: center;    /*font-size: 12px;*/
+    font-family: "Dubai Light";  text-align: center;    /*font-size: 12px;*/
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
@@ -376,7 +378,7 @@ footer a
     display: block;
     margin: 15px auto;  padding: 5px 10px;
     height: 45px;   width: 300px;
-    font-family: calibri;   text-align: center;     font-size: 15px; color: black;
+    font-family: "Dubai Light";   text-align: center;     font-size: 15px; color: black;
     border: 1px solid #000;    border-radius: 13px;
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
@@ -405,7 +407,7 @@ footer a
     margin: 15px auto;  padding: 5px 10px;
     height: 90px;   max-height: 90px;   width: 300px;   max-width: 300px;
     border-radius: 20px; border: 1px solid #000;
-    text-align: center; font-size: 15px;
+    font-family: "Dubai Light"; font-size: 15px;
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
@@ -421,7 +423,7 @@ footer a
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
     border-radius: 13px; border-width: 0px;
-    font-family: calibri;   text-align: center; font-size: 18px; color: black;
+    font-family: "Dubai Light";   text-align: center; font-size: 18px; color: black;
 }
 
 .btn_submit_insert:hover {
@@ -435,7 +437,7 @@ footer a
     width: fit-content; width: -moz-fit-content;     height: fit-content;
     /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
     background-color: rgba(255, 255, 255, 0.7);
-    color: snow;    font-family: calibri;   text-align: center; font-size: 17px;
+    color: snow;      font-family: "Dubai Light";  text-align: center; font-size: 17px;
     border-radius: 25px;
 }
 
@@ -446,7 +448,7 @@ footer a
     margin: 15px 5px;    padding: 5px 10px;
     border-radius: 13px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    font-family: calibri;   text-align: center; font-size: 15px;
+    font-family: "Dubai Light";   text-align: center; font-size: 15px;
 }
 
 .btn_submit_sreach {
@@ -455,7 +457,7 @@ footer a
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
     border-radius: 13px; border-width: 0px;
-    font-family: calibri;   text-align: center; font-size: 18px; color: black;
+    font-family: "Dubai Light";  text-align: center; font-size: 18px; color: black;
 }
 
 
@@ -504,33 +506,32 @@ footer a
 
 .alert_itemID{
     display: block;
+    position: fixed; right: 0px; top: -15px; left: 0;
     width: fit-content;     width: -moz-fit-content;
-    margin:-12px auto 0px;   padding: 5px 8px;
+    margin:0px auto ;   padding: 0px 8px;
     background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
     text-align: center;     color: white;
-    border-radius: 50%;
+    border-radius: 25px;
 }
 
 .alert_newitem
-{
-    position: relative;
-    right: 10px;
+{   display: block;
+    position: fixed; right: 10px; top: 10px;
     width: fit-content;     width: -moz-fit-content;
-    margin:-12px 0 0px 10px;   padding: 1px 4px;
+    margin:0px auto 0px auto;   padding: 1px 4px;
     background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    border-radius: 25px;
-    color: snow; font-size: 13px;
+    border-radius: 15px;
+    color: snow; font-size: 11px;
 }
 
 .alert_useditem
 {
-    position: relative;
-    right: 10px;
+    position: fixed; right: 10px; top: 10px;
     width: fit-content;     width: -moz-fit-content;
-    margin:-12px 0 0px 10px;   padding: 1px 3px;
-    background-image: linear-gradient( 135deg, #fff7ab 10%, #c6ad03 100%);
+    margin:0px auto 0px auto;   padding: 1px 4px;
+    background-color: darkslateblue;
     border-radius: 25px;
-    color: black; font-size: 13px;
+    color: #ffffff; font-size: 11px;
 }
 
 
@@ -546,11 +547,11 @@ footer a
         grid-template-columns:  95% ;
     }
 
-    .head h1
+    .h1
     {
         font-size: 25px;
         height: fit-content;    width: fit-content;
-        padding: 15px;
+         padding: 15px 20px;
     }
 
     .head h2
@@ -565,21 +566,23 @@ footer a
         font-size: 20px;
     }
 
-    .head  ol
+    .p_list
     {
-        text-align: right;
-        margin: 050px;
+        display: block;
+        position: center;
+        margin: 10px auto;
+        text-indent: 50px; text-align: justify;  line-height: 3; font-size: 13px;
+
     }
 
-    .head  ol li
+    .img_list
     {
-        list-style: decimal-leading-zero;
-        list-style: -moz-decimal-leading-zero;
-        list-style: -ms-decimal-leading-zero;
-        text-indent: 1px;
-        color: black; font-size: 14px;
-        letter-spacing: 1px;
+        /*display: inline;*/
+        position: absolute;
+        width: 42px;  height: 42px;
+        margin: -1px -45px;
     }
+
 
     .box_sreach
     {
@@ -671,6 +674,7 @@ footer a
     }
 
 
+
     .h1
     {
         font-size: 60px;
@@ -689,24 +693,30 @@ footer a
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px)
-{
-    .Display_Grid-container {
-        grid-template-columns:  23% 23% 23% 23%;
-    }
+/*@media (min-width: 1200px)*/
+/*{*/
+/*    .Display_Grid-container {*/
+/*        grid-template-columns:  23% 23% 23% 23%;*/
+/*    }*/
 
-    .h1
-    {
-        font-size: 60px;
-    }
+/*    .h1*/
+/*    {*/
+/*        font-size: 60px;*/
+/*    }*/
 
-    .head h2
-    {
-        font-size: 25px;
-    }
+/*    .head h2*/
+/*    {*/
+/*        font-size: 25px;*/
+/*    }*/
 
-    .head a
-    {  /* start links  of header */
-        font-size: 31px;
-    }
-}
+/*    .head a*/
+/*    {  !* start links  of header *!*/
+/*        font-size: 31px;*/
+/*    }*/
+
+/*    .head*/
+/*    {*/
+/*        height: 400px;*/
+/*        */
+/*    }*/
+/*}*/

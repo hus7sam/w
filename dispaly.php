@@ -23,7 +23,7 @@ $r=1;
     <h2>| فينا خير  </h2>
     <a href="index.php">الرئيسية </a>
     <a href="dispaly.php"> العرض</a>
-    <img class="img_logo" src="logo.png">
+    <img class="img_logo" src="photos/logo.png">
 
 </div>
 
@@ -148,6 +148,7 @@ $r=1;
     <?php }
     $r=0;
 
+       $conn = null;
    }else
        {
        echo " <div class='alert_info'>  لم يتم العثور على بحثك </div>";
@@ -183,7 +184,7 @@ $r=1;
          <?php elseif($row['Status']==="مستعمل"):   ?>
          <p class="alert_useditem"><?php echo  'مستعمل';  endif;?> </p>
 
-              <p class="p_item_1"><?php echo $row['Number'].str_repeat('&nbsp;', 5) .date("y-m-d : g:I",strtotime($row['Date'])); ?></p>
+              <p class="p_number_date"><?php echo $row['Number'].str_repeat('&nbsp;', 5) .date("Y-m-d ",strtotime($row['Date'])); ?></p>
               <p class="p_item_2">
                         <?php
                         $string = strip_tags($row['Description']);
@@ -204,7 +205,7 @@ $r=1;
      <a class="link_item" href="dispaly.php">تفاصيل اكثر</a>
        </div>
 
-<?php }  endif;?>
+<?php }  endif;$conn = null;?>
 
 </div>
 </body>

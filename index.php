@@ -7,6 +7,8 @@ $DescriptionErr = $emailErr = $genderErr = $websiteErr = "";
 
 if(isset($_POST["Description_F"])){
 
+
+
 //    $Description  =$_POST["Description_F"];
 //    $State        =$_POST["State_F"];
 //    $City         =$_POST["City_F"];
@@ -84,6 +86,8 @@ if(isset($_POST["Description_F"])){
 
         echo "<p class='alert_danger'>".$error->getMessage() ."</p>";
     }
+     $conn=null;
+    header("Location: dispaly.php");
 }
 
 ?>
@@ -104,7 +108,7 @@ if(isset($_POST["Description_F"])){
     <h2>| فينا خير  </h2>
     <a href="index.php">الرئيسية </a>
     <a href="dispaly.php"> العرض</a>
-    <img class="img_logo" src="logo.png">
+    <img class="img_logo" src="photos/logo.png">
 </div>
 
 <div class="head">
@@ -125,25 +129,25 @@ if(isset($_POST["Description_F"])){
 <div class="head_2">
     <h1 class="h1">  أهداف عمل الخير</h1>
 
-    <p class="p_list"><img class="img_list" src="icons8-number-1-100.png">
+    <p class="p_list"><img class="img_list" src="photos/icons8-number-1-100.png">
         تحقيق رضا الله تعالى، والحصول على الأجر والثواب.
     </p>
-    <p class="p_list"><img class="img_list" src="icons8-number-2-100.png">
+    <p class="p_list"><img class="img_list" src="photos/icons8-number-2-100.png">
         فعل الخير بما يضمن للآخرين الحياة الكريمة.
     </p>
-    <p class="p_list"> <img class="img_list" src="icons8-3-100.png">
+    <p class="p_list"> <img class="img_list" src="photos/icons8-3-100.png">
         نشر المعروف بين الناس، وتشجيعهم على التعاون والتواصل والبرّ.
     </p>
-    <p class="p_list"> <img class="img_list" src="icons8-number-4-100.png">
+    <p class="p_list"> <img class="img_list" src="photos/icons8-number-4-100.png">
         نشر القيم الإسلامية بين الناس، كالتضامن، والتسامح، والتعاون.
     </p>
-    <p class="p_list"> <img class="img_list" src="icons8-5-c-100.png">
+    <p class="p_list"> <img class="img_list" src="photos/icons8-5-c-100.png">
         صيانة كرامة الفقراء والمحتاجين بتقديم المساعدة إليهم دون حاجتهم لذلّ السؤال.
     </p>
-    <p class="p_list"> <img class="img_list" src="icons8-number-6-100.png">
+    <p class="p_list"> <img class="img_list" src="photos/icons8-number-6-100.png">
         تربية على معاني العطاء والابتكار.
     </p>
-    <p class="p_list"> <img class="img_list" src="icons8-7-c-100.png">
+    <p class="p_list"> <img class="img_list" src="photos/icons8-7-c-100.png">
         تربية الأجيال على معنى المواطنة الصالحة
     </p>
 
