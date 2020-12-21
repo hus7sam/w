@@ -123,7 +123,7 @@ $r=1;
             <?php elseif($row['Status']==="مستعمل"):   ?>
             <p class="alert_useditem"><?php echo  'مستعمل';  endif;?> </p>
 
-            <p class="p_item_1"><?php echo   $row['Number'].str_repeat('&nbsp;', 10) .date("y-m-d : g:I",strtotime($row['Date'])); ?></p>
+            <p class="p_number_date"><?php echo $row['Number'].str_repeat('&nbsp;', 5) .date("Y-m-d ",strtotime($row['Date'])); ?></p>
             <p class="p_item_2">
                 <?php
                 $string = strip_tags($row['Description']);
@@ -138,7 +138,7 @@ $r=1;
 
             </p>
             <p class="p_item_1">
-            <?php  echo $row['State'].str_repeat('&nbsp;', 10). $row['City']; ?>
+                <?php  echo $row['State'].str_repeat('&nbsp;', 2). "=>".str_repeat('&nbsp;', 2). $row['City']; ?>
             </p>
 
 
