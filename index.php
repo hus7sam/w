@@ -97,7 +97,7 @@ if(isset($_POST["Description_F"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 
     <title>فينا خير</title>
@@ -125,25 +125,25 @@ if(isset($_POST["Description_F"])){
 <div class="head_2">
     <h1 class="h1">  أهداف عمل الخير</h1>
 
-    <p class="p_list"><img class="img_list" src="photos/icons8-number-1-100.png">
+    <p class="p_list"><img class="img_list" src="img/icons8-number-1-100.png">
         تحقيق رضا الله تعالى، والحصول على الأجر والثواب.
     </p>
-    <p class="p_list"><img class="img_list" src="photos/icons8-number-2-100.png">
+    <p class="p_list"><img class="img_list" src="img/icons8-number-2-100.png">
         فعل الخير بما يضمن للآخرين الحياة الكريمة.
     </p>
-    <p class="p_list"> <img class="img_list" src="photos/icons8-3-100.png">
+    <p class="p_list"> <img class="img_list" src="img/icons8-3-100.png">
         نشر المعروف بين الناس، وتشجيعهم على التعاون والتواصل والبرّ.
     </p>
-    <p class="p_list"> <img class="img_list" src="photos/icons8-number-4-100.png">
+    <p class="p_list"> <img class="img_list" src="img/icons8-number-4-100.png">
         نشر القيم الإسلامية بين الناس، كالتضامن، والتسامح، والتعاون.
     </p>
-    <p class="p_list"> <img class="img_list" src="photos/icons8-5-c-100.png">
+    <p class="p_list"> <img class="img_list" src="img/icons8-5-c-100.png">
         صيانة كرامة الفقراء والمحتاجين بتقديم المساعدة إليهم دون حاجتهم لذلّ السؤال.
     </p>
-    <p class="p_list"> <img class="img_list" src="photos/icons8-number-6-100.png">
+    <p class="p_list"> <img class="img_list" src="img/icons8-number-6-100.png">
         تربية على معاني العطاء والابتكار.
     </p>
-    <p class="p_list"> <img class="img_list" src="photos/icons8-7-c-100.png">
+    <p class="p_list"> <img class="img_list" src="img/icons8-7-c-100.png">
         تربية الأجيال على معنى المواطنة الصالحة
     </p>
 
