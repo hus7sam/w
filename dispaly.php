@@ -19,14 +19,10 @@ $r=1;
 </head>
 <body>
 
-<div class="bar">
-    <h2>| فينا خير  </h2>
-    <a href="index.php">الرئيسية </a>
-    <a href="dispaly.php"> العرض</a>
-    <img class="img_logo" src="photos/logo.png">
+<?php  include ("header.php")?>
 
-</div>
 
+        <div class="alert_danger"> احتاج ما لا تحتاجة </div>
     <div class="box_sreach">
         <form action="dispaly.php" method="post">
             <select class="list_sreach" name="search_State">
@@ -198,6 +194,7 @@ $r=1;
                         }else{ echo $string  ;} ?>
 
               </p>
+    <img class="img_item" src="photos/brina.jpg">
      <p class="p_item_1">
          <?php  echo $row['State'].str_repeat('&nbsp;', 2). "=>".str_repeat('&nbsp;', 2). $row['City']; ?>
      </p>
@@ -208,6 +205,8 @@ $r=1;
 <?php }  endif;$conn = null;?>
 
 </div>
+
+<?php include ("footer.php")?>
 </body>
 
 </html>

@@ -104,12 +104,8 @@ if(isset($_POST["Description_F"])){
 </head>
 <body>
 
-<div class="bar">
-    <h2>| فينا خير  </h2>
-    <a href="index.php">الرئيسية </a>
-    <a href="dispaly.php"> العرض</a>
-    <img class="img_logo" src="photos/logo.png">
-</div>
+<?php include ("header.php")?>
+
 
 <div class="head">
     <h1 class="h1">   خير الناس أنفعهم للناس   </h1>
@@ -204,27 +200,10 @@ if(isset($_POST["Description_F"])){
     </div>
 </div>
 
+<?php include ("footer.php")?>
 
 
-<footer>
-    <!--    <ul>-->
-    <!--        <li> لتواصل عبر البريد الالكتوني-->
-    <!--            <ul>-->
-    <!--                <li><a href="mailto:hege@example.com">hege@example.com</a></li>-->
-    <!--            </ul>-->
-    <!--        </li>-->
-    <!---->
-    <!--        <li>  لتواصل عبر الواتس-->
-    <!--            <ul>-->
-    <!--                <li><a href="https://wa.me/+996546668820">    0546668820  </a></li>-->
-    <!--            </ul>-->
-    <!--        </li>-->
-    <!---->
-    <!--    </ul>-->
-    <!---->
-    <!--<h3> جميع الحقوق محفوظة </h3>-->
 
-
-</footer>
+</div>
 </body>
 </html>

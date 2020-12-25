@@ -1,32 +1,30 @@
-*
-{
+* {
     box-sizing: border-box;
     direction: rtl;
-    font-family: "Dubai Light";
+    font-family: Tahoma ;
+    font-size: 12px;
     font-weight: normal;
     /*font-family: "Source Sans Pro", "Arial", sans-serif;*/
     z-index: 10000;
-}
 
+
+
+}
 
 .logo
 {
-    width: 32px;
-    height: 32px;
+    width: 32px; height: 32px;
     margin: 1px auto;
-    text-align: center;
-    align-items: center;
+    text-align: center; align-items: center;
 }
 .img_logo
 {
     float:left;
-    width: 52px;
-    height: 52px;
+    width: 52px; height: 52px;
     margin: 3px auto ;
     display: inline-block;
-    text-indent: -9999px;
-    border-radius: 50%;
-    border:1px solid #f1bf0a;
+    border-radius: 9%;
+    border:1px solid #050505;
 }
 .error {color: #FF0000;}
 
@@ -182,52 +180,106 @@ body { /* start boody */
 
 }
 
-
-
-
-footer
+.footer
 {
-    display: inline-block;
-    width: 100%;
-    background-color: #131212;
-    margin: auto  auto;
-    padding: 0 200px 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-
-}
-
-footer ul
-{
-    /*margin: 10px 02PX;*/
-    color: #e9e8e8;
-}
-
-footer ul li{
-    /*display: grid;?*/
-}
-
-
-footer h3
-{
-    display: none;
-    margin: auto 200px ;
+    height: fit-content; width: 100%;
+    margin: 0 auto 0px 0px; padding: 20px 0;
+    background-color: #585858;
+    color: #030303;
     text-align: center;
-    padding: 5px 5px;
+    /*word-spacing: 3px;*/
+    letter-spacing: 0.6px;
+
 }
 
-footer a
+.footer a
 {
+    font-size: 15px;
+    color: #000000;
     text-decoration: none;
-    color: #ffffff;
 }
 
-/*  start  Display Page  */
-.Display_Body {
-    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);
+.Donation_Gr_container
+{
+    display:grid;
+    height: fit-content;
+    width: 100%;
+    margin: 60px auto;
+    grid-template-columns: 20% 20% 20%  20%  ;
+    grid-template-rows: auto;    justify-content: center;
+    column-gap: 20px;
+    row-gap: 15px;
+}
+
+.Donation_g_item
+{
+    display: block;
+    /*background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);    !*border: 1px solid rgba(0, 0, 0, 0.8);*!*/
+    text-align: center;
+    border-radius: 2px;
+    width: 100%;
+    padding: 0px;  margin: 0 0 10px 0;
+    background: rgba( 255, 255, 255, 0.40 );
+    box-shadow: 0 8px 14px 0 rgba(5, 5, 5, 0.37);
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+}
+
+.Donation_g_item img
+{
+    height: 90px; width: 100%;
+}
+
+
+
+.fo_Gr-container {
+
+    display:grid;
+    height: fit-content;
+    width: 100%;
+    margin: 10px auto;
+    grid-template-columns: fit-content(45%) fit-content(45%) fit-content(45%)  fit-content(45%)  ;
+    grid-template-rows: auto;    justify-content: center;
+    border-radius: 7px;
+    column-gap: 20px;
+    row-gap: 15px;
+
+}
+
+.fo_g-item {
+    display: block;
+    text-align: center;
+    width: 100%;
+    /*border-radius: 1pc;*/
+    /*width: fit-content; width: -moz-fit-content;*/
+    padding: 0px 15px 0 0;  margin: 8px 0px 10px 0;
+    /*background: #cacaca;*/
+    /*box-shadow: 0 8px 14px 0 rgba(5, 5, 5, 0.37);*/
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    border-right: 1px solid #ffe977;
 
 
 }
+
+
+.fo_g-item h1
+{
+    color:#fff;
+    text-align: right; font-size: 15px;
+    padding: 0 0 9px 0;
+    border-bottom: 1px solid #ffe977;
+
+}
+
+
+
+/*!*  start  Display Page  *!*/
+/*.Display_Body {*/
+/*    background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);*/
+
+
+/*}*/
 
 .Display_Grid-container {
 
@@ -250,7 +302,7 @@ footer a
     display: block;
     /*background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);    !*border: 1px solid rgba(0, 0, 0, 0.8);*!*/
     text-align: center;
-    border-radius: 25px;
+    border-radius: 7px;
     padding: 0px;  margin: 0 0 10px 0;
     background: rgba( 255, 255, 255, 0.40 );
     box-shadow: 0 8px 14px 0 rgba(5, 5, 5, 0.37);
@@ -292,10 +344,9 @@ footer a
 
 .p_item_1
 {
-    position: fixed;
-    left:  0; right: 0; bottom: 5px;
+
     width: fit-content; width: -moz-fit-content;
-    margin:0 auto ; padding: 1px 5px;
+    margin:0px auto 7px  ; padding: 1px 5px;
     font-size: 12px;
     border-bottom: 1px solid  black ;
 
@@ -304,10 +355,9 @@ footer a
 
 .p_number_date
 {
-    position: fixed;
-    left:  0; right:  0; top: 15px;
+
     width: fit-content; width: -moz-fit-content;
-    margin:0 auto ; padding: 1px 4px;
+    margin:8px auto 3px ; padding: 1px 1px;
     font-size: 12px;
     /*background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
     /*box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.1), 0 2px 8px -1px rgba(0, 0, 0, 0.06); border-radius: 25px;*/
@@ -318,8 +368,8 @@ footer a
 {
     display: block;
     width: fit-content; width: -moz-fit-content;
-    margin: 45px auto 25px; padding: 5px 6px;
-    font-size: 14px;
+    margin: 3px auto 3px; padding: 5px 6px;
+    font-size: 12px;
 
 }
 
@@ -363,7 +413,7 @@ footer a
     margin: 15px 0;  padding: 5px 5px;
     height: 45px;   width: 300px;
     border-radius: 13px;    border: 1px solid #000;
-    font-family: "Dubai Light";  text-align: center;    /*font-size: 12px;*/
+    font-family:  Tahoma;  text-align: center;    /*font-size: 12px;*/
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
@@ -378,7 +428,7 @@ footer a
     display: block;
     margin: 15px auto;  padding: 5px 10px;
     height: 45px;   width: 300px;
-    font-family: "Dubai Light";   text-align: center;     font-size: 15px; color: black;
+    font-family:Tahoma;   text-align: center;     font-size: 15px; color: black;
     border: 1px solid #000;    border-radius: 13px;
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
@@ -407,7 +457,7 @@ footer a
     margin: 15px auto;  padding: 5px 10px;
     height: 90px;   max-height: 90px;   width: 300px;   max-width: 300px;
     border-radius: 20px; border: 1px solid #000;
-    font-family: "Dubai Light"; font-size: 15px;
+    font-family: Tahoma; font-size: 15px;
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
@@ -423,7 +473,7 @@ footer a
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
     border-radius: 13px; border-width: 0px;
-    font-family: "Dubai Light";   text-align: center; font-size: 18px; color: black;
+    font-family: Tahoma;   text-align: center; font-size: 18px; color: black;
 }
 
 .btn_submit_insert:hover {
@@ -433,11 +483,14 @@ footer a
 .box_sreach
 {
     display: block;
-    margin: 15px auto 15px auto ;   padding: 3px 15px;
+    margin: 65px auto 70px auto ;   padding: 4px 15px;
     width: fit-content; width: -moz-fit-content;     height: fit-content;
     /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
-    background-color: rgba(255, 255, 255, 0.7);
-    color: snow;      font-family: "Dubai Light";  text-align: center; font-size: 17px;
+    background: rgba( 255, 255, 255, 0.40 );
+    box-shadow: 0 8px 14px 0 rgba(5, 5, 5, 0.37);
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    color: snow;      font-family: Tahoma;  text-align: center; font-size: 17px;
     border-radius: 25px;
 }
 
@@ -448,7 +501,7 @@ footer a
     margin: 15px 5px;    padding: 5px 10px;
     border-radius: 13px;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    font-family: "Dubai Light";   text-align: center; font-size: 15px;
+    font-family: Tahoma;   text-align: center; font-size: 15px;
 }
 
 .btn_submit_sreach {
@@ -457,7 +510,7 @@ footer a
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;
     border-radius: 13px; border-width: 0px;
-    font-family: "Dubai Light";  text-align: center; font-size: 18px; color: black;
+    font-family:"Tahoma";  text-align: center; font-size: 18px; color: black;
 }
 
 
@@ -473,7 +526,12 @@ footer a
 }
 
 /*  end  Display Page  */
-
+.alert_copy{
+    width: 100%;
+    margin: 0 0 0 0 ;    padding: 5px;
+    background-image: linear-gradient( 135deg, #f05f57 10%, #f05f57 100%);
+    text-align: center; font-size: 10px;    color: white;
+}
 
 .alert_success{
     width: 100%;
@@ -506,21 +564,21 @@ footer a
 
 .alert_itemID{
     display: block;
-    position: fixed; right: 0px; top: -8px; left: 0;
     width: fit-content;     width: -moz-fit-content;
-    margin:0px auto ;   padding: 0px 8px;
+    margin:-15px auto 0px ;   padding: 1px 8px;
     background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
     text-align: center;     color: white; font-size: 11px;
-    border-radius: 25px;
+    border-radius:  10px 10px 0 0;
 }
 
 .alert_newitem
 {   display: block;
-    position: fixed; right: -8px; top: 40px;
+    /*position: fixed; right: -8px; top: 40px;*/
+    float: left;
     width: fit-content;     width: -moz-fit-content;
-    margin:0px auto 0px auto;   padding: 5px 1px;
+    margin:0px 0px 0 0 ;   padding: 8px 0 4px 2px;
     background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    border-radius: 15px;
+    /*border-radius:  0px 10px 10px 0px  ;*/
     color: snow; font-size: 11px;
     transform: rotate(180deg);
     writing-mode: vertical-rl;
@@ -528,17 +586,23 @@ footer a
 
 .alert_useditem
 {
-    position: fixed; right: -8px; top: 30px;
+    /*position: fixed; right: -8px; top: 30px;*/
+    float: left;
     width: fit-content;     width: -moz-fit-content;
-    margin:0px auto 0px auto;   padding: 5px 1px;
+    margin:0px 0px 0 0 ;   padding: 8px 0 4px 2px;
     background-color: darkslateblue;
-    border-radius: 25px;
+    /*border-radius: 15px;*/
     color: #ffffff; font-size: 11px;
     transform: rotate(180deg);
     writing-mode: vertical-rl;
 }
 
-
+.img_item{
+    display: inline-flex;
+    margin: auto auto;
+    width:  100%; height: 140px;
+    /*border-radius: 25px;*/
+}
 
 /*// Extra small devices (portrait phones, less than 576px)*/
 /*// No media query for `xs` since this is the default in Bootstrap*/
@@ -551,6 +615,17 @@ footer a
         grid-template-columns:  95% ;
     }
 
+
+    .fo_Gr-container {
+
+        grid-template-columns:  95% ;
+    }
+    .img_item{
+        /*display: inline-flex;*/
+        margin: auto auto;
+        width:  100%; height: 140px;
+        /*border-radius: 25px;*/
+    }
     .h1
     {
         font-size: 25px;
@@ -618,6 +693,11 @@ footer a
         grid-template-columns:  48% 48% ;
     }
 
+    .fo_Gr-container {
+
+        grid-template-columns:  48% 48% ;
+    }
+
 
     .h1
     {
@@ -633,28 +713,30 @@ footer a
     {  /* start links  of header */
         font-size: 20px;
     }
-    .box_sreach
-    {
-        width: 90%;
-    }
-    .list_sreach
-    {
-        width: 100px;
-        margin: 8px 5px;
-    }
-    .list_sreach
-    {
-        width: 114px; height: 35px;
-        margin: 8px 5px;
-        font-size: 10px;
-    }
 
-    .btn_submit_sreach
-    {
-        width: 110px; height: 35px;
-        margin: 8px 5px;
-        font-size: 11px;
-    }
+
+    /*.box_sreach*/
+    /*{*/
+    /*    width: 90%;*/
+    /*}*/
+    /*.list_sreach*/
+    /*{*/
+    /*    width: 100px;*/
+    /*    margin: 8px 5px;*/
+    /*}*/
+    /*.list_sreach*/
+    /*{*/
+    /*    width: 114px; height: 35px;*/
+    /*    margin: 8px 5px;*/
+    /*    font-size: 10px;*/
+    /*}*/
+
+    /*.btn_submit_sreach*/
+    /*{*/
+    /*    width: 110px; height: 35px;*/
+    /*    margin: 8px 5px;*/
+    /*    font-size: 11px;*/
+    /*}*/
 
 }
 
@@ -666,6 +748,11 @@ footer a
 
         grid-template-columns:  32% 32% 32%;
 
+    }
+
+    .fo_Gr-container {
+
+        grid-template-columns:  32% 32% 32% ;
     }
 
     .grid-item  td{
@@ -685,6 +772,12 @@ footer a
     .head a
     {  /* start links  of header */
         font-size: 31px;
+    }
+    .img_item{
+        display: block;
+        margin: auto auto;
+        width:  100%; height: 140px;
+        /*border-radius: 25px;*/
     }
 
 
@@ -715,15 +808,21 @@ footer a
     {  /* start links  of header */
         font-size: 31px;
     }
+    .img_item{
+        display: block;
+        margin: auto auto;
+        width:  100%; height: 140px;
+        /*border/-radius: 25px;*/
+    }
 
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
-/*@media (min-width: 1200px)*/
-/*{*/
-/*    .Display_Grid-container {*/
-/*        grid-template-columns:  23% 23% 23% 23%;*/
-/*    }*/
+@media (min-width: 1200px)
+{
+    .Display_Grid-container {
+        grid-template-columns:  19% 19% 19% 19% 19%;
+    }
 
 /*    .h1*/
 /*    {*/
@@ -745,4 +844,7 @@ footer a
 /*        height: 400px;*/
 /*        */
 /*    }*/
-/*}*/
+
+
+
+}
