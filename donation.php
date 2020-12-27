@@ -5,8 +5,8 @@
 <?php  include ("header.php")?>
 
 <style>
-    <?php  include ("style.css")?>
 
+    <?php  include ("css/style.css")?>
 </style>
 
 <div class="Donation_Gr_container">

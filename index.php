@@ -2,6 +2,7 @@
 
 
 include 'Connection.php';
+include ("fun.php");
 $DescriptionErr = $emailErr = $genderErr = $websiteErr = "";
 //$Description = $State = $City = $itemNumber= $itStatus= $itemCategory = "";
 
@@ -87,7 +88,7 @@ if(isset($_POST["Description_F"])){
         echo "<p class='alert_danger'>".$error->getMessage() ."</p>";
     }
      $conn=null;
-    header("Location: dispaly.php");
+    header("Location: display.php");
 }
 
 ?>
@@ -110,13 +111,13 @@ if(isset($_POST["Description_F"])){
 <div class="head">
     <h1 class="h1">   خير الناس أنفعهم للناس   </h1>
 
-    <a href="dispaly.php">أجهزة طبية </a>
-    <a href="dispaly.php"> أجهزة الكترونية</a>
-    <a href="dispaly.php"> أجهزة كهربائية</a>
-    <a href="dispaly.php"> كتب</a>
-    <a href="dispaly.php"> مواد غذائي </a>
-    <a href="dispaly.php"> أثاث</a>
-    <a href="dispaly.php"> ملابس </a>
+    <a href="display.php">أجهزة طبية </a>
+    <a href="display.php"> أجهزة الكترونية</a>
+    <a href="display.php"> أجهزة كهربائية</a>
+    <a href="display.php"> كتب</a>
+    <a href="display.php"> مواد غذائي </a>
+    <a href="display.php"> أثاث</a>
+    <a href="display.php"> ملابس </a>
 
     <!--    <a href="inedx.php"> تبرعات</a>-->
 <!--    <h2>(يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا وَاعْبُدُوا رَبَّكُمْ وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ) </h2>-->
@@ -162,36 +163,27 @@ if(isset($_POST["Description_F"])){
 
             <select class="list_insert" name="State_F" required>
                 <option value="">-- أختر المنطقة --</option>
-                <option value="مكة المكرمة">مكة المكرمة</option>
-                <option value="المدينة المنورة">المدينة المنورة</option>
-                <option value="الرياض ">الرياض </option>
-                <option value="عسير"> عسير</option>
-                <option value="الحدود الشمالية">الحدود الشمالية</option>
-                <option value="نجران"> نجران</option>
-                <option value="حائل">حائل </option>
-                <option value="القصيم">القصيم</option>
-                <option value="تبوك">تبوك</option>
-                <option value="جازان">جازان</option>
-                <option value="الجوف">الجوف</option>
-                <option value="الشرقية">الشرقية</option>
+                <?php   for ($i=0; $i<$length_State; $i++)  {?>
+                <option value="<?php  echo $arra_list_State[$i]; ?>">
+                <?php echo $arra_list_State[$i]; ?> </option>
+                <?php } ?>
             </select>
 
             <select class="list_insert" name="Category_F" required>
                 <option value="">-- أختر فئة العنصر --</option>
-                <option value="أجهزة طبية">أجهزة طبية</option>
-                <option value="أجهزة كهربائية"> أجهزة كهربائية</option>
-                <option value="أجهزة الكترونية">أجهزة الكترونية</option>
-                <option value="كتب">كتب</option>
-                <option value="ملابس">ملابس</option>
-                <option value="أثاث">أثاث</option>
-                <option value="مواد غذائية">مواد غذائية</option>
-                <option value="أخر">أخر</option>
+                <?php   for ($i=0; $i<$length_Category; $i++)  {?>
+                <option value="<?php  echo $arra_list_Category[$i]; ?>">
+                <?php echo $arra_list_Category[$i]; ?> </option>
+                <?php } ?>
             </select>
 
+
             <select class="list_insert" name="Status_F" required>
-                <option value="">-- أختر حالة العنصر  -- </option>
-                <option value="جديد">جديد</option>
-                <option value="مستعمل">مستعمل</option>
+                <option value=""> -- أختر حالة العنصر  -- </option>
+                <?php   for ($i=0; $i<$length_Status; $i++)  {?>
+                <option value="<?php  echo $arr_list_Status[$i]; ?>">
+                <?php echo $arr_list_Status[$i];?> </option>
+                <?php } ?>
             </select>
 
             <input class="btn_submit_insert" type="submit" value="بحث">

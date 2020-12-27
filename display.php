@@ -1,5 +1,6 @@
 <?php
 require 'Connection.php';
+require ("fun.php");
 
 $r=1;
 ?>
@@ -22,41 +23,31 @@ $r=1;
 <?php  include ("header.php")?>
 
 
-        <div class="alert_danger"> احتاج ما لا تحتاجة </div>
+<!--        <div class="alert_danger"> احتاج ما لا تحتاجة </div>-->
     <div class="box_sreach">
-        <form action="dispaly.php" method="post">
+        <form action="display.php" method="post">
             <select class="list_sreach" name="search_State">
                 <option value="">-- أختر المنطقة --</option>
-                <option value="مكة المكرمة">مكة المكرمة</option>
-                <option value="المدينة المنورة">المدينة المنورة</option>
-                <option value="الرياض ">الرياض </option>
-                <option value="عسير"> عسير</option>
-                <option value="الحدود الشمالية">الحدود الشمالية</option>
-                <option value="نجران"> نجران</option>
-                <option value="حائل">حائل </option>
-                <option value="القصيم">القصيم</option>
-                <option value="تبوك">تبوك</option>
-                <option value="جازان">جازان</option>
-                <option value="الجوف">الجوف</option>
-                <option value="الشرقية">الشرقية</option>
+                <?php   for ($i=0; $i<$length_State; $i++)  {?>
+                <option value="<?php  echo $arra_list_State[$i]; ?>">
+                <?php echo $arra_list_State[$i]; ?> </option>
+                <?php } ?>
             </select>
 
             <select class="list_sreach" NAME="search_Category">
                 <option value="">-- أختر فئة العنصر --</option>
-                <option value="أجهزة طبية">أجهزة طبية</option>
-                <option value="أجهزة كهربائية"> أجهزة كهربائية</option>
-                <option value="أجهزة الكترونية">أجهزة الكترونية</option>
-                <option value="كتب">كتب</option>
-                <option value="ملابس">ملابس</option>
-                <option value="أثاث">أثاث</option>
-                <option value="مواد غذائية">مواد غذائية</option>
-                <option value="أخر">أخر</option>
+                <?php   for ($i=0; $i<$length_Category; $i++)  {?>
+                <option value="<?php  echo $arra_list_Category[$i]; ?>">
+                <?php echo $arra_list_Category[$i]; ?> </option>
+                <?php } ?>
             </select>
 
             <select class="list_sreach" name="search_Status">
                 <option value="">-- أختر حالة العنصر --</option>
-                <option value="جديد">جديد</option>
-                <option value="مستعمل">مستعمل</option>
+                <?php   for ($i=0; $i<$length_Status; $i++)  {?>
+                <option value="<?php  echo $arr_list_Status[$i]; ?>">
+                <?php echo $arr_list_Status[$i]; ?> </option>
+                <?php } ?>
             </select>
 
             <input class="btn_submit_sreach" type="submit" value="بحث" name="box_Search">
@@ -138,7 +129,7 @@ $r=1;
             </p>
 
 
-            <a class="link_item" href="dispaly.php">تفاصيل اكثر</a>
+            <a class="link_item" href="display.php">تفاصيل اكثر</a>
         </div>
 
     <?php }
@@ -199,7 +190,7 @@ $r=1;
          <?php  echo $row['State'].str_repeat('&nbsp;', 2). "=>".str_repeat('&nbsp;', 2). $row['City']; ?>
      </p>
 
-     <a class="link_item" href="dispaly.php">تفاصيل اكثر</a>
+     <a class="link_item" href="display.php">تفاصيل اكثر</a>
        </div>
 
 <?php }  endif;$conn = null;?>
