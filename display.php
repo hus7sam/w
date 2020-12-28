@@ -23,6 +23,7 @@ $r=1;
 <?php  include ("header.php")?>
 
 
+
 <!--        <div class="alert_danger"> احتاج ما لا تحتاجة </div>-->
     <div class="box_sreach">
         <form action="display.php" method="post">
@@ -52,6 +53,35 @@ $r=1;
 
             <input class="btn_submit_sreach" type="submit" value="بحث" name="box_Search">
         </form>
+    </div>
+
+    <div class="box_sreach">
+
+      <form method="post" action="display.php">
+         <input class="list_sreach" type="text" name="delete" placeholder="اكتب رقم العنصر">
+         <input class="btn_submit_sreach" type="submit" value="أحذف">
+      </form>
+        <?php
+        if (isset($_POST["delete"]))
+        {
+            if (empty($_POST["delete"]))
+            {
+                $DescriptionErr="الرجاء كتابة";  $_POST["delete"]='';
+            }
+            if(filter_has_var(INPUT_POST,'delete'))
+            {
+                $id=test_input(filter_var($_POST["delete"],FILTER_SANITIZE_NUMBER_INT));
+                delete($id);
+                $page = $_SERVER['PHP_SELF'];
+                $sec = "10";
+                header("Refresh: $sec; url=$page");
+            }
+        }
+
+
+        ?>
+    </div>
+
     </div>
 
 <!--  ---  sreach BOX   ---  -->
@@ -110,7 +140,10 @@ $r=1;
             <?php elseif($row['Status']==="مستعمل"):   ?>
             <p class="alert_useditem"><?php echo  'مستعمل';  endif;?> </p>
 
-            <p class="p_number_date"><?php echo $row['Number'].str_repeat('&nbsp;', 5) .date("Y-m-d ",strtotime($row['Date'])); ?></p>
+            <p class="p_number_date">
+            <img  class="phone_icon" src="img/phone-icon-24.png">
+            <?php echo $row['Number'] ; ?>
+            <?php echo str_repeat('&nbsp;', 5) .date("Y-m-d ",strtotime($row['Date'])); ?></p>
             <p class="p_item_2">
                 <?php
                 $string = strip_tags($row['Description']);
@@ -124,12 +157,13 @@ $r=1;
                 }else{ echo $string  ;} ?>
 
             </p>
-            <p class="p_item_1">
+            <img class="img_item" src="img/brina.jpg">
+            <p class="p_item_1"> <img  class="phone_icon" src="img/place.png">
                 <?php  echo $row['State'].str_repeat('&nbsp;', 2). "=>".str_repeat('&nbsp;', 2). $row['City']; ?>
             </p>
 
 
-            <a class="link_item" href="display.php">تفاصيل اكثر</a>
+<!--            <a class="link_item" href="display.php">تفاصيل اكثر</a>-->
         </div>
 
     <?php }
@@ -171,7 +205,10 @@ $r=1;
          <?php elseif($row['Status']==="مستعمل"):   ?>
          <p class="alert_useditem"><?php echo  'مستعمل';  endif;?> </p>
 
-              <p class="p_number_date"><?php echo $row['Number'].str_repeat('&nbsp;', 5) .date("Y-m-d ",strtotime($row['Date'])); ?></p>
+              <p class="p_number_date">
+                  <img  class="phone_icon" src="img/phone-icon-24.png">
+                  <?php echo $row['Number'] ; ?>
+              <?php echo str_repeat('&nbsp;', 5) .date("Y-m-d ",strtotime($row['Date'])); ?></p>
               <p class="p_item_2">
                         <?php
                         $string = strip_tags($row['Description']);
@@ -186,7 +223,7 @@ $r=1;
 
               </p>
     <img class="img_item" src="img/brina.jpg">
-     <p class="p_item_1">
+     <p class="p_item_1"> <img  class="phone_icon" src="img/place.png">
          <?php  echo $row['State'].str_repeat('&nbsp;', 2). "=>".str_repeat('&nbsp;', 2). $row['City']; ?>
      </p>
 

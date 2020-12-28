@@ -19,13 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="css sort1">
-      <change afterPath="$PROJECT_DIR$/fun.php" afterDir="false" />
+    <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="for">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispaly.php" beforeDir="false" afterPath="$PROJECT_DIR$/display.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/display.php" beforeDir="false" afterPath="$PROJECT_DIR$/display.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/donation.php" beforeDir="false" afterPath="$PROJECT_DIR$/donation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fun.php" beforeDir="false" afterPath="$PROJECT_DIR$/fun.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +121,9 @@
       <workItem from="1608769740383" duration="9978000" />
       <workItem from="1608879539390" duration="11169000" />
       <workItem from="1608931299555" duration="11326000" />
-      <workItem from="1609028376474" duration="6933000" />
+      <workItem from="1609028376474" duration="9295000" />
+      <workItem from="1609058592113" duration="2087000" />
+      <workItem from="1609119042684" duration="5614000" />
     </task>
     <task id="LOCAL-00001" summary="u">
       <created>1602417578729</created>
@@ -362,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608938313118</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="for">
+      <created>1609042782800</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1609042782801</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +406,7 @@
     <MESSAGE value="done array" />
     <MESSAGE value="css sort" />
     <MESSAGE value="css sort1" />
-    <option name="LAST_COMMIT_MESSAGE" value="css sort1" />
+    <MESSAGE value="for" />
+    <option name="LAST_COMMIT_MESSAGE" value="for" />
   </component>
 </project>

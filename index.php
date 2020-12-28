@@ -10,21 +10,6 @@ if(isset($_POST["Description_F"])){
 
 
 
-//    $Description  =$_POST["Description_F"];
-//    $State        =$_POST["State_F"];
-//    $City         =$_POST["City_F"];
-//    $Number       =$_POST["Number_F"];
-//    $Status       =$_POST["Status_F"];
-//    $Category     =$_POST["Category_F"];
-
-    function test_input($data) {
-        $data=trim($data);
-        $data=stripslashes($data);
-        $data=htmlspecialchars($data);
-        return $data;
-    }
-
-
     if (empty($_POST["Description_F"]))
     { $DescriptionErr="الرجاء كتابة المدينة";  $_POST["Description_F"]=''; }
 
