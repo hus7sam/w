@@ -158,7 +158,7 @@ if(isset($messgage)):
                 </div> <?php  endif;?>
 
             <div class="div_item_number">
-                <img class="img_item_icon" src="img/phone-icon-24.png">
+                <img class="img_item_icon" src="img/phone-call.png">
                 <p> <?php echo $row['Number'] ; ?></p>
             </div>
 
@@ -194,13 +194,13 @@ if(isset($messgage)):
             </div>
 
             <div class="div_item_place">
-                <img class="img_item_icon" src="img/place.png">
+                <img class="img_item_icon" src="img/location.png">
                 <p><?php  echo $row['State'].str_repeat('&nbsp;', 1). "-".str_repeat('&nbsp;', 1). $row['City']; ?></p>
             </div>
 
             <div class="div_item_complaint">
                 <a href="#" title="يقوم هذا الزر بتقديم بلاغ ">
-                    <img class="img_item_icon" src="img/block.png">
+                    <img class="img_item_icon" src="img/block%20.png">
                 </a>
                 <!--              <p>    تبليغ </p>-->
             </div>
