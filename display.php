@@ -2,6 +2,7 @@
 require 'Connection.php';
 require ("fun.php");
 
+
 $r=1;
 ?>
 
@@ -13,19 +14,25 @@ $r=1;
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link  rel="stylesheet" type="text/css" href="css/style.css">
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-<!---->
 
     <title>عرض</title>
 </head>
+
 <body>
+<?php
+if(isset($messgage)):
+    echo "<div class='alert_success'> ";
+
+    echo $messgage; " </div>" ; endif; ?>
+
 
 <?php  include ("header.php")?>
-
+<?php // include ("AD.php")?>
 
 
 <!--        <div class="alert_danger"> احتاج ما لا تحتاجة </div>-->
-    <div class="box_sreach">
+<div class="cont">
+    <div class="div_box_sreach">
         <form action="display.php" method="post">
             <select class="list_sreach" name="search_State">
                 <option value="">-- أختر المنطقة --</option>
@@ -55,45 +62,43 @@ $r=1;
         </form>
     </div>
 
-    <div class="box_sreach">
+<!--    <div class="div_box_sreach" >-->
+<!---->
+<!--      <form method="post" action="display.php" >-->
+<!--         <input class="list_sreach" type="text" name="delete" placeholder="اكتب رقم العنصر">-->
+<!--         <input class="btn_submit_sreach" type="submit" value="أحذف">-->
+<!--      </form>-->
+<!--        --><?php
+//        if (isset($_POST["delete"]))
+//        {
+//            if (empty($_POST["delete"]))
+//            {
+//                $DescriptionErr="الرجاء كتابة";  $_POST["delete"]='';
+//            }
+//            if(filter_has_var(INPUT_POST,'delete'))
+//            {
+//                $id=test_input(filter_var($_POST["delete"],FILTER_SANITIZE_NUMBER_INT));
+//                delete($id);
+////                $page = $_SERVER['PHP_SELF'];
+////                $sec = "10";
+//////                header("Refresh: $sec; url=$page");
+// $messgage=' لقد تم حذف الاعلان بنجاح';
+//            }
+//        }
+//
+//
+//        ?>
+<!--    </div>-->
 
-      <form method="post" action="display.php">
-         <input class="list_sreach" type="text" name="delete" placeholder="اكتب رقم العنصر">
-         <input class="btn_submit_sreach" type="submit" value="أحذف">
-      </form>
-        <?php
-        if (isset($_POST["delete"]))
-        {
-            if (empty($_POST["delete"]))
-            {
-                $DescriptionErr="الرجاء كتابة";  $_POST["delete"]='';
-            }
-            if(filter_has_var(INPUT_POST,'delete'))
-            {
-                $id=test_input(filter_var($_POST["delete"],FILTER_SANITIZE_NUMBER_INT));
-                delete($id);
-                $page = $_SERVER['PHP_SELF'];
-                $sec = "10";
-                header("Refresh: $sec; url=$page");
-            }
-        }
+</div>
 
-
-        ?>
-    </div>
-
-    </div>
+  <HR>
 
 <!--  ---  sreach BOX   ---  -->
 
 
 <?php if(isset($_POST["box_Search"])):
-    function test_input($data) {
-                $data=trim($data);
-                $data=stripslashes($data);
-                $data=htmlspecialchars($data);
-                return $data;
-    }
+
 
     if (empty($_POST["search_State"]))
     { $DescriptionErr="الرجاء كتابة المدينة";  $_POST["search_State"]=''; }
@@ -116,7 +121,7 @@ $r=1;
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
     $sql = "SELECT *
             FROM item
-            WHERE  Status=:Status_1 AND Category=:Category_1 AND State=:State_1 ";
+            WHERE  Status=:Status_1 or Category=:Category_1 or State=:State_1 ";
     $stmt = $conn->prepare($sql);
     $select=array(
          'Status_1'   => $Status_1,
@@ -134,36 +139,71 @@ $r=1;
 
         <div class='grid-item'>
 
-            <p class="alert_itemID"><?php echo $row['ID']. " ID"; ?> </p>
+            <div class="div_item_id">
+                <p> <?php echo " م : ". $row['ID'] ; ?> </p>
+            </div>
+
+            <div class="div_item_Name">
+                <p>  <?php echo  $row['name']; ?> </p>
+            </div>
+
             <?php  if ($row['Status']==="جديد"):?>
-                <p class="alert_newitem"><?php echo  'جديد'; ?> </p>
+                <div  class="div_item_new">
+                    <p> <?php echo  'جديد'; ?></p>
+                </div>
+
             <?php elseif($row['Status']==="مستعمل"):   ?>
-            <p class="alert_useditem"><?php echo  'مستعمل';  endif;?> </p>
+                <div class="div_item_used">
+                    <p> <?php echo  'مستعمل'; ?></p>
+                </div> <?php  endif;?>
 
-            <p class="p_number_date">
-            <img  class="phone_icon" src="img/phone-icon-24.png">
-            <?php echo $row['Number'] ; ?>
-            <?php echo str_repeat('&nbsp;', 5) .date("Y-m-d ",strtotime($row['Date'])); ?></p>
-            <p class="p_item_2">
-                <?php
-                $string = strip_tags($row['Description']);
-                if (strlen($string) > 100) {
-                    // truncate string
-                    $stringCut = substr($string, 0, 300);
-                    $endPoint = strrpos($stringCut, ' ');
-                    //if the string doesn't contain any space then it will cut without word basis.
-                    $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-                    echo $string . " ..." ;
-                }else{ echo $string  ;} ?>
+            <div class="div_item_number">
+                <img class="img_item_icon" src="img/phone-icon-24.png">
+                <p> <?php echo $row['Number'] ; ?></p>
+            </div>
 
-            </p>
-            <img class="img_item" src="img/brina.jpg">
-            <p class="p_item_1"> <img  class="phone_icon" src="img/place.png">
-                <?php  echo $row['State'].str_repeat('&nbsp;', 2). "=>".str_repeat('&nbsp;', 2). $row['City']; ?>
-            </p>
+            <div class="div_item_date">
+                <img class="img_item_icon" src="img/calendar.png">
+                <p> <?php echo date("Y-m-d ",strtotime($row['Date'])); ?></p>
+            </div>
 
+            <div class="div_item_description">
+                <p>  <?php
+                    $string = strip_tags($row['Description']);
+                    if (strlen($string) > 100) {
+                        // truncate string
+                        $stringCut = substr($string, 0, 300);
+                        $endPoint = strrpos($stringCut, ' ');
+                        // if the string doesn't contain any space then it will cut without word basis.
+                        $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                        echo $string . " ..." ;
+                    }else{ echo $string  ;} ?></p>
+            </div>
 
-<!--            <a class="link_item" href="display.php">تفاصيل اكثر</a>-->
+            <!--          <img class="img_Ads_img" src="img/ww.jpg">-->
+            <!--          <img class="img_Ads_img" src="img/xxxx.jpg">-->
+            <!--          <img class="img_Ads_img" src="img/ppp.png">-->
+            <!--          <img class="img_Ads_img" src="img/qqq.jpg">-->
+            <img class="img_item_img1" src="img/logo3.png">
+
+            <div class="div_item_delete">
+                <a href="#" title="يقوم هذا الزر بحذف العنصر">
+                    <img class="img_item_icon" src="img/delete.png" >
+                </a>
+                <!--         <p> خذف</p>-->
+            </div>
+
+            <div class="div_item_place">
+                <img class="img_item_icon" src="img/place.png">
+                <p><?php  echo $row['State'].str_repeat('&nbsp;', 1). "-".str_repeat('&nbsp;', 1). $row['City']; ?></p>
+            </div>
+
+            <div class="div_item_complaint">
+                <a href="#" title="يقوم هذا الزر بتقديم بلاغ ">
+                    <img class="img_item_icon" src="img/block.png">
+                </a>
+                <!--              <p>    تبليغ </p>-->
+            </div>
         </div>
 
     <?php }
@@ -199,36 +239,73 @@ $r=1;
         ?>
  <div class='grid-item'>
 
-         <p class="alert_itemID"><?php echo $row['ID']. " ID"; ?> </p>
-         <?php  if ($row['Status']==="جديد"):?>
-         <p class="alert_newitem"><?php echo  'جديد'; ?> </p>
-         <?php elseif($row['Status']==="مستعمل"):   ?>
-         <p class="alert_useditem"><?php echo  'مستعمل';  endif;?> </p>
+         <div class="div_item_id">
+             <p> <?php echo " م : ". $row['ID'] ; ?> </p>
+         </div>
 
-              <p class="p_number_date">
-                  <img  class="phone_icon" src="img/phone-icon-24.png">
-                  <?php echo $row['Number'] ; ?>
-              <?php echo str_repeat('&nbsp;', 5) .date("Y-m-d ",strtotime($row['Date'])); ?></p>
-              <p class="p_item_2">
-                        <?php
+         <div class="div_item_Name">
+             <p>  <?php echo  $row['name']; ?> </p>
+         </div>
+
+         <?php  if ($row['Status']==="جديد"):?>
+         <div  class="div_item_new">
+            <p> <?php echo  'جديد'; ?></p>
+         </div>
+
+         <?php elseif($row['Status']==="مستعمل"):   ?>
+         <div class="div_item_used">
+            <p> <?php echo  'مستعمل'; ?></p>
+         </div> <?php  endif;?>
+
+          <div class="div_item_number">
+              <img class="img_item_icon" src="img/phone-icon-24.png">
+             <p> <?php echo $row['Number'] ; ?></p>
+          </div>
+
+          <div class="div_item_date">
+              <img class="img_item_icon" src="img/calendar.png">
+             <p> <?php echo date("Y-m-d ",strtotime($row['Date'])); ?></p>
+          </div>
+
+          <div class="div_item_description">
+              <p>  <?php
                         $string = strip_tags($row['Description']);
                             if (strlen($string) > 100) {
                             // truncate string
                             $stringCut = substr($string, 0, 300);
                             $endPoint = strrpos($stringCut, ' ');
-                            //if the string doesn't contain any space then it will cut without word basis.
+                            // if the string doesn't contain any space then it will cut without word basis.
                             $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
                             echo $string . " ..." ;
-                        }else{ echo $string  ;} ?>
+                        }else{ echo $string  ;} ?></p>
+          </div>
 
-              </p>
-    <img class="img_item" src="img/brina.jpg">
-     <p class="p_item_1"> <img  class="phone_icon" src="img/place.png">
-         <?php  echo $row['State'].str_repeat('&nbsp;', 2). "=>".str_repeat('&nbsp;', 2). $row['City']; ?>
-     </p>
+<!--          <img class="img_Ads_img" src="img/ww.jpg">-->
+<!--          <img class="img_Ads_img" src="img/xxxx.jpg">-->
+<!--          <img class="img_Ads_img" src="img/ppp.png">-->
+<!--          <img class="img_Ads_img" src="img/qqq.jpg">-->
+          <img class="img_item_img1" src="img/logo3.png">
 
-     <a class="link_item" href="display.php">تفاصيل اكثر</a>
-       </div>
+         <div class="div_item_delete">
+             <a href="#" title="يقوم هذا الزر بحذف العنصر">
+                 <img class="img_item_icon" src="img/delete.png" >
+             </a>
+<!--         <p> خذف</p>-->
+         </div>
+
+           <div class="div_item_place">
+              <img class="img_item_icon" src="img/place.png">
+              <p><?php  echo $row['State'].str_repeat('&nbsp;', 1). "-".str_repeat('&nbsp;', 1). $row['City']; ?></p>
+          </div>
+
+          <div class="div_item_complaint">
+              <a href="#" title="يقوم هذا الزر بتقديم بلاغ ">
+                <img class="img_item_icon" src="img/block.png">
+              </a>
+<!--              <p>    تبليغ </p>-->
+          </div>
+<!--          <a class="link_item" href="display.php">تفاصيل اكثر</a>-->
+ </div>
 
 <?php }  endif;$conn = null;?>
 

@@ -3,10 +3,15 @@
 
 ?>
 
-<div class="bar">
-    <h2>| فينا خير  </h2>
+<style>
+
+<?php  include "css/style.css";?>
+</style>
+
+<div class="navbarH">
     <a href="index.php">الرئيسية </a>
     <a href="display.php"> العرض</a>
-    <img class="img_logo" src="img/logo.png">
-
+    <a href="index.php#C4">أهداف الموقع</a>
+    <a href="index.php#C10">تسجيل عنصر</a>
+    <img class="img_logo" src="img/logo3.png">
 </div>

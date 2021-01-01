@@ -73,26 +73,56 @@ $length_account=count($arr_list_account);
 
      try
      {
+
          include ("Connection.php");
          $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
          $sql ="DELETE FROM  item  WHERE ID=:ITID";
          $stmt = $conn->prepare($sql);
          $stmt->execute(array('ITID'=>$id));
-         echo "<p class='alert_success'>.. لقد تم حذف الاعلان بنجاح ..</p>";
+
 
       }catch (PDOException $error)
      {
-         echo "<p class='alert_danger'>".$error->getMessage() ."</p>";
+         $messgage=$error->getMessage() ;
+         return $messgage;
      }
 
 }
 
 
+
+//delete($id);
+function insert_Communication ($id){
+
+    try
+    {
+
+        include ("Connection.php");
+        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+        $sql ="INSERT INTO item (ID,name,Description,Status,Category,State,City,Number) 
+                      VALUES(:itID,:itname,:itDesc,:itStatus,:itCategory,:itState,:itCity,:itNumber)";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($R=array(
+            'itID'       => null,
+            'itname'     => $name,
+            'itDesc'     => $Description,
+            'itStatus'   => $Status,
+            'itCategory' => $Category,
+            'itState'    => $State,
+            'itCity'     => $City,
+            'itNumber'   => $Number,
+        ));
+
+
+    }catch (PDOException $error)
+    {
+        $messgage=$error->getMessage() ;
+        return $messgage;
+    }
+
+}
+
 ?>
-
-
-
-
 
 
 
