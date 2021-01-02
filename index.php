@@ -141,7 +141,7 @@ if(isset($_POST["Description_F"])){
 </div>
 
 <div id="C10" class="head_3">
-    <h1 class="h1">   نموذج تسجيل عنصر</h1>
+    <h1 class="h1">   نموذج تسجيل إعلان</h1>
     <div class="box_form">
         <form  class="form_insert" action="index.php" method="post">
 

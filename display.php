@@ -258,7 +258,7 @@ if(isset($messgage)):
          </div> <?php  endif;?>
 
           <div class="div_item_number">
-              <img class="img_item_icon" src="img/phone-icon-24.png">
+              <img class="img_item_icon" src="img/phone-call.png">
              <p> <?php echo $row['Number'] ; ?></p>
           </div>
 
@@ -287,7 +287,7 @@ if(isset($messgage)):
           <img class="img_item_img1" src="img/logo3.png">
 
          <div class="div_item_delete">
-             <a href="#" title="يقوم هذا الزر بحذف العنصر">
+             <a href="#" title="يقوم هذا الزر بحذف الاعلان">
                  <img class="img_item_icon" src="img/delete.png" >
              </a>
 <!--         <p> خذف</p>-->
@@ -299,8 +299,8 @@ if(isset($messgage)):
           </div>
 
           <div class="div_item_complaint">
-              <a href="#" title="يقوم هذا الزر بتقديم بلاغ ">
-                <img class="img_item_icon" src="img/block.png">
+              <a href="#" title="يقوم هذا الزر بحظر الاعلان ">
+                <img class="img_item_icon" src="img/block%20.png">
               </a>
 <!--              <p>    تبليغ </p>-->
           </div>

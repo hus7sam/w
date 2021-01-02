@@ -17,13 +17,54 @@ include "fun.php";
     <title>تحكم</title>
 </head>
 <body>
+<?php //include "header.php"; ?>
 
-<div class="section">
-    <p> hussam</p>
+<div class="control_right_side">
+
+    <div class="div_right_side">
+        <h3> تقرير رقمي </h3>
+        <div class="grid-control_container">
+            <div class="grid-control_item">
+                <h3> عدد الزوار </h3>
+
+            </div>
+
+            <div class="grid-control_item">
+                <h3> عدد الاعلانات </h3>
+                <?php echo Number_item() ;?>
+            </div>
+
+            <div class="grid-control_item">
+                <h3>عدد طلبات خذف الاعلانات  </h3>
+
+            </div>
+
+            <div class="grid-control_item">
+                <h3> عدد طلبات حظر الاعلانات </h3>
+
+            </div>
+
+            <div class="grid-control_item">
+                <h3> عدد الاعلانات المحظورة </h3>
+
+            </div>
+
+        </div>
+    </div>
+
 </div>
 
-<div class="side">
-    <p> hussam</p>
+<div class="control_left_side">
+
+   <div class="div_left_side">
+
+       <a class="control_list" href="#" title="#">1</a>
+       <a class="control_list" href="#" title="#">2</a>
+       <a class="control_list" href="#" title="#">3</a>
+       <a class="control_list" href="#" title="#">4</a>
+       <a class="control_list" href="#" title="#">5</a>
+   </div>
+
 </div>
 </body>
 </html>

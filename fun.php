@@ -122,6 +122,32 @@ function insert_Communication ($id){
 
 }
 
+
+
+//NumberVisitors();
+function Number_item (){
+
+    try
+    {
+
+        include ("Connection.php");
+        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+        $sql = "select *
+            from item
+            order by id DESC ";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $Rows_item = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $COUNTVisitors=count($Rows_item);
+
+    }catch (PDOException $error)
+    {
+        $messgage=$error->getMessage() ;
+        return $messgage;
+    }
+ return $COUNTVisitors;
+}
+
 ?>
 
 
@@ -130,36 +156,3 @@ function insert_Communication ($id){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!---->
-<!--</head>-->
-<!--<body>-->
-<!---->
-<!---->
-<!--    <form>-->
-<!---->
-<!--        <select>-->
-<!--            --><?php //  for ($i=0;$i<$arrlength;$i++)  {?>
-<!--            <option value="--><?php // echo $list_cits[$i];   ?><!--">--><?php //echo $list_cits[$i] ;  ?><!-- </option>-->
-<!--            --><?php //  } ?>
-<!--        </select>-->
-<!-- </php>-->
-<!--    </form>-->
-<!--</body>-->
-<!--</html>-->
