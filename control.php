@@ -13,6 +13,7 @@ include "fun.php";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
         <?php include "css/style.css";?>
+        <?php include "css/bootstrap.min.css";?>
     </style>
     <title>تحكم</title>
 </head>
@@ -22,47 +23,64 @@ include "fun.php";
 <div class="control_right_side">
 
     <div class="div_right_side">
-        <h3> تقرير رقمي </h3>
+        <p> تقرير رقمي </p>
         <div class="grid-control_container">
             <div class="grid-control_item">
-                <h3> عدد الزوار </h3>
-
+                <p> عدد الزوار </p>
+               <?php echo  counts_visitors_Fun()   ;?>
             </div>
 
             <div class="grid-control_item">
-                <h3> عدد الاعلانات </h3>
-                <?php echo Number_item() ;?>
+                <p> عدد الاعلانات </p>
+                <?php echo counts_Item_Fun() ;?>
             </div>
 
             <div class="grid-control_item">
-                <h3>عدد طلبات خذف الاعلانات  </h3>
+                <p>عدد طلبات خذف الاعلانات  </p>
+                <p>888  </p>
 
+            </div>
+            <div class="grid-control_item">
+                <p>عدد طلبات خذف الاعلانات المحذوفه  </p>
+                <p>888  </p>
             </div>
 
             <div class="grid-control_item">
-                <h3> عدد طلبات حظر الاعلانات </h3>
-
+                <p> عدد طلبات حظر الاعلانات </p>
+                <p>888  </p>
             </div>
 
-            <div class="grid-control_item">
-                <h3> عدد الاعلانات المحظورة </h3>
-
+            <div class="grid-control_item" id="C1">
+                <p> عدد الاعلانات المحظورة </p>
+                <p>888  </p>
             </div>
 
         </div>
+    </div>
+
+    <div class="div_right_side">
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>id</th>
+                <th>descrption</th>
+                <th>casa</th>
+            </tr>
+            <?php table_item_delete();?>
+        </table>
     </div>
 
 </div>
 
 <div class="control_left_side">
 
-   <div class="div_left_side">
+   <div class="div_left_side" id="control1">
+       <h4> القائمة</h4>
+       <a class="control_list" href="#control1" title="#">أحصائيات رقمية</a>
+       <a class="control_list" href="#" > طلبات الخذف </a>
+       <a class="control_list" href="control.php#C1" >طلبات الحظر</a>
+       <a class="control_list" href="#" >4</a>
+       <a class="control_list" href="#" >5</a>
 
-       <a class="control_list" href="#" title="#">1</a>
-       <a class="control_list" href="#" title="#">2</a>
-       <a class="control_list" href="#" title="#">3</a>
-       <a class="control_list" href="#" title="#">4</a>
-       <a class="control_list" href="#" title="#">5</a>
    </div>
 
 </div>

@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="for">
+    <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="control page">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/control.php" beforeDir="false" afterPath="$PROJECT_DIR$/control.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
@@ -67,9 +69,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -83,7 +87,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.display.php">
-    <configuration name="display.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8090/w/display.php">
+    <configuration name="display.php" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:8090/w/display.php">
       <method v="2" />
     </configuration>
     <configuration name="header.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8090/w/header.php">
@@ -91,7 +95,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.display.php" />
         <item itemvalue="JavaScript Debug.header.php" />
       </list>
     </recent_temporary>
@@ -156,7 +159,9 @@
       <workItem from="1609463170700" duration="472000" />
       <workItem from="1609463862076" duration="16802000" />
       <workItem from="1609512009995" duration="3205000" />
-      <workItem from="1609552967265" duration="3595000" />
+      <workItem from="1609552967265" duration="18155000" />
+      <workItem from="1609584599199" duration="15437000" />
+      <workItem from="1609653023759" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="u">
       <created>1602417578729</created>
@@ -424,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609516408920</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="control page">
+      <created>1609556668687</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1609556668687</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +473,8 @@
     <MESSAGE value="css sort" />
     <MESSAGE value="css sort1" />
     <MESSAGE value="for" />
-    <option name="LAST_COMMIT_MESSAGE" value="for" />
+    <MESSAGE value="control page" />
+    <option name="LAST_COMMIT_MESSAGE" value="control page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

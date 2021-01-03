@@ -125,11 +125,10 @@ function insert_Communication ($id){
 
 
 //NumberVisitors();
-function Number_item (){
+function counts_Item_Fun(){
 
     try
     {
-
         include ("Connection.php");
         $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
         $sql = "select *
@@ -138,15 +137,93 @@ function Number_item (){
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $Rows_item = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $COUNTVisitors=count($Rows_item);
+        $counts_Item=count($Rows_item);
 
     }catch (PDOException $error)
     {
         $messgage=$error->getMessage() ;
         return $messgage;
     }
- return $COUNTVisitors;
+ return $counts_Item;
+
+
+
 }
+
+//NumberVisitors();
+function counts_visitors_Fun(){
+
+    try
+    {
+
+        include ("Connection.php");
+
+        $visitor_ip = $_SERVER["REMOTE_ADDR"];
+
+        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+        $sql = "SELECT *
+            from countsusers WHERE ip_address=:ip_address";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindValue("ip_address",$visitor_ip);
+        $stmt->execute();
+        $total_visitor=count($stmt->fetchAll(PDO::FETCH_ASSOC));
+
+        if ($total_visitor==0) {
+
+            $sql = "INSERT INTO countsusers (ip_address) VALUES(:count)";
+            $stmt = $conn->prepare($sql);
+            $stmt->execute(array('count' => $visitor_ip,));
+        }
+
+        $sql = "SELECT *
+            from countsusers ";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $total_visitor=count($stmt->fetchAll(PDO::FETCH_ASSOC));
+
+
+    }catch (PDOException $error)
+    {
+        $messgage=$error->getMessage() ;
+        return $messgage;
+    }
+ return $total_visitor;
+}
+
+function table_item_delete()
+{
+    try {
+        include("Connection.php");
+        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword, $options);
+        $sql = "select *
+            from item
+            order by id DESC ";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $Rows= $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ( $Rows as $item) {
+
+            echo "   
+                               
+                <tr>
+                    <td> ".$item["ID"];"</td>
+                    <td> ".$item["Description"];"</td>
+                    <td> 2</td>
+                </tr>
+            ";
+        }
+
+
+    } catch (PDOException $error) {
+        $messgage = $error->getMessage();
+        return $messgage;
+    }
+
+
+
+}
+
+
 
 ?>
 

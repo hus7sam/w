@@ -3,6 +3,9 @@
 
 include 'Connection.php';
 include ("fun.php");
+counts_visitors_Fun();
+
+$_countVisiters = "";
 $DescriptionErr = $emailErr = $genderErr = $websiteErr = "";
 //$Description = $State = $City = $itemNumber= $itStatus= $itemCategory = "";
 

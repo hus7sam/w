@@ -120,7 +120,8 @@ body {
     text-align: center;  color: #f5f1f3;
     width: 100%;   height: 300px;
     margin: -5px auto 0 auto;   padding: 100px 1px 20px 10px;
-
+    animation-duration: 1s;
+    animation-name: slidein;
 
 }
 
@@ -163,7 +164,8 @@ body {
     width: 100%;
     margin: 0 0 0px;   padding: 50px 10px 30px  10px;
     /*background-image: url("../img/brina.jpg");*/
-
+    animation-duration: 1s;
+    animation-name: slidein;
 
 }
 
@@ -197,7 +199,8 @@ body {
     text-align: center;  color: #f5f1f3;
     width: 100%;   height: fit-content;
     margin: 0 0;   padding: 40px 0 20PX 0;
-
+    animation-duration: 1s;
+    animation-name: slidein;
 
 }
 
@@ -381,6 +384,8 @@ hr
     -webkit-backdrop-filter: blur( 3px );
     transition: 0.5s;
     background-size: 200% auto;
+    animation-duration: 1s;
+    animation-name: slidein;
 }
 
 .grid-item:hover {
@@ -408,7 +413,7 @@ hr
 .control_right_side
 {
     float: left;
-    width: 70%;
+    width: 80%;
     margin: 0px auto;    padding: 0px 0px;
 }
 
@@ -416,32 +421,55 @@ hr
 {
     display: inline-block;
     margin: 0px auto;    padding: 5px 10px;
-    width: 100%;
-    background-color: #c0c0c0 ;
+    width: 100%;height: 350px;
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
     color: black; text-align: center;
+    overflow: auto;
 }
+/*.HUSSAM*/
+/*{*/
+/*    height: fit-content;*/
+/*    width: fit-content; border-radius: 25px;*/
+/*    position: absolute;*/
+/*    top: 100px;*/
+/*    left: 30px;*/
+/*    background: #faf7f7;*/
+/*    margin: 0px auto;*/
+/*    padding: 2px 5px;*/
+/*    animation: roll 4s infinite;*/
+/*    transform: rotate(30deg)*/
+/*}*/
 
 .grid-control_container
 {
     display: grid;
     grid-gap: 10px ;
-    grid-template-columns: 32.5% 32.5% 32.5%;
+    grid-template-columns: 22% 22% 22% 22%;
+    justify-content: center;
     /*background-color: #2196F3;*/
     padding: 10px;
 }
 .grid-control_item
 {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8); border-radius: 15px;
+
+    border-radius: 15px;
     padding: 5px 5px; margin: 0px  0px;
-     height: 100px;
+    height: 100px;
     text-align: center;
+    background: rgba( 255, 255, 255, 0.40 );
+    box-shadow: 0 8px 14px 0 rgba(5, 5, 5, 0.37);
+    /*backdrop-filter: blur( 3px );*/
+    -webkit-backdrop-filter: blur( 3px );
+    border: 1px dotted transparent;
+    overflow: auto;
+    animation-duration: 1s;
+    animation-name: slidein;
 }
 
 .control_left_side
 {
     float: right;display: block;
-    width: 30%;
+    width: 20%;
     max-width: 30%;
     margin: 0px auto;    padding: 0px 0px;
 }
@@ -450,17 +478,57 @@ hr
 {
     display: block;
     margin: 0px auto;    padding: 5px 10px;
-    width: 100%;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply;
-    color: snow; text-align: center;
+    width: 100%; height: 700px; max-height: fit-content;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+
 }
+
+
 .control_list
 {
     display: block;
-    margin: 10px auto;     padding: 10px 10px;
-    text-align: center; color: snow; text-decoration: none;
-    border-radius: 10px; border: 1px dotted snow;
+    width: 99.9%;
+    margin: 15px auto;     padding: 10px 10px;
+    text-align: center; color: #fcfbfb; text-decoration: none; font-size: 13px;
+    border-radius: 10px; border: 1px dotted #faf9f9;
+    color: #fffafa; text-align: center;
+}
+
+
+
+.control_list:hover
+{
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    /*display: block;*/
+    width: 99.9%;
+    margin: 15px auto;     padding: 10px 10px;
+    text-align: center; color: #fcfbfb; text-decoration: none; font-size: 13px;
+    border-radius: 10px; border: 1px dotted #faf9f9;
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation: roll 3s infinite;
+    transform: rotate(30deg)
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes slidein {
+    from {
+        margin-top: 100%;
+        width: 400%;
+    }
+
+    to {
+        margin-top: 0%;
+        width: 100%;
+    }
 }
 
 .link_item
@@ -486,7 +554,7 @@ hr
 .div_item_place
 {
      display: inline-block;
-    width: 60%; height: 28px;
+    width: 70%; height: 28px;
     margin: 0px auto ; padding: 0px 0px;
     /*border-bottom: 1px solid  black ;*/
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
@@ -496,7 +564,7 @@ hr
 .div_item_complaint
 {
     float: left;
-    width: 20%; height: 28px;
+    width: 15%; height: 28px;
     margin: 0px auto ; padding: 0px 5px;
     COLOR: #000000;
     /*border-bottom: 1px solid  black ;*/
@@ -508,7 +576,7 @@ hr
 .div_item_delete
 {
     float: right;
-    width: 20%; height: 28px;
+    width: 15%; height: 28px;
     margin: 0px auto ; padding: 0px 5px;
     COLOR: #000000;
     /*border-radius:  0px 0px 10px 0;*/
@@ -687,7 +755,8 @@ hr
     display: block;
     align-content: center;
     text-align: center;
-
+    animation-duration: 1s;
+    animation-name: slidein;
 }
 .div_box_sreach
 {
@@ -699,6 +768,7 @@ hr
     backdrop-filter: blur( 3px );
     -webkit-backdrop-filter: blur( 3px );
     border-radius: 15px;
+
 }
 
 .list_sreach
@@ -755,6 +825,7 @@ hr
     width: fit-content;
     border: 1px solid rgba(0, 0, 0, 0.8); border-radius: 15px;
     text-align: center;
+
 }
 
 /*  end  Display Page  */

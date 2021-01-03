@@ -2,7 +2,7 @@
 require 'Connection.php';
 require ("fun.php");
 
-
+counts_visitors_Fun();
 $r=1;
 ?>
 
@@ -19,6 +19,8 @@ $r=1;
 </head>
 
 <body>
+
+<!--<div class="HUSSAM"> تصميم م.حسام الصاعدي</div>-->
 <?php
 if(isset($messgage)):
     echo "<div class='alert_success'> ";
