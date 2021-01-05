@@ -13,28 +13,27 @@ $r=1;
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link  rel="stylesheet" type="text/css" href="css/style.css">
-
-    <title>عرض</title>
+       <title>عرض</title>
 </head>
 
 <body>
 
+<?php  include ("header.php")?>
+<div class="container">
 <!--<div class="HUSSAM"> تصميم م.حسام الصاعدي</div>-->
 <?php
 if(isset($messgage)):
-    echo "<div class='alert_success'> ";
+    echo "<div class='alert alert-success text-center fs-5'> ";
 
     echo $messgage; " </div>" ; endif; ?>
 
 
-<?php  include ("header.php")?>
 <?php // include ("AD.php")?>
 
 
 <!--        <div class="alert_danger"> احتاج ما لا تحتاجة </div>-->
 <div class="cont">
-    <div class="div_box_sreach">
+    <div class="div_box_search my-5 p-3">
         <form action="display.php" method="post">
             <select class="list_sreach" name="search_State">
                 <option value="">-- أختر المنطقة --</option>
@@ -44,7 +43,7 @@ if(isset($messgage)):
                 <?php } ?>
             </select>
 
-            <select class="list_sreach" NAME="search_Category">
+            <select class="list_sreach" name="search_Category">
                 <option value="">-- أختر فئة العنصر --</option>
                 <?php   for ($i=0; $i<$length_Category; $i++)  {?>
                 <option value="<?php  echo $arra_list_Category[$i]; ?>">
@@ -94,7 +93,7 @@ if(isset($messgage)):
 
 </div>
 
-  <HR>
+    <hr class="text-center ">
 
 <!--  ---  sreach BOX   ---  -->
 
@@ -135,6 +134,7 @@ if(isset($messgage)):
  $rows=$stmt->fetchAll(PDO::FETCH_ASSOC);
    $sum=count($rows);
    if ($sum > 0){
+       echo " <div class='alert  alert-primary text-center fs-5'>  عدد الاعلانات المطابقة لبحثك =  $sum </div>";
  echo "<div class='Display_Grid-container'>";
     foreach($rows as $row){
 ?>
@@ -208,19 +208,20 @@ if(isset($messgage)):
             </div>
         </div>
 
+
     <?php }
+
+    echo"</div>";
+
     $r=0;
 
-       $conn = null;
    }else
        {
-       echo " <div class='alert_info'>  لم يتم العثور على بحثك </div>";
+       echo "</div> <div class='alert  alert-warning text-center fs-5'>  لم يتم العثور على بحثك </div>";
        $r=1;
        }
    endif;
-
-    echo"</div>";
-    ?>
+   ?>
 
 <!--  ---  sreach BOX   ---  -->
 
@@ -314,6 +315,7 @@ if(isset($messgage)):
 </div>
 
 <?php include ("footer.php")?>
+</div>
 </body>
 
 </html>

@@ -11,77 +11,115 @@ include "fun.php";
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <style>
-        <?php include "css/style.css";?>
-        <?php include "css/bootstrap.min.css";?>
-    </style>
+    <link  rel="stylesheet" type="text/css" href="css/style.css">
+    <link  rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link  rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<!--    <link  rel="stylesheet" type="text/css" href="css/mdb.min.css">-->
+<!--    <link  rel="stylesheet" type="text/css" href="css/mdb.rtl.min.css">-->
     <title>تحكم</title>
+
 </head>
 <body>
 <?php //include "header.php"; ?>
 
 <div class="control_right_side">
 
-    <div class="div_right_side">
-        <p> تقرير رقمي </p>
-        <div class="grid-control_container">
-            <div class="grid-control_item">
-                <p> عدد الزوار </p>
-               <?php echo  counts_visitors_Fun()   ;?>
-            </div>
+    <div class="div_right_side mt-0 p-4 bg-aliceblue_HU">
+        <div class="alert bg-info  text-secondary rounded-2"> <h2> تقرير رقمي</h2></div>
 
-            <div class="grid-control_item">
-                <p> عدد الاعلانات </p>
-                <?php echo counts_Item_Fun() ;?>
+        <div class="container  mb-4">
+            <div class="row gap-3  justify-content-center mb-2 ">
+                <div class="col shadow-sm bg-white ">
+                    <p class="mt-3"> عدد الزوار </p>
+                    <p><?php echo  counts_visitors_Fun()   ;?> </p>
+                </div>
+                <div class="col  shadow-sm bg-white ">
+                    <p class="mt-3"> عدد الاعلانات</p>
+                    <p><?php echo counts_Item_Fun() ;?></p>
+                </div>
+                <div class="col   shadow-sm bg-white ">
+                    <p class="mt-3">عدد طلبات الخذف </p>
+                    <p><?php echo counts_Item_Fun() ;?></p>
+                </div>
             </div>
+            <div class="row gap-3 justify-content-center mt-4 ">
+                <div class="col  shadow-sm bg-white  ">
+                    <p class="mt-3">عدد الطلبات المحذوفه</p>
+                    <p><?php echo counts_Item_Fun() ;?></p>
+                </div>
 
-            <div class="grid-control_item">
-                <p>عدد طلبات خذف الاعلانات  </p>
-                <p>888  </p>
-
+                <div class="col shadow-sm bg-white ">
+                    <p class="mt-3">عدد طلبات حظر </p>
+                    <p><?php echo counts_Item_Fun() ;?></p>
+                </div>
+                <div class="col shadow-sm bg-white ">
+                    <p class="mt-3">عدد الاعلانات المحظورة</p>
+                    <p><?php echo counts_Item_Fun() ;?></p>
+                </div>
             </div>
-            <div class="grid-control_item">
-                <p>عدد طلبات خذف الاعلانات المحذوفه  </p>
-                <p>888  </p>
-            </div>
-
-            <div class="grid-control_item">
-                <p> عدد طلبات حظر الاعلانات </p>
-                <p>888  </p>
-            </div>
-
-            <div class="grid-control_item" id="C1">
-                <p> عدد الاعلانات المحظورة </p>
-                <p>888  </p>
-            </div>
-
         </div>
-    </div>
 
-    <div class="div_right_side">
-        <table class="table table-striped table-hover">
+
+        <div class="cotainer overflow-auto ">
+        <div class="alert bg-info  text-white rounded-2 "> <h2> [جدول طلبات الحذف] </h2></div>
+        <table class="table  table-striped table-hover ">
+            <thead>
             <tr>
-                <th>id</th>
-                <th>descrption</th>
-                <th>casa</th>
+                <th scope="col">#</th>
+                <th scope="col">إسم المنتج</th>
+                <th scope="col">وصف المنتح</th>
+                <th scope="col">حذف المنتح</th>
             </tr>
-            <?php table_item_delete();?>
+            </thead>
+            <tbody>
+            <?php  table_item_delete(); ?>
+            </tbody>
         </table>
+        </div>
+
+
+        <div class="alert bg-info  text-white rounded-2"> <h2> [جدول طلبات الحظر] </h2></div>
+        <div class="overflow-auto h-25 ">
+        <table class="table  table-striped table-hover ">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">إسم المنتج</th>
+                <th scope="col">وصف المنتح</th>
+                <th scope="col">حذف المنتح</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php  table_item_delete(); ?>
+            </tbody>
+        </table>
+        </div>
+
+    </div>
     </div>
 
-</div>
 
 <div class="control_left_side">
 
    <div class="div_left_side" id="control1">
-       <h4> القائمة</h4>
-       <a class="control_list" href="#control1" title="#">أحصائيات رقمية</a>
-       <a class="control_list" href="#" > طلبات الخذف </a>
-       <a class="control_list" href="control.php#C1" >طلبات الحظر</a>
-       <a class="control_list" href="#" >4</a>
-       <a class="control_list" href="#" >5</a>
 
-   </div>
+       <div class="list-group">
+           <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+               القائمة
+           </a>
+           <a href="#" class="list-group-item list-group-item-action">أحصائيات رقمية</a>
+           <a href="#" class="list-group-item list-group-item-action"> طلبات الخذف</a>
+           <a href="#" class="list-group-item list-group-item-action"> طلبات الخذف</a>
+<!--           <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>-->
+       </div>
+<!--       <h4> القائمة</h4>-->
+<!--       <a class="control_list link-warning" href="#control1" title="#">أحصائيات رقمية</a>-->
+<!--       <a class="control_list" href="#" > طلبات الخذف </a>-->
+<!--       <a class="control_list" href="control.php#C1" >ط طلبات الخذف</a>-->
+<!--       <a class="control_list" href="#" >4</a>-->
+<!--       <a class="control_list" href="#" >5</a>-->
+<!---->
+<!--   </div>-->
 
 </div>
 </body>

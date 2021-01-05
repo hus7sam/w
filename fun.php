@@ -203,13 +203,14 @@ function table_item_delete()
         $Rows= $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach ( $Rows as $item) {
 
-            echo "   
+            echo "
                                
-                <tr>
-                    <td> ".$item["ID"];"</td>
-                    <td> ".$item["Description"];"</td>
-                    <td> 2</td>
-                </tr>
+                 <tr>
+                <th scope='row'>".$item['ID']."</th>
+                <td>".$item['name']."</td>
+                <td>".$item['Description']."</td>
+                <td><a href='#'>".$item['name']."</a></td>
+            </tr>
             ";
         }
 

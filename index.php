@@ -71,11 +71,11 @@ if(isset($_POST["Description_F"])){
             'itCity'     => $City,
             'itNumber'   => $Number,
         ));
-        echo "<p class='alert_success'>.. لقد تم إضافة الاعلان بنجاح ..</p>";
+        echo "<p class='alert alert-success text-center fs-5'>.. لقد تم إضافة الاعلان بنجاح ..</p>";
 
     }catch (PDOException $error){
 
-        echo "<p class='alert_danger'>".$error->getMessage() ."</p>";
+        echo "<p class='alert-danger text-center fs-5'>".$error->getMessage() ."</p>";
     }
      $conn=null;
     header("Location: display.php");
@@ -89,14 +89,14 @@ if(isset($_POST["Description_F"])){
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
-
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>فينا خير</title>
 </head>
 <body>
 
 <?php include ("header.php") ?>
 
+</div>
 
 <div class="head">
 
@@ -144,47 +144,81 @@ if(isset($_POST["Description_F"])){
 </div>
 
 <div id="C10" class="head_3">
-    <h1 class="h1">   نموذج تسجيل إعلان</h1>
-    <div class="box_form">
-        <form  class="form_insert" action="index.php" method="post">
+    <h1 class="h1"> نموذج تسجيل إعلان</h1>
+            <form action="index.php" method="post" class="row g-3 bg-gradient justify-content-center m-auto p-5 mt-5 col rounded-2">
+                <div class="col-md-4">
+                    <label for="inputPassword4" class="form-label fs-5 text-light">أسم المنتج</label>
+                    <input type="text" class="form-control form-control-lg" id="inputPassword4" placeholder="أكتب إسم المنتج" name="name_F" required>
+<!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
+                </div>
+                <div class="col-md-4">
+                    <label for="Status_F" class="form-label fs-5  text-light">حالة المنتج</label>
+                    <select id="Status_F" class="form-select form-select-lg" name="Status_F" required>
+                        <option selected value=""> أختر الحالة ...</option>
+                        <?php   for ($i=0; $i<$length_Status; $i++)  {?>
+                            <option value="<?php  echo $arr_list_Status[$i]; ?>">
+                                <?php echo $arr_list_Status[$i];?> </option>
+                        <?php } ?>
+                    </select>
+<!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
+                </div>
+                <div class="col-md-4">
+                    <label for="Category_F" class="form-label fs-5 text-light"> فئة المنتج</label>
+                    <select id="Category_F" class="form-select form-select-lg" name="Category_F" required>
+                        <option  selected value=""> أختر الفئة ...</option>
+                        <?php   for ($i=0; $i<$length_Category; $i++)  {?>
+                            <option value="<?php  echo $arra_list_Category[$i]; ?>">
+                                <?php echo $arra_list_Category[$i]; ?> </option>
+                        <?php } ?>
+                    </select>
+<!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
+                </div>
+                <div class="col-12 lh-lg">
+                    <label for="Description_F" class="form-label fs-5 text-light"> وصف للمنتج</label>
+<!--                    <input type="text" class="form-control form-control-lg" id="Description_F" placeholder="أكتب وصف للمنتج لا يتعدى 200 حرف" name="Description_F"required>-->
+                    <textarea class="form-control" id="Description_F" aria-label="وصف للمنتج"placeholder="أكتب وصف للمنتج لا يتعدى 200 حرف" name="Description_F"required></textarea>
+<!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
+                </div>
 
-            <input    class="input_form_insert" type="text" name="name_F"   placeholder="أكتب اسم العنصر" required/>
+                <div class="col-md-4">
+                    <label for="State_F" class="form-label fs-5 text-light">إسم المنطقة</label>
+                    <select id="State_F" class="form-select form-select-lg" name="State_F" required>
+                        <option selected value=""> أختر المنطقة ...</option>
+                        <?php   for ($i=0; $i<$length_State; $i++)  {?>
+                            <option value="<?php  echo $arra_list_State[$i]; ?>">
+                                <?php echo $arra_list_State[$i]; ?> </option>
+                        <?php } ?>
+                    </select>
+<!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
+                </div>
+                <div class="col-md-4">
+                    <label for="City_F" class="form-label fs-5 text-light"> إسم المدينة</label>
+                    <input type="text"  class="form-control form-control-lg" id="City_F"  placeholder="أكتب إسم المدينة" name="City_F" required >
+<!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
+                </div>
+                <div class="col-md-4">
+                    <label for="Number_F" class="form-label fs-5 text-light">رقم الجوال</label>
+                    <input type="number" class="form-control form-control-lg" id="Number_F" placeholder="أكتب رقم الجوال" name="Number_F" required>
+<!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
+                </div>
+                <!--        <div class="col-12">-->
+                <!--            <div class="form-check">-->
+                <!--                <input class="form-check-input" type="checkbox" id="gridCheck">-->
+                <!--                <label class="form-check-label" for="gridCheck">-->
+                <!--                    Check me out-->
+                <!--                </label>-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <div class="d-grid  col-md-12 mx-auto m-5">
+                    <button type="submit" class="btn btn-outline-light btn-lg">إضافة الاعلان</button>
+                </div>
+            </form>
 
-            <textarea class="textarea_form_insert" name="Description_F" placeholder="أكتب وصف للعنصر لا يتعدى 200 حرف" required></textarea>
-
-            <input    class="input_form_insert" type="text" name="City_F"   placeholder="أكتب اسم المدينة / المحافطة / القرية" required>
-            <input    class="input_form_insert" type="text" name="Number_F" placeholder="أكتب رقم الجوال " required/>
-
-            <select class="list_insert" name="State_F" required/>
-                <option value="">-- أختر المنطقة --</option>
-                <?php   for ($i=0; $i<$length_State; $i++)  {?>
-                <option value="<?php  echo $arra_list_State[$i]; ?>">
-                <?php echo $arra_list_State[$i]; ?> </option>
-                <?php } ?>
-            </select>
-
-            <select class="list_insert" name="Category_F" required/>
-                <option value="">-- أختر فئة العنصر --</option>
-                <?php   for ($i=0; $i<$length_Category; $i++)  {?>
-                <option value="<?php  echo $arra_list_Category[$i]; ?>">
-                <?php echo $arra_list_Category[$i]; ?> </option>
-                <?php } ?>
-            </select>
-
-
-            <select class="list_insert" name="Status_F" required/>
-                <option value=""> -- أختر حالة العنصر  -- </option>
-                <?php   for ($i=0; $i<$length_Status; $i++)  {?>
-                <option value="<?php  echo $arr_list_Status[$i]; ?>">
-                <?php echo $arr_list_Status[$i];?> </option>
-                <?php } ?>
-            </select>
-
-            <input class="btn_submit_insert" type="submit" value="بحث" hidden>
-
-        </form>
-    </div>
 </div>
+
+
+
+
 
 <?php include ("footer.php")?>
 
