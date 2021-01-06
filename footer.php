@@ -26,7 +26,7 @@
     <div class="fo_Gr-container ">
 
         <div class="fo_g-item">
-            <h1> الادارة&nbsp; <sub>لدعاية والاعلان</sub> </h1>
+            <h1> الادارة&nbsp; <span class="badge bg-danger text-white">لدعاية والاعلان</span> </h1>
 
             <a class="text-pink_HU fs-5" href="mailto:alsaedi@finakhayr.com">alsaedi@finakhayr.com</a>
         </div>

@@ -65,6 +65,17 @@ $arr_list_account=array(
 
 $length_account=count($arr_list_account);
 
+//  array Classification of the violation    *-*-*-*-*-*-*-*-*-*-*-*-*
+$arr_list_violation=array(
+     "مخالف للشريعة الاسلامية",
+    "مخالف لقوانين المملكة العربية السعودية",
+    "غش وخداع ",
+    "طلب مبلغ مقابل المنتج",
+    "اخر",
+);
+
+$length_violation=count($arr_list_violation);
+
 
 //  DELETE  ITEM    *-*-*-*-*-*-*-*-*-*-*-*-*
 
@@ -219,6 +230,7 @@ function table_item_delete()
         $messgage = $error->getMessage();
         return $messgage;
     }
+
 
 
 

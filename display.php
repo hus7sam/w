@@ -189,9 +189,15 @@ if(isset($messgage)):
             <img class="img_item_img1" src="img/logo3.png">
 
             <div class="div_item_delete">
-                <a href="#" title="يقوم هذا الزر بحذف العنصر">
-                    <img class="img_item_icon" src="img/delete.png" >
-                </a>
+
+<!--                <a href="#" title="يقوم هذا الزر بحذف العنصر">-->
+                    <form action="delete.php method="POST">
+                        <input type="number" name="num1">
+                        <input type="text" name="name1">
+                    <input type="image" name="submit" src="img/delete.png" border="0" alt="Submit"  />
+                    </form>
+<!--                    <img class="img_item_icon" src="img/delete.png" >-->
+<!--                </a>-->
                 <!--         <p> خذف</p>-->
             </div>
 
@@ -240,34 +246,34 @@ if(isset($messgage)):
 
     foreach($rows as $row){
         ?>
- <div class='grid-item'>
+ <div class='grid-item lass="p-1 m-0"'>
 
          <div class="div_item_id">
-             <p> <?php echo " م : ". $row['ID'] ; ?> </p>
+             <p lass="p-1 m-0"> <?php echo " م : ". $row['ID'] ; ?> </p>
          </div>
 
          <div class="div_item_Name">
-             <p>  <?php echo  $row['name']; ?> </p>
+             <p lass="p-1 m-0">  <?php echo  $row['name']; ?> </p>
          </div>
 
          <?php  if ($row['Status']==="جديد"):?>
          <div  class="div_item_new">
-            <p> <?php echo  'جديد'; ?></p>
+            <p lass="p-1 m-0"> <?php echo  'جديد'; ?></p>
          </div>
 
          <?php elseif($row['Status']==="مستعمل"):   ?>
          <div class="div_item_used">
-            <p> <?php echo  'مستعمل'; ?></p>
+            <p class="p-1 m-0" > <?php echo  'مستعمل'; ?></p>
          </div> <?php  endif;?>
 
           <div class="div_item_number">
               <img class="img_item_icon" src="img/phone-call.png">
-             <p> <?php echo $row['Number'] ; ?></p>
+             <p class="p-1 "> <?php echo $row['Number'] ; ?></p>
           </div>
 
           <div class="div_item_date">
               <img class="img_item_icon" src="img/calendar.png">
-             <p> <?php echo date("Y-m-d ",strtotime($row['Date'])); ?></p>
+             <p class="p-1 "> <?php echo date("Y-m-d ",strtotime($row['Date'])); ?></p>
           </div>
 
           <div class="div_item_description">
@@ -290,10 +296,14 @@ if(isset($messgage)):
           <img class="img_item_img1" src="img/logo3.png">
 
          <div class="div_item_delete">
-             <a href="#" title="يقوم هذا الزر بحذف الاعلان">
-                 <img class="img_item_icon" src="img/delete.png" >
-             </a>
-<!--         <p> خذف</p>-->
+                 <form action="delete.php" method="POST">
+                 <input type="number" name="id_old_F"  value="<?php echo  $row['ID']; ?>"   hidden>
+                 <input type="text" name="name_old_F"   value="<?php echo  $row['name']; ?>" hidden>
+                 <input type="text" name="Description_old_F"   value="<?php echo  $row['Description']; ?>" hidden>
+                 <input type="image" name="submit" src="img/delete.png" alt="Submit" class="img_item_icon py-0 mt-2"  />
+                 </form>
+                 <!--                    <img class="img_item_icon" src="img/delete.png" >-->
+                 <!--                </a>-->
          </div>
 
            <div class="div_item_place">
