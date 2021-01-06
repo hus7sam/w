@@ -1,7 +1,6 @@
 <?php
 require 'Connection.php';
 require ("fun.php");
-
 counts_visitors_Fun();
 $r=1;
 ?>
@@ -267,6 +266,7 @@ if(isset($messgage)):
          </div> <?php  endif;?>
 
           <div class="div_item_number">
+
               <img class="img_item_icon" src="img/phone-call.png">
              <p class="p-1 "> <?php echo $row['Number'] ; ?></p>
           </div>
@@ -297,11 +297,12 @@ if(isset($messgage)):
 
          <div class="div_item_delete">
                  <form action="delete.php" method="POST">
-                 <input type="number" name="id_old_F"  value="<?php echo  $row['ID']; ?>"   hidden>
-                 <input type="text" name="name_old_F"   value="<?php echo  $row['name']; ?>" hidden>
-                 <input type="text" name="Description_old_F"   value="<?php echo  $row['Description']; ?>" hidden>
-                 <input type="image" name="submit" src="img/delete.png" alt="Submit" class="img_item_icon py-0 mt-2"  />
+                 <input type="number" name="id_old_F"            value="<?php  echo $row['ID'] ; ?>"           hidden>
+                 <input type="text"   name="name_old_F"          value="<?php  echo $row['name']; ?>"          hidden>
+                 <input type="text"   name="Description_old_F"   value="<?php  echo $row['Description']; ?>"   hidden>
+                 <input type="image"  name="submit" src="img/delete.png" alt="Submit" class="img_item_icon py-0 mt-2" />
                  </form>
+
                  <!--                    <img class="img_item_icon" src="img/delete.png" >-->
                  <!--                </a>-->
          </div>

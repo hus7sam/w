@@ -39,7 +39,7 @@ include "fun.php";
                 </div>
                 <div class="col   shadow-sm bg-white ">
                     <p class="mt-3">عدد طلبات الخذف </p>
-                    <p><?php echo counts_Item_Fun() ;?></p>
+                    <p><?php echo count_delete() ;?></p>
                 </div>
             </div>
             <div class="row gap-3 justify-content-center mt-4 ">
@@ -68,7 +68,9 @@ include "fun.php";
                 <th scope="col">#</th>
                 <th scope="col">إسم المنتج</th>
                 <th scope="col">وصف المنتح</th>
-                <th scope="col">حذف المنتح</th>
+                <th scope="col">سبب الحذف</th>
+                <th scope="col"> التصنيف</th>
+                <th scope="col"> رقم المنتج</th>
             </tr>
             </thead>
             <tbody>
@@ -86,7 +88,9 @@ include "fun.php";
                 <th scope="col">#</th>
                 <th scope="col">إسم المنتج</th>
                 <th scope="col">وصف المنتح</th>
-                <th scope="col">حذف المنتح</th>
+                <th scope="col">سبب الحذف</th>
+                <th scope="col"> التصنيف</th>
+                <th scope="col"> رقم المنتج</th>
             </tr>
             </thead>
             <tbody>

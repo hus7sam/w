@@ -207,33 +207,47 @@ function table_item_delete()
         include("Connection.php");
         $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword, $options);
         $sql = "select *
-            from item
+            from delete_item
             order by id DESC ";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $Rows= $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach ( $Rows as $item) {
-
-            echo "
-                               
-                 <tr>
-                <th scope='row'>".$item['ID']."</th>
+            echo "                        
+                <tr>
+                <th scope='row'>".$item['id']."</th>
                 <td>".$item['name']."</td>
-                <td>".$item['Description']."</td>
-                <td><a href='#'>".$item['name']."</a></td>
+                <td>".$item['Description_old']."</td>
+                <td>".$item['Description_new']."</td>
+                <td>".$item['Classification']."</td>
+                <td>".$item['id_d']."</td>
             </tr>
             ";
         }
-
-
     } catch (PDOException $error) {
         $messgage = $error->getMessage();
         return $messgage;
     }
+}
 
-
-
-
+//        count_delete()           *-*-*-*-*-*-*-*--*-*-*-*-*-*-*--*-*
+function count_delete()
+{
+    try {
+        include("Connection.php");
+        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword, $options);
+        $sql = "select *
+            from delete_item
+            order by id DESC ";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $Rows= $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $count_D=count($Rows);
+        return $count_D;
+    } catch (PDOException $error) {
+        $messgage = $error->getMessage();
+        return $messgage;
+    }
 }
 
 
