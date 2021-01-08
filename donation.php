@@ -4,19 +4,57 @@
 
 <?php  include ("header.php")?>
 
-<style>
 
-    <?php  include ("css/style.css")?>
-</style>
+<div class="container w-100">
+    <!--  *-*-*-*-*-*-*-* بداية البحث   *-*-*-*-*-*-*-*-*-*-   -->
+    <div class="row justify-content-center  bg-gradient  my-5  rounded-3 anmaHu" >
+        <!--    start column 1  -->
+        <div class="col p-4 justify-content-center ">
+            <!--    start form 1  -->
+            <form action="display.php" method="POST" class="row g-3 justify-content-center">
+
+                <div class="col-md-8">
+                    <label for="search_State" class="form-label  fs-5">  المنطقة:</label>
+                    <select id="search_State" class="form-select  form-select-lg" name="search_State" >
+                        <option selected value="">-- أختر المنطقة --</option>
+                        <?php if (!empty($length_State)) {
+                            for ($i=0; $i<$length_State; $i++)  {?>
+                                <option value="<?php if (!empty($arra_list_State)) {
+                                    echo $arra_list_State[$i];
+                                } ?>">
+                                    <?php if (!empty($arra_list_State)) {
+                                        echo $arra_list_State[$i];
+                                    } ?> </option>
+                            <?php }
+                        } ?>
+                    </select>
+                </div>
+                <div class="d-grid  col-md-8 mx-auto mx-5">
+                    <button type="submit" name="box_Search" class="btn btn-outline-light btn-lg">إبحث</button>
+                </div>
+            </form>
+        </div>
+        <!--    start column 2  -->
+
+    </div>
+    <!--   *-*-*-*-*-*-*-* نهاية  مربع البحث   *-*-*-*-*-*-*-*-*-*-   -->
 
 
-    <div class="Donation_Gr_container">
+    <!--   *-*-*-*-*-*-*-* بداية عرض الحسابات   *-*-*-*-*-*-*-*-*-*-   -->
+    <div class="row justify-content-center  text-center bg-gradient  my-5  rounded-3 anmaHu">
+        <div class="col-md-7 col-sm-8  pt-5 ">
+            <p class="fs-lg-2 fs-md-1 fs-sm-3 border border-light p-2 rounded-3">البنك الأهلي التجاري</p>
 
+        </div>
+        <div class="col-md-7 col-sm-8 p-2 ">
+            <p class="fs-lg-2 fs-md-1 fs-sm-3 border border-light p-2 rounded-3">33447858000103</p>
+        </div>
+        <div class=" col-md-7 col-sm-8 p-2">
 
-
-        <div class="Donation_g_item">
-
-
+            <div class="fs-lg-2 fs-md-1 fs-sm-3 border border-light p-2  rounded-3">
+                <span class="badge rounded-pill bg-warning">الايبان</span>
+                SA7610000033447858000103
+            </div>
         </div>
     </div>
 
@@ -24,105 +62,7 @@
 
 
 
-
-<hr>
-
-<div class="Donation_Gr_container">
-
-
-    <div class="donation_g_item">
-        <img src="img/alb.jpg">
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-
-        <img src="img/22.png">
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/ncb.png">
-
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/aljaxira.jpg">
-
-        0123456789456
-    </div>
-a
-    <div class="donation_g_item">
-        <img src="img/ww.jpg">
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/هinvestmen.jpg">
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/arr.png">
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/francy.jpg">
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/aa.png">
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/ddd.png">
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/xxxx.jpg">
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/rrr.jpg">
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/qqq.jpg">
-
-        0123456789456
-
-        sa0123456789456
-    </div>
-
-    <div class="donation_g_item">
-        <img src="img/zzz.jpg">
-
-        0123456789456
-    </div>
-
-    <div class="donation_g_item">
-
-        <img src="img/p4.png">
-
-        <a href="https://paypal.me/alsaedi808?locale.x=en_us"> تبرع عبر paypal</a>
-    </div>
-
 </div>
+
+
 <?php include ("footer.php");?>

@@ -13,6 +13,10 @@
     <link  rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link  rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="shortcut icon" type="image/png" href="img/logo3.png" />
+    <meta name="description" content="بدون مقابل  بلاش تطوع">
+    <meta name="keywords" content="سلمان,مكيف,ثلاجة,سوني,مروحه,سيارة,فايروس,الصحه,البترول,ارمكو, شاشه, بطارية, ايفون, جديد, مستعمل, جلكسي, الرؤيه, افلام, مسلسل, احمد, محمد, رمضان">
+    <meta name="author" content="John Doe">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
 
 </head>
 <body>
@@ -27,11 +31,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="index.php">الرئيسية</a>
-                <a class="nav-link" href="display.php">العرض</a>
-                <a class="nav-link" href="index.php#C4">أهداف الموقع</a>
-                <a class="nav-link" href="delete.php"> الحذف</a>
-                <a class="nav-link" href="index.php#C10">أضافة إعلان</a>
+                <a class="nav-link fs-4 " aria-current="page" href="index.php">الرئيسية</a>
+                <a class="nav-link fs-4 " href="display.php">العرض</a>
+                <a class="nav-link fs-4 " href="index.php#C4">أهدافنا</a>
+<!--                <a class="nav-link" href="delete.php"> الحذف</a>-->
+                <a class="nav-link fs-4 " href="index.php#C10">أضافة إعلان</a>
 <!--                <a class="nav-link disabled" href="#" /tabindex="-1" aria-disabled="true">Disabled</a>-->
             </div>
         </div>

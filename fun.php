@@ -86,7 +86,17 @@ $length_violation=count($arr_list_violation);
      {
 
          include ("Connection.php");
-         $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+         if (!empty($dbhost)) {
+             if (!empty($dbname)) {
+                 if (!empty($dbusername)) {
+                     if (!empty($dbpassword)) {
+                         if (!empty($options)) {
+                             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+                         }
+                     }
+                 }
+             }
+         }
          $sql ="DELETE FROM  item  WHERE ID=:ITID";
          $stmt = $conn->prepare($sql);
          $stmt->execute(array('ITID'=>$id));
@@ -103,26 +113,54 @@ $length_violation=count($arr_list_violation);
 
 
 //delete($id);
+/**
+ * @param $id
+ * @return string
+ */
 function insert_Communication ($id){
 
     try
     {
 
         include ("Connection.php");
-        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+        if (!empty($dbhost)) {
+            if (!empty($dbname)) {
+                if (!empty($dbusername)) {
+                    if (!empty($dbpassword)) {
+                        if (!empty($options)) {
+                            $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+                        }
+                    }
+                }
+            }
+        }
         $sql ="INSERT INTO item (ID,name,Description,Status,Category,State,City,Number) 
                       VALUES(:itID,:itname,:itDesc,:itStatus,:itCategory,:itState,:itCity,:itNumber)";
         $stmt = $conn->prepare($sql);
-        $stmt->execute($R=array(
-            'itID'       => null,
-            'itname'     => $name,
-            'itDesc'     => $Description,
-            'itStatus'   => $Status,
-            'itCategory' => $Category,
-            'itState'    => $State,
-            'itCity'     => $City,
-            'itNumber'   => $Number,
-        ));
+        if (!empty($name)) {
+            if (!empty($Description)) {
+                if (!empty($Status)) {
+                    if (!empty($Category)) {
+                        if (!empty($State)) {
+                            if (!empty($City)) {
+                                if (!empty($Number)) {
+                                    $stmt->execute($R=array(
+                                        'itID'       => null,
+                                        'itname'     => $name,
+                                        'itDesc'     => $Description,
+                                        'itStatus'   => $Status,
+                                        'itCategory' => $Category,
+                                        'itState'    => $State,
+                                        'itCity'     => $City,
+                                        'itNumber'   => $Number,
+                                    ));
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
 
     }catch (PDOException $error)
@@ -141,7 +179,17 @@ function counts_Item_Fun(){
     try
     {
         include ("Connection.php");
-        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+        if (!empty($dbhost)) {
+            if (!empty($dbname)) {
+                if (!empty($dbusername)) {
+                    if (!empty($dbpassword)) {
+                        if (!empty($options)) {
+                            $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+                        }
+                    }
+                }
+            }
+        }
         $sql = "select *
             from item
             order by id DESC ";
@@ -171,7 +219,17 @@ function counts_visitors_Fun(){
 
         $visitor_ip = $_SERVER["REMOTE_ADDR"];
 
-        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+        if (!empty($dbhost)) {
+            if (!empty($dbname)) {
+                if (!empty($dbusername)) {
+                    if (!empty($dbpassword)) {
+                        if (!empty($options)) {
+                            $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+                        }
+                    }
+                }
+            }
+        }
         $sql = "SELECT *
             from countsusers WHERE ip_address=:ip_address";
         $stmt = $conn->prepare($sql);
@@ -205,7 +263,17 @@ function table_item_delete()
 {
     try {
         include("Connection.php");
-        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword, $options);
+        if (!empty($dbhost)) {
+            if (!empty($dbname)) {
+                if (!empty($dbusername)) {
+                    if (!empty($dbpassword)) {
+                        if (!empty($options)) {
+                            $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword, $options);
+                        }
+                    }
+                }
+            }
+        }
         $sql = "select *
             from delete_item
             order by id DESC ";
@@ -235,7 +303,17 @@ function count_delete()
 {
     try {
         include("Connection.php");
-        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword, $options);
+        if (!empty($dbhost)) {
+            if (!empty($dbname)) {
+                if (!empty($dbusername)) {
+                    if (!empty($dbpassword)) {
+                        if (!empty($options)) {
+                            $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword, $options);
+                        }
+                    }
+                }
+            }
+        }
         $sql = "select *
             from delete_item
             order by id DESC ";
@@ -250,6 +328,50 @@ function count_delete()
     }
 }
 
+
+// مصفوفة حسابات البنوك
+
+//$marks = array(
+//    "بنك الأهلي" => array (
+//        "1" => 33447858000103,
+//        "2" => SA7610000033447858000103,
+//    ),
+//
+//    "بنك الجزيرة" => array (
+//        "1" => 011433507001,
+//        "2" => SA4160000000011433507001,
+//    ),
+//
+//    "بنك الرياض" => array (
+//        "1" => 1010737199940,
+//        "2" => SA7620000001010737199940
+//    ),
+//
+//    "بنك الانماء" => array (
+//        "1" => 68202658973000,
+//        "2" => SA8805000068202658973000
+//    ),
+//
+//    "بنك البلاد" => array (
+//        "1" => 726117455580009,
+//        "2" => SA7415000726117455580009
+//    ),
+//
+//    "بنك السعودي للاستثمار" => array (
+//        "1" => 5555754819001,
+//        "2" => SA7565000005555754819001
+//    ),
+//
+//    "بنك الفرنسي" => array (
+//        "1" => 0072500167,
+//        "2" => SA82550000000J0072500167
+//    ),
+//
+//    "البنك العربي" => array (
+//        "1" => 108068777060017,
+//        "2" => SA9630000108068777060017
+//    )
+//);
 
 
 ?>

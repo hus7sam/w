@@ -1,7 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Cairo);
+
+
 * {
     box-sizing: border-box;
     direction: rtl;
-    font-family: Tahoma ;
+    font-family:"Cairo";
     font-size: 12px;
     font-weight: normal;
     /*font-family: "Source Sans Pro", "Arial", sans-serif;*/
@@ -9,8 +12,6 @@
     /*overflow: auto;*/
     box-sizing:  border-box;
 }
-
-
 
 
 .ads
@@ -115,11 +116,11 @@ body {
     /*background-image: linear-gradient(120deg, #ffd700 85%,#fffefc 10%, gold 100%);*/
     /*background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);*/
     /*background-color: #FBAB7E;*/
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    text-align: center;  color: #f5f1f3;
-    width: 100%;   height: 300px;
-    margin: -5px auto 0 auto;   padding: 100px 1px 20px 10px;
+    /*background-color: #4158D0;*/
+    /*background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);*/
+    /*text-align: center;  color: #f5f1f3;*/
+    /*width: 100%;   height: 300px;*/
+    margin: 0px auto;   padding: 0px;
     animation-duration: 1s;
     animation-name: slidein;
 
@@ -169,12 +170,12 @@ body {
 
 .head a
 {  /* start links  of header */
-    width: fit-content;     height: fit-content;
-    display: inline-block;
-    text-decoration: none;  color: white; text-align: center;
+    /*width: fit-content;     height: fit-content;*/
+    /*display: inline-block;*/
+    /*text-decoration: none;  color: white; text-align: center;*/
     /*background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);*/
-    margin: 5px 10px 0px 0px ;  padding: 7px 7px  ;
-    font-size: 15px; border: 1px dotted #faf2f2;  border-radius: 25px;
+    /*margin: 5px 10px 0px 0px ;  padding: 7px 7px  ;*/
+    /*font-size: 15px; border: 1px dotted #faf2f2;  border-radius: 25px;*/
     /*box-shadow:*/
     /*        10px 10px 14px 0 rgba(0, 0, 0, 0.25),*/
     /*        -8px -8px 10px 0 rgba(255, 255, 255, 0.3);*/
@@ -183,24 +184,24 @@ body {
 
 .head a:hover
 {
-    color: #000000;
-    /*background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);*/
-    /*background-blend-mode: screen;*/
-    /*border-bottom: 1px solid #070707;*/
-    background: rgba( 255, 255, 255, 0.40 );
-    box-shadow: 0 8px 14px 0 rgba(5, 5, 5, 0.37);
-    /*backdrop-filter: blur( 3px );*/
-    -webkit-backdrop-filter: blur( 3px );
-    border: 1px dotted transparent;
+    /*color: #000000;*/
+    /*!*background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);*!*/
+    /*!*background-blend-mode: screen;*!*/
+    /*!*border-bottom: 1px solid #070707;*!*/
+    /*background: rgba( 255, 255, 255, 0.40 );*/
+    /*box-shadow: 0 8px 14px 0 rgba(5, 5, 5, 0.37);*/
+    /*!*backdrop-filter: blur( 3px );*!*/
+    /*-webkit-backdrop-filter: blur( 3px );*/
+    /*border: 1px dotted transparent;*/
 }
 
 
 .head_2{
     display: block;
-    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-    background-blend-mode: screen;
-    width: 100%; height: fit-content;
-    margin: 0 0 0px;   padding: 50px 10px 30px  10px;
+    /*background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);*/
+    /*background-blend-mode: screen;*/
+    /*width: 100%; height: fit-content;*/
+    margin: 0px auto;   padding: 0px ;
     /*background-image: url("../img/brina.jpg");*/
     animation-duration: 1s;
     animation-name: slidein;
@@ -231,14 +232,21 @@ body {
     display: block;
     /*background-image: linear-gradient(120deg, #ffd700 85%,#fffefc 10%, gold 100%);*/
     /*background-image: linear-gradient(to top, #FFD700 0%, #ffe977 100%);*/
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    /*background-color: #4158D0;*/
+    /*background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);*/
 
     width: 100%;   height: fit-content;
     margin: 0 0;   padding: 40px 0 20PX 0;
     animation-duration: 1s;
     animation-name: slidein;
 
+}
+
+
+.anmaHu
+{
+    animation-duration: 1s;
+    animation-name: slidein;
 }
 
 .h1

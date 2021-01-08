@@ -62,13 +62,23 @@ $isvalue=0;
         $name_old_F=test_input(filter_var($_POST["name_new_F"], FILTER_SANITIZE_STRING));
         $isvalue +=1;
     }
-        echo "<div class='fs-1 alert alert_danger '>" .$isvalue . "</div>";
+//        echo "<div class='fs-1 alert alert_danger '>" .$isvalue . "</div>";
 }
 
 if ($isvalue==5):
     try {
         include ("Connection.php");
-        $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+        if (!empty($dbhost)) {
+            if (!empty($dbname)) {
+                if (!empty($dbusername)) {
+                    if (!empty($dbpassword)) {
+                        if (!empty($options)) {
+                            $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+                        }
+                    }
+                }
+            }
+        }
         $sql ="INSERT INTO delete_item (id,name,Description_new,Description_old,Classification,id_d) 
                       VALUE(:id,:name_old,:Description_new,:Description_old,:DClassification,:id_d)";
         $stmt = $conn->prepare($sql);
@@ -98,7 +108,8 @@ endif;
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--    <title>Document</title>-->
+    <title></title>
+    <!--    <title>Document</title>-->
 </head>
 <body>
 
@@ -116,11 +127,11 @@ endif;
                 <form action="delete.php" method="POST" class="row g-3 justify-content-center">
                     <div class="col-md-4">
                         <label for="id_new_F" class="form-label fs-5 ">رقم المنتج</label>
-                        <input type="number" class="form-control form-control-lg" value="<?php echo $id_old;?>" id="id_new_F" name="id_new_F" readonly="true">
+                        <input type="number" class="form-control form-control-lg" value="<?php echo $id_old;?>" id="id_new_F" name="id_new_F" readonly="readonly">
                     </div>
                     <div class="col-md-8">
                         <label for="name_new_F" class="form-label fs-5 ">أسم المنتج</label>
-                        <input type="text" class="form-control form-control-lg" value="<?php echo $name_old;?>" id="name_new_F" name="name_new_F" readonly="true" >
+                        <input type="text" class="form-control form-control-lg" value="<?php echo $name_old;?>" id="name_new_F" name="name_new_F" readonly="readonly" >
                     </div>
                     <div class="col-md-12 ">
                         <label for="4" class="form-label fs-5 "> وصف المنتج:</label>
@@ -142,7 +153,7 @@ endif;
                     <div class="col-md-12 lh-lg">
                         <label for="Description_new_F" class="form-label fs-5 text-dark"> سبب طلب الحذف</label>
                         <!--                    <input type="text" class="form-control form-control-lg" id="Description_F" placeholder="أكتب وصف للمنتج لا يتعدى 200 حرف" name="Description_F"required>-->
-                        <textarea class="form-control" id="Description_new_F" aria-label="وصف للمنتج"placeholder="أكتب سبب طلب الحذف" name="Description_new_F"></textarea>
+                        <textarea class="form-control" id="Description_new_F" aria-label="وصف للمنتج" placeholder="أكتب سبب طلب الحذف" name="Description_new_F"></textarea>
                         <span class="badge bg-danger p-2 my-2 rounded-1"><?php echo $ClassificationErr;?></span>
                     </div>
                     <div class="d-grid  col-md-12 mx-auto m-5">
