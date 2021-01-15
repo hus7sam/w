@@ -1,9 +1,7 @@
 <?php
 
 
-include 'Connection.php';
-include ("fun.php");
-counts_visitors_Fun();
+include("header.php") ;
 
 $_countVisiters = "";
 $DescriptionErr = $emailErr = $genderErr = $websiteErr = "";
@@ -11,7 +9,38 @@ $DescriptionErr = $emailErr = $genderErr = $websiteErr = "";
 
 if(isset($_POST["Description_F"])){
 
-//        vilter  name_F             *-*-*-*-*-*-*-*--*-*-*-*-*-*-*--*-*
+
+//   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* بداية استقبال بيانات الصورة *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+    $errors= array();
+    $file_name = $_FILES['image']['name'];
+    $file_size = $_FILES['image']['size'];
+    $file_tmp = $_FILES['image']['tmp_name'];
+    $file_type = $_FILES['image']['type'];
+    $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
+
+    $expensions= array("jpeg","jpg","png");
+
+    if(in_array($file_ext,$expensions)=== false){
+        $errors[]="صيغة الصورة غير مسموح به ، يرجى اختيار ملف JPEG أو  Jpeg أو PNG.";
+    }
+
+    if($file_size > 2097152) {
+        $errors[]='يجب أن يكون حجم الملف 2 ميغابايت بالضبط';
+    }
+
+    if(empty($errors)==true) {
+        move_uploaded_file($file_tmp,"img/".$file_name);
+        echo " $img";
+    }
+
+
+//   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* نهاية استقبال بيانات الصورة *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+
+
+
+    //        vilter  name_F             *-*-*-*-*-*-*-*--*-*-*-*-*-*-*--*-*
     if (empty($_POST["name_F"]))
     {  $DescriptionErr="الرجاء كتابة المدينة";  $_POST["name_F"]=''; }
     if(filter_has_var(INPUT_POST,'name_F'))
@@ -66,8 +95,8 @@ if(isset($_POST["Description_F"])){
                 }
             }
         }
-        $sql ="INSERT INTO item (ID,name,Description,Status,Category,State,City,Number) 
-                      VALUES(:itID,:itname,:itDesc,:itStatus,:itCategory,:itState,:itCity,:itNumber)";
+        $sql ="INSERT INTO item (ID,name,Description,Status,Category,State,City,Number,img) 
+                      VALUES(:itID,:itname,:itDesc,:itStatus,:itCategory,:itState,:itCity,:itNumber,:itimg)";
         if (isset($conn)) {
             $stmt = $conn->prepare($sql);
         }
@@ -88,6 +117,7 @@ if(isset($_POST["Description_F"])){
                                             'itState'    => $State,
                                             'itCity'     => $City,
                                             'itNumber'   => $Number,
+                                            'itimg'   => $file_name,
                                         ));
                                     }
                                 }
@@ -114,20 +144,24 @@ if(isset($_POST["Description_F"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>فينا خير</title>
+    <title>فينا خير</title>   <link rel="shortcut icon" type="image/png" href="img/logo3.png" />
 </head>
 <body>
 
-<?php include ("header.php") ?>
+<div class="container">
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            Hello, world! This is a toast message.
+            <div class="mt-2 pt-2 border-top">
+                <button type="button" class="btn btn-primary btn-sm">Take action</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
+            </div>
+        </div>
+    </div>
 
-<div class="head my-5">
+<div class="head my-5 ">
+    <h1 class="my-5 mx-auto text-center py-3 shadow-lg bg-light w-75 rounded-1 ">   خير الناس أنفعهم للناس   </h1>
 
-
-    <h1 class="h1 my-5 py-3">   خير الناس أنفعهم للناس   </h1>
-
-    <div class="container">
         <div class="row g-3 row-cols-md-4 justify-content-center text-center text-white py-5 ">
 
             <?php if (isset($length_Category)) {
@@ -141,40 +175,37 @@ if(isset($_POST["Description_F"])){
                     </a> </div> </div>
                  <?php }
             } ?>
+</div>
 
-</div>
-</div>
-</div>
 
 
 
 <div id="C4" class="head_2">
-    <h1 class="h1 my-5 py-3 shadow-lg">  أهدافنا</h1>
+    <h1 class="my-5 mx-auto py-3  shadow-lg text-center  bg-light w-75 rounded-1">  أهدافنا</h1>
         <div class="container">
             <div class="row g-3 row-cols-md-4 justify-content-center text-center text-white py-5 ">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4 col-sm-4">
                     <div class="p-3  fs-2  bg-gradient rounded-pill border border-light shadow-lg">فعل الخير </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4 col-sm-4">
                     <div class="p-3  fs-2  bg-gradient rounded-pill border border-light shadow-lg">نفع الغير</div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4 col-sm-4">
                     <div class="p-3 fs-2  bg-gradient rounded-pill border border-light shadow-lg">التعاون  </div>
                  </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4 col-sm-4">
                     <div class="p-3  fs-2  bg-gradient rounded-pill border border-light shadow-lg">العطاء</div>
                 </div>
             </div>
     </div>
 </div>
-
+<h1 class="my-5 mx-auto text-center py-3 shadow-lg rounded-1 bg-light w-75 "> نموذج تسجيل إعلان</h1>
 <div id="C10" class="head_3">
-    <div class="container">
-    <h1 class="h1 my-5 py-3 shadow-lg"> نموذج تسجيل إعلان</h1>
-    <div class="row  justify-content-center my-5  rounded-3 shadow-lg"  >
+
+    <div class="row  justify-content-center my-5  rounded-3 shadow-lg text-white"  >
         <!--    start column 1  -->
         <div class="col p-4 justify-content-center bg-gradient">
-            <form action="index.php" method="post" class="row g-3 justify-content-center">
+            <form action="index.php" method="post" enctype="multipart/form-data" class="row g-3 justify-content-center">
                 <div class="col-md-4 ">
                     <label for="inputPassword4" class="form-label fs-5 ">أسم المنتج</label>
                     <input type="text" class="form-control form-control-lg" id="inputPassword4" placeholder="أكتب إسم المنتج" name="name_F" required>
@@ -214,13 +245,16 @@ if(isset($_POST["Description_F"])){
                     </select>
 <!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
                 </div>
-                <div class="col-12 lh-lg">
+                <div class="col-lg-8 col-md-4 lh-lg">
                     <label for="Description_F" class="form-label fs-5 "> وصف للمنتج</label>
 <!--                    <input type="text" class="form-control form-control-lg" id="Description_F" placeholder="أكتب وصف للمنتج لا يتعدى 200 حرف" name="Description_F"required>-->
                     <textarea class="form-control" id="Description_F" aria-label="وصف للمنتج" placeholder="أكتب وصف للمنتج لا يتعدى 200 حرف" name="Description_F" required></textarea>
 <!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
                 </div>
-
+                <div class="col-md-4 lh-lg">
+                    <label for="image" class="form-label fs-5 ">أرفق الصورة:</label>
+                    <input type="file" class="form-control form-control-lg" value="اختر الصورة" name="image"  id="image">
+                </div>
                 <div class="col-md-4">
                     <label for="State_F" class="form-label fs-5 ">إسم المنطقة</label>
                     <select id="State_F" class="form-select form-select-lg" name="State_F" required>
@@ -264,6 +298,8 @@ if(isset($_POST["Description_F"])){
 </div>
     </div>
 
+</div>
+</div>
 </div>
     <?php include ("footer.php")?>
 </body>
