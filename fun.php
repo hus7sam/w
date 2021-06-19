@@ -1,5 +1,5 @@
 <?php
-
+ echo ' <link  rel="stylesheet"    type="text/css"   href="node_modules/bootstrap-icons/font/bootstrap-icons.css">';
  // filter all input
 function test_input($data) {
     $data=trim($data);
@@ -12,17 +12,12 @@ function test_input($data) {
 //  array Category   *-*-*-*-*-*-*-*-*-*-*-*-*
 $arra_list_Category=array(
 
-    "أجهزة كهربائية",
-    "أجهزة الكترونية",
-    "مستلزمات صحية",
-    "مستلزمات طبية",
-    "مستلزمات نسائية",
-    "مستلزمات رجالية",
-    "كتب",
-    "خردوات",
-    "مواد غذائية",
-    "أثاث",
-    "أدوات سباكة",
+    "أجهزة كهربائية",    "أجهزة الكترونية",    "مستلزمات صحية",
+    "مستلزمات طبية",     "مستلزمات رجالية",    "مستلزمات نسائية",
+    "كتب",               "خردوات",             "مواد غذائية",
+    "أثاث",              "أدوات سباكة",        "حيونات اليفه",
+    "قطع غيار",
+
 );
 
  $length_Category=count($arra_list_Category);
@@ -30,18 +25,10 @@ $arra_list_Category=array(
 
 //  array State   *-*-*-*-*-*-*-*-*-*-*-*-*
 $arra_list_State=array(
-    "مكة المكرمة",
-    "المدينة المنورة",
-    "الرياض",
-    "الشرقية",
-    "القصيم",
-    "حائل",
-    "تبوك",
-    "جازان",
-    "الجوف",
-    "نجران",
-    "عسير",
-    "الحدود الشمالية",
+    "مكة المكرمة", "المدينة المنورة",  "الرياض",
+    "الشرقية",     "القصيم",           "حائل",
+    "تبوك",        "جازان",            "الجوف",
+    "نجران",       "عسير",             "الحدود الشمالية",
 );
 
 $length_State=count($arra_list_State);
@@ -49,8 +36,7 @@ $length_State=count($arra_list_State);
 
 //  array Status   *-*-*-*-*-*-*-*-*-*-*-*-*
 $arr_list_Status=array(
-    "جديد",
-    "مستعمل",
+    "جديد",    "مستعمل",
 );
 
 $length_Status=count($arr_list_Status);
@@ -59,18 +45,15 @@ $length_Status=count($arr_list_Status);
 
 //  array account number   *-*-*-*-*-*-*-*-*-*-*-*-*
 $arr_list_account=array(
-    "1"=> "",
-    "مستعمل",
+    "1"=> "",    "مستعمل",
 );
 
 $length_account=count($arr_list_account);
 
 //  array Classification of the violation    *-*-*-*-*-*-*-*-*-*-*-*-*
 $arr_list_violation=array(
-     "مخالف للشريعة الاسلامية",
-    "مخالف لقوانين المملكة العربية السعودية",
-    "غش وخداع ",
-    "طلب مبلغ مقابل المنتج",
+     "مخالف للشريعة الاسلامية",    "مخالف لقوانين المملكة العربية السعودية",
+    "غش وخداع ",                 "طلب مبلغ مقابل المنتج",
     "اخر",
 );
 
@@ -80,23 +63,15 @@ $length_violation=count($arr_list_violation);
 //  DELETE  ITEM    *-*-*-*-*-*-*-*-*-*-*-*-*
 
 //delete($id);
- function delete ($id){
+ function delete($id){
 
      try
      {
 
          include ("Connection.php");
-         if (!empty($dbhost)) {
-             if (!empty($dbname)) {
-                 if (!empty($dbusername)) {
-                     if (!empty($dbpassword)) {
-                         if (!empty($options)) {
+         if (!empty($dbhost)) {   if (!empty($dbname)) {   if (!empty($dbusername)) {    if (!empty($dbpassword)) { if (!empty($options)) {
                              $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
-                         }
-                     }
-                 }
-             }
-         }
+                         }        }    }        }         }
          $sql ="DELETE FROM  item  WHERE ID=:ITID";
          $stmt = $conn->prepare($sql);
          $stmt->execute(array('ITID'=>$id));
@@ -111,56 +86,81 @@ $length_violation=count($arr_list_violation);
 }
 
 
+//  DELETE  ITEM    *-*-*-*-*-*-*-*-*-*-*-*-*
+
+//delete($id);
+function delete_from_table_delet($id){
+
+    try
+    {
+
+        include ("Connection.php");
+        if (!empty($dbhost)) { if (!empty($dbname)) { if (!empty($dbusername)) {  if (!empty($dbpassword)) {  if (!empty($options)) {
+                            $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
+                        }                    }                }            }        }
+        $sql ="DELETE FROM  delete_item  WHERE id_d=:ITID";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(array('ITID'=>$id));
+
+
+    }catch (PDOException $error)
+    {
+        $messgage=$error->getMessage() ;
+        return $messgage;
+    }
+
+}
+
+
 
 //delete($id);
 /**
  * @param $id
  * @return string
  */
+
+
+function serachByName(){
+//    SELECT * FROM item WHERE name like '%طابعة%'
+//    select * from delete_item  order by id DESC
+    try
+    {
+        include("Connection.php");
+            if (!empty($dbhost)){
+            if (!empty($dbname)){
+            if (!empty($dbusername)){
+            if (!empty($dbpassword)){
+            if (!empty($options)){
+                $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword, $options);  }
+            }        }        }        }
+
+        $sql = "select * from delete_item  order by id DESC ";
+        $stmt = $conn->prepare($sql); $stmt->execute();        $Rows= $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $count_D=count($Rows);        return $count_D;
+    } catch (PDOException $error) {     $messgage = $error->getMessage();    return $messgage;    }
+
+}
+
 function insert_Communication ($id){
 
     try
     {
-
         include ("Connection.php");
-        if (!empty($dbhost)) {
-            if (!empty($dbname)) {
-                if (!empty($dbusername)) {
-                    if (!empty($dbpassword)) {
-                        if (!empty($options)) {
+        if (!empty($dbhost)) {if (!empty($dbname)) { if (!empty($dbusername)) { if (!empty($dbpassword)) { if (!empty($options)) {
                             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
-                        }
-                    }
-                }
-            }
-        }
+                        }                    }                }            }        }
         $sql ="INSERT INTO item (ID,name,Description,Status,Category,State,City,Number) 
                       VALUES(:itID,:itname,:itDesc,:itStatus,:itCategory,:itState,:itCity,:itNumber)";
         $stmt = $conn->prepare($sql);
-        if (!empty($name)) {
-            if (!empty($Description)) {
-                if (!empty($Status)) {
-                    if (!empty($Category)) {
-                        if (!empty($State)) {
+        if (!empty($name)) {  if (!empty($Description)) { if (!empty($Status)) {  if (!empty($Category)) {if (!empty($State)) {
                             if (!empty($City)) {
                                 if (!empty($Number)) {
                                     $stmt->execute($R=array(
-                                        'itID'       => null,
-                                        'itname'     => $name,
-                                        'itDesc'     => $Description,
-                                        'itStatus'   => $Status,
-                                        'itCategory' => $Category,
-                                        'itState'    => $State,
-                                        'itCity'     => $City,
-                                        'itNumber'   => $Number,
+                                        'itID'       => null,     'itname'     => $name,      'itDesc'     => $Description,
+                                        'itStatus'   => $Status,  'itCategory' => $Category,  'itState'    => $State,
+                                        'itCity'     => $City,    'itNumber'   => $Number,
                                     ));
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+                                }             }             }           }     }            }        }
 
 
     }catch (PDOException $error)
@@ -179,11 +179,8 @@ function counts_Item_Fun(){
     try
     {
         include ("Connection.php");
-        if (!empty($dbhost)) {
-            if (!empty($dbname)) {
-                if (!empty($dbusername)) {
-                    if (!empty($dbpassword)) {
-                        if (!empty($options)) {
+        if (!empty($dbhost)) {            if (!empty($dbname)) {                if (!empty($dbusername)) {
+                    if (!empty($dbpassword)) {                        if (!empty($options)) {
                             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
                         }
                     }
@@ -219,11 +216,8 @@ function counts_visitors_Fun(){
 
         $visitor_ip = $_SERVER["REMOTE_ADDR"];
 
-        if (!empty($dbhost)) {
-            if (!empty($dbname)) {
-                if (!empty($dbusername)) {
-                    if (!empty($dbpassword)) {
-                        if (!empty($options)) {
+        if (!empty($dbhost)) {            if (!empty($dbname)) {                if (!empty($dbusername)) {
+                    if (!empty($dbpassword)) {                        if (!empty($options)) {
                             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
                         }
                     }
@@ -246,16 +240,10 @@ function counts_visitors_Fun(){
 
         $sql = "SELECT *
             from countsusers ";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $total_visitor=count($stmt->fetchAll(PDO::FETCH_ASSOC));
+        $stmt = $conn->prepare($sql);    $stmt->execute();   $total_visitor=count($stmt->fetchAll(PDO::FETCH_ASSOC));
 
 
-    }catch (PDOException $error)
-    {
-        $messgage=$error->getMessage() ;
-        return $messgage;
-    }
+    }catch (PDOException $error)    {       $messgage=$error->getMessage() ;        return $messgage;    }
  return $total_visitor;
 }
 
@@ -263,17 +251,10 @@ function table_item_delete()
 {
     try {
         include("Connection.php");
-        if (!empty($dbhost)) {
-            if (!empty($dbname)) {
-                if (!empty($dbusername)) {
-                    if (!empty($dbpassword)) {
-                        if (!empty($options)) {
+        if (!empty($dbhost)) {            if (!empty($dbname)) {                if (!empty($dbusername)) {
+                    if (!empty($dbpassword)) {                        if (!empty($options)) {
                             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword, $options);
-                        }
-                    }
-                }
-            }
-        }
+                        }                    }                }            }        }
         $sql = "select *
             from delete_item
             order by id DESC ";
@@ -281,51 +262,39 @@ function table_item_delete()
         $stmt->execute();
         $Rows= $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach ( $Rows as $item) {
+            $id_Dlelete=$item['id'];
             echo "                        
                 <tr>
-                <th scope='row'>".$item['id']."</th>
-                <td>".$item['name']."</td>
-                <td>".$item['Description_old']."</td>
-                <td>".$item['Description_new']."</td>
+                <th scope='row'>".$item['id']."</th>      <td>".$item['name']."</td>
+                <td>".$item['Description_old']."</td>     <td>".$item['Description_new']."</td>
                 <td>".$item['Classification']."</td>
-                <td>".$item['id_d']."</td>
-            </tr>
+                
+                <td><a href='control.php?Delete_id=".$item['id_d']." '> <i class='bi bi-trash text-danger m-5 fs-4 '></i></a></td>
+                </tr>
             ";
         }
-    } catch (PDOException $error) {
-        $messgage = $error->getMessage();
-        return $messgage;
-    }
+    } catch (PDOException $error) {     $messgage = $error->getMessage();        return $messgage;    }
 }
+
+
 
 //        count_delete()           *-*-*-*-*-*-*-*--*-*-*-*-*-*-*--*-*
 function count_delete()
 {
     try {
         include("Connection.php");
-        if (!empty($dbhost)) {
-            if (!empty($dbname)) {
-                if (!empty($dbusername)) {
-                    if (!empty($dbpassword)) {
-                        if (!empty($options)) {
+        if (!empty($dbhost)) {            if (!empty($dbname)) {                if (!empty($dbusername)) {
+            if (!empty($dbpassword)) {                        if (!empty($options)) {
                             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword, $options);
                         }
                     }
                 }
             }
         }
-        $sql = "select *
-            from delete_item
-            order by id DESC ";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $Rows= $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $count_D=count($Rows);
-        return $count_D;
-    } catch (PDOException $error) {
-        $messgage = $error->getMessage();
-        return $messgage;
-    }
+        $sql = "select * from delete_item  order by id DESC ";
+        $stmt = $conn->prepare($sql);        $stmt->execute();        $Rows= $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $count_D=count($Rows);        return $count_D;
+    } catch (PDOException $error) {     $messgage = $error->getMessage();    return $messgage;    }
 }
 
 

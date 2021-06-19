@@ -3,7 +3,8 @@
 
 include("header.php") ;
 
-$_countVisiters = "";
+
+counts_visitors_Fun();
 $DescriptionErr = $emailErr = $genderErr = $websiteErr = "";
 //$Description = $State = $City = $itemNumber= $itStatus= $itemCategory = "";
 
@@ -95,7 +96,7 @@ if(isset($_POST["Description_F"])){
                 }
             }
         }
-        $sql ="INSERT INTO item (ID,name,Description,Status,Category,State,City,Number,img) 
+        $sql ="INSERT INTO item (ID,name,Description,Status,Category,State,City,Number,Img) 
                       VALUES(:itID,:itname,:itDesc,:itStatus,:itCategory,:itState,:itCity,:itNumber,:itimg)";
         if (isset($conn)) {
             $stmt = $conn->prepare($sql);
@@ -127,8 +128,10 @@ if(isset($_POST["Description_F"])){
                 }
             }
         }
-        echo "<p class='alert alert-success text-center fs-5'>.. لقد تم إضافة الاعلان بنجاح ..</p>";
+        echo "<p class='alert alert-success text-center fs-5'><span class='material-icons'>
 
+</span>.. لقد تم إضافة الاعلان بنجاح ..</p>";
+        header("Location: display.php");
     }catch (PDOException $error){
 
         echo "<p class='alert-danger text-center fs-5'>".$error->getMessage() ."</p>";
@@ -149,25 +152,17 @@ if(isset($_POST["Description_F"])){
 <body>
 
 <div class="container">
-    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-body">
-            Hello, world! This is a toast message.
-            <div class="mt-2 pt-2 border-top">
-                <button type="button" class="btn btn-primary btn-sm">Take action</button>
-                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Close</button>
-            </div>
-        </div>
-    </div>
 
-<div class="head my-5 ">
-    <h1 class="my-5 mx-auto text-center py-3 shadow-lg bg-light w-75 rounded-1 ">   خير الناس أنفعهم للناس   </h1>
 
-        <div class="row g-3 row-cols-md-4 justify-content-center text-center text-white py-5 ">
+<div class="head my-4 ">
+    <h1 class="my-5 mx-auto text-center py-3 shadow-lg bg-light col-md-4 col rounded-1 ">   خير الناس أنفعهم للناس   </h1>
+
+        <div class="row g-4  row-cols-md-4  justify-content-center text-center text-white py-5 p ">
 
             <?php if (isset($length_Category)) {
                 for ($i=0; $i<$length_Category; $i++)  {?>
-                <div class="col-lg-3 col-md-4 col-sm-4 ">
-                    <div class="p-3  fs-lg-2 fs-md-1 fs-sm-6 bg-gradient rounded-pill border border-light shadow-lg " >
+                <div class="col-lg-3 col-md-5 col-sm-6 col-sm-1  w-50">
+                    <div class="p-3  fs-lg-2 fs-md-1 fs-sm-2 bg-gradient rounded-pill border border-light shadow-lg " >
                         <a href="display.php " class="link-light text-decoration-none fs-3">
                         <?php if (isset($arra_list_Category)) {
                             echo $arra_list_Category[$i];
@@ -175,32 +170,33 @@ if(isset($_POST["Description_F"])){
                     </a> </div> </div>
                  <?php }
             } ?>
-</div>
+        </div></div>
 
 
 
 
 <div id="C4" class="head_2">
-    <h1 class="my-5 mx-auto py-3  shadow-lg text-center  bg-light w-75 rounded-1">  أهدافنا</h1>
+    <h1 class="my-5 mx-auto py-3  shadow-lg text-center  bg-light col-md-4 col  rounded-1">  أهدافنا</h1>
         <div class="container">
-            <div class="row g-3 row-cols-md-4 justify-content-center text-center text-white py-5 ">
-                <div class="col-lg-3 col-md-4 col-sm-4">
-                    <div class="p-3  fs-2  bg-gradient rounded-pill border border-light shadow-lg">فعل الخير </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-4">
-                    <div class="p-3  fs-2  bg-gradient rounded-pill border border-light shadow-lg">نفع الغير</div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-4">
-                    <div class="p-3 fs-2  bg-gradient rounded-pill border border-light shadow-lg">التعاون  </div>
-                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-4">
-                    <div class="p-3  fs-2  bg-gradient rounded-pill border border-light shadow-lg">العطاء</div>
-                </div>
-            </div>
-    </div>
-</div>
-<h1 class="my-5 mx-auto text-center py-3 shadow-lg rounded-1 bg-light w-75 "> نموذج تسجيل إعلان</h1>
+            <div class="row g-4 row-cols-md-4 justify-content-center text-center text-white  ">
+
+                <div class="col-lg-3 col-md-5 col-sm-6 col-sm-1  w-50">
+                    <div class="p-3  fs-lg-2 fs-md-1 fs-sm-2 bg-gradient rounded-pill border border-light shadow-lg fs-3 " >فعل الخير </div></div>
+
+                <div class="col-lg-3 col-md-5 col-sm-6 col-sm-1  w-50">
+                    <div class="p-3  fs-lg-2 fs-md-1 fs-sm-2 bg-gradient rounded-pill border border-light shadow-lg fs-3 " >نفع الغير</div></div>
+
+                <div class="col-lg-3 col-md-5 col-sm-6 col-sm-1  w-50">
+                    <div class="p-3  fs-lg-2 fs-md-1 fs-sm-2 bg-gradient rounded-pill border border-light shadow-lg fs-3 " >التعاون</div></div>
+
+                <div class="col-lg-3 col-md-5 col-sm-6 col-sm-1  w-50">
+                    <div class="p-3  fs-lg-2 fs-md-1 fs-sm-2 bg-gradient rounded-pill border border-light shadow-lg fs-3 " >العطاء</div></div>
+
+            </div></div></div>
+
+
 <div id="C10" class="head_3">
+    <h1 class="my-5 mx-auto text-center py-3 shadow-lg rounded-1 bg-light col col-md-4"> نموذج تسجيل إعلان</h1>
 
     <div class="row  justify-content-center my-5  rounded-3 shadow-lg text-white"  >
         <!--    start column 1  -->
@@ -208,7 +204,7 @@ if(isset($_POST["Description_F"])){
             <form action="index.php" method="post" enctype="multipart/form-data" class="row g-3 justify-content-center">
                 <div class="col-md-4 ">
                     <label for="inputPassword4" class="form-label fs-5 ">أسم المنتج</label>
-                    <input type="text" class="form-control form-control-lg" id="inputPassword4" placeholder="أكتب إسم المنتج" name="name_F" required>
+                    <input type="text" class="form-control form-control-lg" id="inputPassword4" placeholder=" إسم المنتج" name="name_F" required>
 <!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
                 </div>
                 <div class="col-md-4">
@@ -248,7 +244,7 @@ if(isset($_POST["Description_F"])){
                 <div class="col-lg-8 col-md-4 lh-lg">
                     <label for="Description_F" class="form-label fs-5 "> وصف للمنتج</label>
 <!--                    <input type="text" class="form-control form-control-lg" id="Description_F" placeholder="أكتب وصف للمنتج لا يتعدى 200 حرف" name="Description_F"required>-->
-                    <textarea class="form-control" id="Description_F" aria-label="وصف للمنتج" placeholder="أكتب وصف للمنتج لا يتعدى 200 حرف" name="Description_F" required></textarea>
+                    <textarea class="form-control fs-5" id="Description_F" aria-label="وصف للمنتج" placeholder="أكتب وصف للمنتج لا يتعدى 200 حرف" name="Description_F" required></textarea>
 <!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
                 </div>
                 <div class="col-md-4 lh-lg">
@@ -274,14 +270,39 @@ if(isset($_POST["Description_F"])){
                 </div>
                 <div class="col-md-4">
                     <label for="City_F" class="form-label fs-5"> إسم المدينة</label>
-                    <input type="text"  class="form-control form-control-lg" id="City_F"  placeholder="أكتب إسم المدينة" name="City_F" required >
+                    <input type="text"  class="form-control form-control-lg" id="City_F"  placeholder=" إسم المدينة" name="City_F" required >
 <!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
                 </div>
                 <div class="col-md-4">
                     <label for="Number_F" class="form-label fs-5 ">رقم الجوال</label>
-                    <input type="number" class="form-control form-control-lg" id="Number_F" placeholder="أكتب رقم الجوال" name="Number_F" required>
+                    <div class="input-group float-start">
+                        <input type="number" class="form-control form-control-lg rounded-0 rounded-end" id="Number_F" placeholder=" رقم الجوال  بدون صفر 5xxxx" name="Number_F" required>
+                        <span class="input-group-text rounded-0 rounded-start px-4" id="basic-addon1">966+</span>
 <!--                    <span class="badge bg-danger p-1 rounded-1">الرجاء كتابة الاسم</span>-->
+                    </div>
                 </div>
+<!--                <div class="col-md-4 d-none">-->
+<!--                    <label class="form-label fs-5 " for="flexCheckDefault"> طريقة التواصل </label>-->
+<!--                    <div class="input-group bg-white text-dark p-3 rounded-3">-->
+<!--                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="1" id="flexRadioDefault1">-->
+<!--                        <label class="form-check-label px-2 ms-5" for="flexCheckDefault"> أتصال </label>-->
+<!---->
+<!--                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="2" id="flexRadioDefault1">-->
+<!--                        <label class="form-check-label px-2 ms-5" for="flexCheckDefault"> رسالة واتس اب</label>-->
+<!--                        <div class="form-check">-->
+<!--                            <label class="form-check-label px-2" for="flexCheckDefault"> اتصال ورسالة</label>-->
+<!--                            <input class="form-check-input" type="radio" name="flexRadioDefault" value="3" id="flexRadioDefault1">-->
+<!--                        </div>-->
+<!--                        <div class="form-check">-->
+<!--                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+<!--                            <label class="form-check-label" for="exampleRadios1">-->
+<!--                                Default radio-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                </div>-->
+
+
+
                 <!--        <div class="col-12">-->
                 <!--            <div class="form-check">-->
                 <!--                <input class="form-check-input" type="checkbox" id="gridCheck">-->

@@ -32,7 +32,7 @@
                 <h5 class="mt-2">الادارة</h5>
                 <ul class="list-group mb-0 mt-3">
                     <li>
-                        <a class="text-light text-decoration-none" href="mailto:alsaedi@finakhayr.com">alsaedi@finakhayr.com</a>
+                        <a class="text-light text-decoration-none" href="mailto:h.alsaedi1992@outlook.com">h.alsaedi1992@outlook.com</a>
                     </li>
                 </ul>
             </div>
@@ -51,36 +51,25 @@
             <!--Grid column-->
 
             <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="mt-2">التوظيف</h5>
-                <ul class="list-group mb-0 mt-3">
-                    <li>
-                        <a href="mailto:jobs@finakhayr.com" class="text-light text-decoration-none">jobs@finakhayr.com</a>
-                    </li>
-                    <li>
-                        <span class="badge bg-danger text-white px-2"> لا توجد وظائف شاغرة حالياً</span>
-                    </li>
-                </ul>
-            </div>
+<!--            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">-->
+<!--                <h5 class="mt-2">التوظيف</h5>-->
+<!--                <ul class="list-group mb-0 mt-3">-->
+<!--                    <li>-->
+<!--                        <a href="mailto:jobs@finakhayr.com" class="text-light text-decoration-none">jobs@finakhayr.com</a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <span class="badge bg-danger text-white px-2"> لا توجد وظائف شاغرة حالياً</span>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
             <!--Grid column-->
 
-            <!--Grid column-->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="mt-2">هل ترغب بتقديم دعم مادي للموقع؟ </h5>
-
-                <ul class="list-group mb-0 mt-3">
-                    <li>
-                        <a href="donation.php" class="text-light text-decoration-none">يمكنك التبرع من هنا </a>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5 class="mt-2">تطوير الموقع</h5>
                 <ul class="list-group mb-0 mt-3">
                     <li>
-                        <a href="#" class="text-light text-decoration-none">م/ حسام  الصاعدي</a>
+                        <a href="#" class="text-light text-decoration-none">م. حسام  الصاعدي</a>
                     </li>
                     <li>
                         <a href="https://api.whatsapp.com/send?phone=+966530423063" class="text-light text-decoration-none">0530423063 </a>
@@ -88,14 +77,26 @@
                     <li>
                         <a href="mailto:h.alsaedi1992@outlook.com" class="text-light  text-decoration-none">h.alsaedi1992@outlook.com</a>
                     </li>
-                    <li>
-                        <a href="#" class="text-light text-decoration-none">م/ عبد الرحمن مسحلي</a>
-                    </li>
-                    <li>
-                        <a href="https://api.whatsapp.com/send?phone=+966502434333" class="text-light text-decoration-none">0502434333 </a>
-                    </li>
+                    <!--                    <li>-->
+                    <!--                        <a href="#" class="text-light text-decoration-none">م/ عبد الرحمن مسحلي</a>-->
+                    <!--                    </li>-->
+                    <!--                    <li>-->
+                    <!--                        <a href="https://api.whatsapp.com/send?phone=+966502434333" class="text-light text-decoration-none">0502434333 </a>-->
+                    <!--                    </li>-->
                 </ul>
             </div>
+<!--            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 d ">-->
+<!--                <h5 class="mt-2">هل ترغب  بدعمي؟ </h5>-->
+<!---->
+<!--                <ul class="list-group mb-0 mt-3">-->
+<!--                    <li>-->
+<!--                        <a href="donation.php" class="text-light text-decoration-none">يمكنك تقديم الدعم من هنا </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+            <!--Grid column-->
+            <!--Grid column-->
+
         </div>
         <!--Grid row-->
     </div>

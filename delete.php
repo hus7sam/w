@@ -1,5 +1,6 @@
 <?php
 include "header.php";
+counts_visitors_Fun();
 
 
 // define variables and set to empty values
@@ -9,7 +10,7 @@ $isvalue=0;
 
     $id_old           = isset($_POST['id_old_F'])           ? $_POST['id_old_F'] : "";
     $name_old         = isset($_POST['name_old_F'])         ? $_POST['name_old_F'] : "";
-    $Description_old1 =isset($_POST['Description_old_F'])   ? $_POST['Description_old_F'] : "";
+    $Description_old1 = isset($_POST['Description_old_F'])   ? $_POST['Description_old_F'] : "";
 
 
     if(isset($_POST["Classification_F"])){
@@ -65,29 +66,19 @@ $isvalue=0;
 if ($isvalue==5):
     try {
         include ("Connection.php");
-        if (!empty($dbhost)) {
-            if (!empty($dbname)) {
-                if (!empty($dbusername)) {
-                    if (!empty($dbpassword)) {
-                        if (!empty($options)) {
+        if (!empty($dbhost)) {   if (!empty($dbname)) { if (!empty($dbusername)) {      if (!empty($dbpassword)) {                        if (!empty($options)) {
                             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword,$options);
-                        }
-                    }
-                }
-            }
-        }
+                        }        }         }            }        }
         $sql ="INSERT INTO delete_item (id,name,Description_new,Description_old,Classification,id_d) 
                       VALUE(:id,:name_old,:Description_new,:Description_old,:DClassification,:id_d)";
         $stmt = $conn->prepare($sql);
         $stmt->execute($R=array(
             'id'       => null,
-            'name_old'          => $name_old_F,
-            'Description_new'   => $Description_new,
-            'Description_old'   => $Description_old,
-            'DClassification'   => $DClassification,
+            'name_old'          => $name_old_F,           'Description_new'   => $Description_new,
+            'Description_old'   => $Description_old,      'DClassification'   => $DClassification,
             'id_d'              => $id_old_F,
         ));
-        echo "<p class='alert alert-success text-center fs-5'>.. لقد تم إضافة الاعلان بنجاح ..</p>";
+        echo "<p class='alert alert-success text-center fs-5'>.. لقد تم حذف الاعلان بنجاح ..</p>";
 
     }catch (PDOException $error){
 
@@ -111,15 +102,15 @@ endif;
 <body>
 
 
-<div class="container justify-content-center">
+<div class="container">
 <!--    --><?php //if (isset($_REQUEST["display"]) && $_REQUEST["display"]===1 ): ?>
 
         <!--    start of delete section -->
-        <h1 class="h1 my-5 p-3"> نموذج طلب حذف منتج</h1>
+        <h1 class="h1 my-5 p-3 bg-white text-center"> نموذج طلب حذف منتج</h1>
         <!--    start of row  -->
-        <div class="row justify-content-center bg-white bg-gradient m-5 py-3 rounded-3" >
+        <div class="row g-4 justify-content-center bg-white bg-gradient m-0 py-2 rounded-3" >
             <!--    start column 1  -->
-            <div class="col p-4 justify-content-center border border-3 border-secondary border-top-0 border-end-0 border-bottom-0">
+            <div class="col col-sm-6 p-3 border border-3 border-info border-top-0 border-end-0 border-bottom-0">
                 <!--    start form 1  -->
                 <form action="delete.php" method="POST" class="row g-3 justify-content-center">
                     <div class="col-md-4">
@@ -127,7 +118,7 @@ endif;
                         <input type="number" class="form-control form-control-lg" value="<?php echo $id_old;?>" id="id_new_F" name="id_new_F" readonly="readonly">
                     </div>
                     <div class="col-md-8">
-                        <label for="name_new_F" class="form-label fs-5 ">أسم المنتج</label>
+                        <label for="name_new_F" class="form-label fs-5 " >أسم المنتج</label>
                         <input type="text" class="form-control form-control-lg" value="<?php echo $name_old;?>" id="name_new_F" name="name_new_F" readonly="readonly" >
                     </div>
                     <div class="col-md-12 ">
@@ -162,10 +153,10 @@ endif;
             <!--    end  column 1  -->
 
             <!--   start  column 3  -->
-            <div class="col   p-4">
+            <div class="col    p-4">
                 <div class="alert alert-info bg-gradient shadow-sm">الرجاء شرح السببب بشكل واضح ومختصر</div>
                 <div class="alert alert-info bg-gradient shadow-sm">الرجاء التأكد من بيانات المنتج قبل ارسال الطلب</div>
-                <span class="badge bg-secondary fs-6 text-white text-center my-2 py-2 shadow-sm">يعد المنتج مخالف في الحالات التالية: </span>
+                <span class="badge bg-info fs-6 fs-sm-4 text-white text-center my-2 py-2 shadow-sm">يعد المنتج مخالف في الحالات التالية: </span>
                 <div class="alert alert-warning py-3 shadow-sm">في حال كان المنتج مخالف للشريعة الاسلامية  </div>
                 <div class="alert alert-warning py-3 shadow-sm">في حال كان المنتج مخالف لقوانين المملكة العربية السعودية   </div>
                 <div class="alert alert-warning py-3 shadow-sm">في حال طلب مبلغ مقابل المنتج   </div>

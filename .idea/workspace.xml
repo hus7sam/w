@@ -20,18 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca20eb1b-e527-4024-9ed4-54b29884faf0" name="Default Changelist" comment="delete">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control.php" beforeDir="false" afterPath="$PROJECT_DIR$/control.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/delete.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/display.php" beforeDir="false" afterPath="$PROJECT_DIR$/display.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donation.php" beforeDir="false" afterPath="$PROJECT_DIR$/donation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fun.php" beforeDir="false" afterPath="$PROJECT_DIR$/fun.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/NCB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/arr.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/francy.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,12 +63,18 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/css/style.css" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/display.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/donation.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/header.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/fun.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/header.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/display.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/css/style.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/delete.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/control.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/donation.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/footer.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$" />
@@ -90,11 +95,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/index.php" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/سطح المكتب/hu" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -199,6 +207,48 @@
       <workItem from="1610653251389" duration="3118000" />
       <workItem from="1610658386860" duration="832000" />
       <workItem from="1610662766821" duration="3743000" />
+      <workItem from="1610672748962" duration="5011000" />
+      <workItem from="1610712281428" duration="4679000" />
+      <workItem from="1610719885014" duration="3042000" />
+      <workItem from="1610746817061" duration="6431000" />
+      <workItem from="1610805213168" duration="15937000" />
+      <workItem from="1610844253350" duration="2423000" />
+      <workItem from="1610895309518" duration="301000" />
+      <workItem from="1611006714359" duration="5245000" />
+      <workItem from="1611022057156" duration="3294000" />
+      <workItem from="1611081933650" duration="4594000" />
+      <workItem from="1617379751559" duration="72000" />
+      <workItem from="1617379848149" duration="199000" />
+      <workItem from="1617384755006" duration="180000" />
+      <workItem from="1617432388505" duration="3413000" />
+      <workItem from="1617558609746" duration="1011000" />
+      <workItem from="1617968397257" duration="1256000" />
+      <workItem from="1618067690376" duration="250000" />
+      <workItem from="1618068213282" duration="4161000" />
+      <workItem from="1618252174695" duration="1634000" />
+      <workItem from="1618255774225" duration="896000" />
+      <workItem from="1618662835336" duration="1784000" />
+      <workItem from="1618669533216" duration="609000" />
+      <workItem from="1618675680596" duration="3380000" />
+      <workItem from="1618685428545" duration="9532000" />
+      <workItem from="1618698625811" duration="17000" />
+      <workItem from="1618698666782" duration="1369000" />
+      <workItem from="1618757799133" duration="554000" />
+      <workItem from="1618917114401" duration="20000" />
+      <workItem from="1618947351145" duration="2246000" />
+      <workItem from="1621462049749" duration="3006000" />
+      <workItem from="1621466788587" duration="205000" />
+      <workItem from="1621700809555" duration="330000" />
+      <workItem from="1622193755087" duration="895000" />
+      <workItem from="1622195841936" duration="1910000" />
+      <workItem from="1622198324445" duration="8038000" />
+      <workItem from="1622394244340" duration="526000" />
+      <workItem from="1622792714602" duration="8536000" />
+      <workItem from="1624014060901" duration="397000" />
+      <workItem from="1624014772908" duration="817000" />
+      <workItem from="1624022609183" duration="2395000" />
+      <workItem from="1624033054839" duration="4039000" />
+      <workItem from="1624102467078" duration="14466000" />
     </task>
     <task id="LOCAL-00001" summary="u">
       <created>1602417578729</created>
@@ -557,22 +607,6 @@
     <MESSAGE value="cssx" />
     <MESSAGE value="delete" />
     <option name="LAST_COMMIT_MESSAGE" value="delete" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/display.php</url>
-          <line>263</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/display.php</url>
-          <line>113</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

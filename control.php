@@ -2,6 +2,10 @@
 include "Connection.php";
 include "fun.php";
 
+if (isset($_GET['id']))
+{
+    delete ($_GET['id']);
+}
 
 ?>
 <!doctype html>
@@ -59,38 +63,14 @@ include "fun.php";
             </div>
         </div>
 
-
         <div class="cotainer overflow-auto ">
-        <div class="alert bg-info  text-white rounded-2 "> <h2> [جدول طلبات الحذف] </h2></div>
+        <div class="alert bg-info  text-white rounded-2 "> <h2> جدول طلبات الحذف </h2></div>
         <table class="table  table-striped table-hover ">
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">إسم المنتج</th>
-                <th scope="col">وصف المنتح</th>
-                <th scope="col">سبب الحذف</th>
-                <th scope="col"> التصنيف</th>
-                <th scope="col"> رقم المنتج</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php  table_item_delete(); ?>
-            </tbody>
-        </table>
-        </div>
-
-
-        <div class="alert bg-info  text-white rounded-2"> <h2> [جدول طلبات الحظر] </h2></div>
-        <div class="overflow-auto h-25 ">
-        <table class="table  table-striped table-hover ">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">إسم المنتج</th>
-                <th scope="col">وصف المنتح</th>
-                <th scope="col">سبب الحذف</th>
-                <th scope="col"> التصنيف</th>
-                <th scope="col"> رقم المنتج</th>
+                <th scope="col">إسم المنتج</th>   <th scope="col">وصف المنتح</th>   <th scope="col">سبب الحذف</th>
+                <th scope="col"> التصنيف</th>     <th scope="col"> رقم المنتج</th>
             </tr>
             </thead>
             <tbody>
@@ -124,7 +104,16 @@ include "fun.php";
 <!--       <a class="control_list" href="#" >5</a>-->
 <!---->
 <!--   </div>-->
+<?php
 
+if (isset($_GET['Delete_id']))
+{
+    delete($_GET['Delete_id']);
+    delete_from_table_delet($_GET['Delete_id']);
+}
+
+
+?>
 </div>
 </body>
 </html>

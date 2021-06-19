@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Cairo);
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
 
 * {
     box-sizing: border-box;
@@ -13,6 +13,9 @@
     box-sizing:  border-box;
 }
 
+.font_icon1{
+    font-family: Arial  !important;
+}
 
 .ads
 {
@@ -70,8 +73,7 @@ body {
     animation-delay: 2400ms;
     background-color: #eeeded;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);    width: 100%;
-    margin: 0 0  0 0;
-    padding: 0 0 0 0 ;
+    margin: 0 0  0 0;    padding: 0 0 0 0 ;
     height: 60px;
     border-bottom: 1px solid #000;
     display: inline-block;
